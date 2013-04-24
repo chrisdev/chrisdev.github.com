@@ -1,5 +1,7 @@
+===============================
 A Static Blog Based on Pelican
-===========================
+===============================
+
 
 Installation
 --------------
@@ -13,11 +15,11 @@ You need the pelican-themes repo (You should probably fork it). ::
       git@github.com:chrisdev/pelican-themes.git
 
 
-
 Settings
 ---------
+My current `settings.py` file 
 
-My current `settings.py` file::
+::
 
     AUTHOR = 'Christopher Clarke'
     DEFAULT_DATE_FORMAT = '%A, %B %d, %Y'
@@ -35,9 +37,11 @@ My current `settings.py` file::
     TIMEZONE = "America/Port_of_Spain"
     TWITTER_USERNAME = 'realchrisdev'
 
-Updating
 
+
+Updating
 ---------
+
 Simply run ::
 
     pelican . -o . -s settings.py
@@ -53,3 +57,4 @@ TO Do
 * More styling of for example I want a topbar, twitter buttons my pic
   etc.
 * Proper pygments styling
+
