@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>chrisdev</title><link href="http://blog.chrisdev.com/" rel="alternate"></link><link href="http://blog.chrisdev.com/feeds/yeah.atom.xml" rel="self"></link><id>http://blog.chrisdev.com/</id><updated>2010-10-03T10:20:00-04:00</updated><entry><title>My super title</title><link href="http://blog.chrisdev.com/my-super-post.html" rel="alternate"></link><updated>2010-10-03T10:20:00-04:00</updated><author><name>Christopher Clarke</name></author><id>tag:blog.chrisdev.com,2010-10-03:my-super-post.html</id><summary type="html">&lt;p&gt;This is a test&lt;/p&gt;
+</summary><category term="thats"></category><category term="awesome"></category></entry></feed>
