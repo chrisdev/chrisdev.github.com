@@ -1,6 +1,6 @@
 AUTHOR = 'Christopher Clarke'
 DEFAULT_DATE_FORMAT = '%A, %B %d, %Y'
-DISQUS_SITENAME = 'chrisdev'
+DISQUS_SITENAME = 'chrisdevblog'
 GITHUB_URL = 'https://github.com/chrisdev/chrisdev-blog'
 GOOGLE_ANALYTICS=''
 SITEURL = 'http://blog.chrisdev.com'
