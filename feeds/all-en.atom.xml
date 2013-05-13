@@ -1,45 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>chrisdev</title><link href="http://blog.chrisdev.com/" rel="alternate"></link><link href="http://blog.chrisdev.com/feeds/all-en.atom.xml" rel="self"></link><id>http://blog.chrisdev.com/</id><updated>2013-04-03T00:00:00-04:00</updated><entry><title>Welcome to the Blog</title><link href="http://blog.chrisdev.com/test-post.html" rel="alternate"></link><updated>2013-04-03T00:00:00-04:00</updated><author><name>Christopher Clarke</name></author><id>tag:blog.chrisdev.com,2013-04-03:test-post.html</id><summary type="html">&lt;p&gt;This is a test
-Vestibulum id ligula porta felis euismod semper.
-Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;
-&lt;p&gt;Nullam quis risus eget urna mollis ornare vel eu leo.
-Cum sociis natoque penatibus et magnis dis parturient montes,
-nascetur ridiculus mus. Duis mollis, est non commodo luctus,
-nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-Duis mollis, est non commodo luctus, nisi erat porttitor
-ligula, eget lacinia odio sem nec elit. Praesent commodo cursus
-magna, vel scelerisque nisl consectetur et.&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/li&gt;
-&lt;li&gt;Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Here is some code:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;CustomFlatPageForm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;FlatpageForm&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-
-    &lt;span class="n"&gt;template_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ChoiceField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-        &lt;span class="n"&gt;choices&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;FPX_TEMPLATE_CHOICES&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;required&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Template&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="n"&gt;help_text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Sepcify a template for displaying your content&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="p"&gt;)&lt;/span&gt;
-
-    &lt;span class="n"&gt;content_md&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CharField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Content&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="n"&gt;widget&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;content_widget&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="p"&gt;)&lt;/span&gt;
-
-    &lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CharField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;widget&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Textarea&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;required&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="nb"&gt;super&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CustomFlatPageForm&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;fp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;instance&lt;/span&gt;
-
-        &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-            &lt;span class="n"&gt;latest_revision&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;revisions&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;order_by&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;-updated&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-        &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;IndexError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-            &lt;span class="n"&gt;latest_revision&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
-
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;latest_revision&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-            &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;content_md&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;initial&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; \
-                            &lt;span class="n"&gt;latest_revision&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;content_source&lt;/span&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>chrisdev</title><link href="http://blog.chrisdev.com/" rel="alternate"></link><link href="http://blog.chrisdev.com/feeds/all-en.atom.xml" rel="self"></link><id>http://blog.chrisdev.com/</id><updated>2013-05-01T00:00:00-04:00</updated><entry><title>Welcome to the Blog</title><link href="http://blog.chrisdev.com/welcome.html" rel="alternate"></link><updated>2013-05-01T00:00:00-04:00</updated><author><name>Christopher Clarke</name></author><id>tag:blog.chrisdev.com,2013-05-01:welcome.html</id><summary type="html">&lt;p&gt;I'm trying out a static blog as maybe this will
+encourage me to post on a more frequent bases. I've decided to go with
+&lt;a class="reference external" href="https://github.com/getpelican/pelican"&gt;pelican&lt;/a&gt; as it's written in python, is a  was really easy to
+set up and has good documentation.&lt;/p&gt;
+&lt;div class="section" id="getting-started"&gt;
+&lt;h2&gt;Getting Started&lt;/h2&gt;
+&lt;p&gt;First, I created a virtualenv for
+the project and installed the main requirements.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;mkvirtualenv chrisdev-blog
+pip install pelican
 &lt;/pre&gt;&lt;/div&gt;
-</summary><category term="general"></category></entry></feed>
+&lt;p&gt;I then used &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;pelican-quickstart&lt;/span&gt;&lt;/tt&gt; to create the skeleton of my project&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pelican-quickstart
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Since I was going to host on Github I felt that I did not need the
+generated Makefile, and other helper scripts.
+Instead I created a settings file that initially
+looked like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;AUTHOR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;Christopher Clarke&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;DEFAULT_DATE_FORMAT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;%A, %B &lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s"&gt;, %Y&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;DISQUS_SITENAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;chrisdev&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;GITHUB_URL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;https://github.com/chrisdev/chrisdev-blog&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;GOOGLE_ANALYTICS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;SITEURL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;http://blog.chrisdev.com&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;FEED_DOMAIN&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SITEURL&lt;/span&gt;
+&lt;span class="n"&gt;SITENAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;ChrrisDev Blog&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;SOCIAL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;twitter&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;http://twitter.com/realchrisdev&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+          &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;github&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;https://github.com/chrisdev&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+          &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;facebook&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;http://www.facebook.com/chrisdevtt&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),)&lt;/span&gt;
+&lt;span class="n"&gt;TAG_FEED_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;feeds/&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;.atom.xml&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;TIMEZONE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;America/Port_of_Spain&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;TWITTER_USERNAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;realchrisdev&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To generate the site I created a test &lt;tt class="docutils literal"&gt;rst&lt;/tt&gt; file and ran the
+following command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pelican content -s settings.py -o .
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To view your site just open the index file in your browser or if you are
+on a Mac&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;open index.html
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="theming-the-blog"&gt;
+&lt;h2&gt;Theming The Blog&lt;/h2&gt;
+&lt;p&gt;By default your Blog will be based on the &lt;tt class="docutils literal"&gt;notmyidea&lt;/tt&gt; theme which is
+pretty nice but we wanted to use a theme based on &lt;a class="reference external" href="http://foundation.zurb.com"&gt;Zurb Foundation 4&lt;/a&gt;.
+Fortunately,  the official &lt;a class="reference external" href="https://github.com/getpelican/pelican-themes"&gt;pelican-themes&lt;/a&gt; repository already contained
+a &lt;tt class="docutils literal"&gt;Foundation 4&lt;/tt&gt; theme called &lt;tt class="docutils literal"&gt;tuxlite_zf&lt;/tt&gt;.
+This is a minimalist theme with a main column and a right sidebar.
+That we felt that this would
+provide a good starting point for our custom theme.  To install the
+pelican-themes we simply cloned the repository to our local machine.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git clone https://github.com/getpelican/pelican-themes ~/pelican-themes
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We then copied the &lt;tt class="docutils literal"&gt;tuxlite_zf&lt;/tt&gt; theme folder to a folder called &lt;tt class="docutils literal"&gt;chrisdev_zf&lt;/tt&gt;
+so that we could customize it. Next we edited our  &lt;tt class="docutils literal"&gt;settings.py&lt;/tt&gt;
+file to include this line:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;../pelican-themes/chrisdev_zf&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then we regenerated the site as before to confirm that &lt;tt class="docutils literal"&gt;tuxlite_zf&lt;/tt&gt; was
+indeed a &lt;tt class="docutils literal"&gt;Foundation 4&lt;/tt&gt; theme.&lt;/p&gt;
+&lt;div class="section" id="sass-and-compass"&gt;
+&lt;h3&gt;SASS and Compass&lt;/h3&gt;
+&lt;p&gt;The best way to customize a &lt;tt class="docutils literal"&gt;Foundation 4&lt;/tt&gt; site is to use
+&lt;a class="reference external" href="http://sass-lang.com/"&gt;Sass&lt;/a&gt;  and &lt;a class="reference external" href="http://compass-style.org"&gt;Compass&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This involves just a little bit of &lt;tt class="docutils literal"&gt;ruby&lt;/tt&gt; but bear with us.
+Just run the following to
+the update you system and install &lt;tt class="docutils literal"&gt;Foundation 4&lt;/tt&gt; gem and all the
+necessary dependencies.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo gem update --system
+
+sudo gem install zurb-foundation
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Next create a project for the custom theme&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;compass create custom-foundation4 -r zurb-foundation --using foundation
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can view &lt;tt class="docutils literal"&gt;index.html&lt;/tt&gt; in your browser confirm that your project is
+a standard &lt;tt class="docutils literal"&gt;Foundation 4&lt;/tt&gt; site. So for example, if you want to modify the
+any CSS component we just need to edit &lt;tt class="docutils literal"&gt;_settings.scss&lt;/tt&gt; file which
+is located in the &lt;tt class="docutils literal"&gt;sass&lt;/tt&gt; folder of the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;custom-foundation&lt;/span&gt;&lt;/tt&gt; project.
+For example to change the colors of the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Top-nav&lt;/span&gt;&lt;/tt&gt; we made the following changes&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="vg"&gt;$topbar&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dropdown&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="ss"&gt;bg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;#3498db;&lt;/span&gt;
+&lt;span class="vg"&gt;$topbar&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dropdown&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;toggle&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="ss"&gt;alpha&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="vg"&gt;$dropdown&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="ss"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;#fff;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Next run&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;compass compile
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can also set compass to watch mode so that it watches your sass for
+changes and compiles them to CSS when ever changes are detected.&lt;/p&gt;
+&lt;p&gt;You can configure compass to generate compressed code by editing the 'config.rb'
+and uncommenting&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;output_style&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;  :compact &lt;span class="c"&gt;# or :compressed expanded or :nested or&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Once you are satisfied you can copy the  &lt;tt class="docutils literal"&gt;app.css&lt;/tt&gt; file to your
+custom pelican-theme's static directory&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="github-setup"&gt;
+&lt;h3&gt;Github setup&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="static-site blogging peilcan foundation4 compass sass"></category></entry></feed>

@@ -4,6 +4,7 @@ a { color: #0090d3; }
 body { word-wrap:break-word; }
 
 /* Base.html - top navigation */
+
 .top-bar {
 height: 100%;
 margin-bottom: 1em;
@@ -49,7 +50,9 @@ hr.gradient {
 }
 
 .highlight {
-    background-color: rgb(136, 136, 136);
-    margin-bottom: 10px;
     padding: 10px;
+    background-color: #e4f2f1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
 }

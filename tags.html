@@ -9,31 +9,41 @@
     <link rel="stylesheet" href="./theme/css/normalize.css">
     <link rel="stylesheet" href="./theme/css/foundation.min.css">
     <link rel="stylesheet" href="./theme/css/style.css">
-    <link rel="stylesheet" href="./theme/css/pygments.css">	
+    <link rel="stylesheet" href="./theme/css/pygment.css">
     <script src="./theme/js/custom.modernizr.js"></script>
 </head>
 
 <body>
 
 <!-- Nav Bar -->
-<nav>
-<div class="top-bar">
-<div class="row">
-    <div class="large-9 large-centered columns">
-	    <h1><a href=".">chrisdev</a></h1>
-    </div>
-</div>
+
+<div class="sticky" id="menu">
+    <nav class="top-bar">
+      <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+          <h1><a href="."> chrisdev </a></h1>
+        </li>
+        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+      <section class="top-bar-section">
+        <!-- Left Nav Section -->
+        <ul class="left">
+          <li class="divider"></li>
+          <li><a href="#">About</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Django</a></li>
+          <li><a href="#">Numpy &amp; Pandas</a></li>
+          <li class="divider"></li>
+          <li><a href="#">ChrisDev</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </section>
+</nav>
 </div>
 
-<!-- Show menu items and pages -->
-<div class="row">
-<div class="large-9 columns">
-    <ul class="button-group navigation">
-	
-                    </ul>
-</div>
-</div>
-</nav>
 <!-- End Nav -->
 
 
@@ -44,9 +54,9 @@
     <div class="large-9 columns">
     
 <ul class="circle">
-    	<li><a href="./tag/general.html">general</a></li>
+    	<li><a href="./tag/static-site-blogging-peilcan-foundation4-compass-sass.html">static-site blogging peilcan foundation4 compass sass</a></li>
 	<ul class="square">
-		<li><a href="./test-post.html"><small>Welcome to the Blog</small></li>
+		<li><a href="./welcome.html"><small>Welcome to the Blog</small></li>
 		</ul>
     </ul>
 
@@ -61,14 +71,12 @@
             <li><a href="./tags.html">Tags</a>
                                 </ul>
 
-        		
-        <h5 class="sidebar-title">Categories</h5>
+                <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
-                    <li><a href="./category/test.html">test</a></li>
-           
-        </ul>
+                    <li><a href="./category/python.html">python</a></li>
+                </ul>
         
-        		
+        
 		        <h5 class="sidebar-title">Social</h5>
         <ul class="side-nav">
                     <li><a href="http://twitter.com/realchrisdev">twitter</a></li>
@@ -92,3 +100,23 @@
             </div>
     </div>
 </footer>
+
+   <script>
+         document.write('<script src=' +
+            ('__proto__' in {} ? './theme/js/zepto' : './theme/js/jquery') +
+            '.js><\/script>')
+   </script>
+   <script src="./theme/js/foundation.min.js"></script>
+
+   <script>
+        $(document).foundation('topbar', {
+              index : 0,
+              stickyClass : 'sticky',
+              custom_back_text: true,
+              back_text: 'Back',
+              init : true
+            }
+        )
+    </script>
+
+</body>
