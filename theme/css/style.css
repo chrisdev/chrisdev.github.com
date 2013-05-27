@@ -1023,11 +1023,10 @@ header nav.top-bar {
       header nav.top-bar ul.title-area li.name h1 a span.star {
         color: #c8433d; }
       header nav.top-bar ul.title-area li.name h1 a span.chris {
-        font-size: 1.25em;
         color: #0d14ab;
         font-family: "Lobster", cursive; }
       header nav.top-bar ul.title-area li.name h1 a span.dev {
-        font-size: 1.25em;
+        margin-left: -3px;
         color: #03b3e4;
         font-family: "Lobster", cursive; }
       header nav.top-bar ul.title-area li.name h1 a span.blog-title {
