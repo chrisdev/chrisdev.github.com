@@ -107,7 +107,7 @@ Sass_ and Compass_
 
 This normally means that ``ruby`` needs to be installed on your system.
 If you are on a Mac then you are in luck since a fairly recent version of 
-``ruby`` ships with `Mountain Lion``.
+``ruby`` ships with ``Mountain Lion``.
 Update your ``ruby`` installation and install ``Foundation 4`` and all the
 necessary dependencies i.e. Sass_ and Compass_ .
 
@@ -118,16 +118,16 @@ necessary dependencies i.e. Sass_ and Compass_ .
     sudo gem install zurb-foundation
 
 
-Next create a project for to generate the custom ``css`` for
-your theme.
+Next create a project for
+your custom theme.
 
 .. code-block:: sh
 
     compass create custom-foundation4 -r zurb-foundation --using foundation
 
 You can view ``index.html`` in your browser confirm that your project is
-a standard ``Foundation 4`` site. Next you will want to start 
-by making changes to the ``Scsss`` files and compiling
+a standard ``Foundation 4`` site. Next, you will want to start 
+by making changes to the ``Scsss`` files and  use
 with ``compass`` to generate ``css`` output.
 
 The Foundation folks have made this easy for us as you can
@@ -162,13 +162,15 @@ and uncommenting
 Once you are satisfied, you can copy ``app.css`` as ``foundation.css`` to your
 custom pelican-theme's static directory. 
 
-Once you have more experience with compass/sass you may want to 
-target particular CSS components instead of regenerating the entire 
-``foundation.css`` just to make changes to a few components. To achieve this we
+Once you have gained more experience with compass/sass you will want to 
+target particular CSS components to modify them instead of 
+regenerating the entire 
+``foundation.css`` every time you make a few changes to components. 
+To achieve this we
 simply created a new ``scss`` called ``style.scss`` and imported just those 
-modify those components that we wished to target. 
-So as in the example above we just wanted to change the
-``top-nav`` colors we just add the following lines to  ``style.sccs`` file
+components that we wished to modify. 
+So as in the example above where we just wanted to change the
+``top-nav`` colors we just add the following lines to  ``style.sccs``
 
 .. code-block:: ruby
 
@@ -182,8 +184,8 @@ So as in the example above we just wanted to change the
 Note, you need to define the new colors etc. **before** you
 import the foundation components.
 
-As before generate ``style.css`` and copy this to the static directory of your pelican
-theme.
+As before, compile the  ``style.css`` and copy this 
+to the static directory of your pelican theme.
 
 
 .. _Zurb Foundation 4 : http://foundation.zurb.com

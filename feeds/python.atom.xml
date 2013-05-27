@@ -67,20 +67,20 @@ indeed generating a &lt;tt class="docutils literal"&gt;Foundation 4&lt;/tt&gt; s
 &lt;a class="reference external" href="http://sass-lang.com/"&gt;Sass&lt;/a&gt; and &lt;a class="reference external" href="http://compass-style.org"&gt;Compass&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This normally means that &lt;tt class="docutils literal"&gt;ruby&lt;/tt&gt; needs to be installed on your system.
 If you are on a Mac then you are in luck since a fairly recent version of
-&lt;tt class="docutils literal"&gt;ruby&lt;/tt&gt; ships with &lt;cite&gt;Mountain Lion`&lt;/cite&gt;.
+&lt;tt class="docutils literal"&gt;ruby&lt;/tt&gt; ships with &lt;tt class="docutils literal"&gt;Mountain Lion&lt;/tt&gt;.
 Update your &lt;tt class="docutils literal"&gt;ruby&lt;/tt&gt; installation and install &lt;tt class="docutils literal"&gt;Foundation 4&lt;/tt&gt; and all the
 necessary dependencies i.e. &lt;a class="reference external" href="http://sass-lang.com/"&gt;Sass&lt;/a&gt; and &lt;a class="reference external" href="http://compass-style.org"&gt;Compass&lt;/a&gt; .&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;sudo gem update --system
 sudo gem install compass
 sudo gem install zurb-foundation
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Next create a project for to generate the custom &lt;tt class="docutils literal"&gt;css&lt;/tt&gt; for
-your theme.&lt;/p&gt;
+&lt;p&gt;Next create a project for
+your custom theme.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;compass create custom-foundation4 -r zurb-foundation --using foundation
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You can view &lt;tt class="docutils literal"&gt;index.html&lt;/tt&gt; in your browser confirm that your project is
-a standard &lt;tt class="docutils literal"&gt;Foundation 4&lt;/tt&gt; site. Next you will want to start
-by making changes to the &lt;tt class="docutils literal"&gt;Scsss&lt;/tt&gt; files and compiling
+a standard &lt;tt class="docutils literal"&gt;Foundation 4&lt;/tt&gt; site. Next, you will want to start
+by making changes to the &lt;tt class="docutils literal"&gt;Scsss&lt;/tt&gt; files and  use
 with &lt;tt class="docutils literal"&gt;compass&lt;/tt&gt; to generate &lt;tt class="docutils literal"&gt;css&lt;/tt&gt; output.&lt;/p&gt;
 &lt;p&gt;The Foundation folks have made this easy for us as you can
 modify almost any Foundation &lt;tt class="docutils literal"&gt;CSS&lt;/tt&gt; component by editing &lt;tt class="docutils literal"&gt;_settings.scss&lt;/tt&gt;
@@ -104,13 +104,15 @@ and uncommenting&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Once you are satisfied, you can copy &lt;tt class="docutils literal"&gt;app.css&lt;/tt&gt; as &lt;tt class="docutils literal"&gt;foundation.css&lt;/tt&gt; to your
 custom pelican-theme's static directory.&lt;/p&gt;
-&lt;p&gt;Once you have more experience with compass/sass you may want to
-target particular CSS components instead of regenerating the entire
-&lt;tt class="docutils literal"&gt;foundation.css&lt;/tt&gt; just to make changes to a few components. To achieve this we
+&lt;p&gt;Once you have gained more experience with compass/sass you will want to
+target particular CSS components to modify them instead of
+regenerating the entire
+&lt;tt class="docutils literal"&gt;foundation.css&lt;/tt&gt; every time you make a few changes to components.
+To achieve this we
 simply created a new &lt;tt class="docutils literal"&gt;scss&lt;/tt&gt; called &lt;tt class="docutils literal"&gt;style.scss&lt;/tt&gt; and imported just those
-modify those components that we wished to target.
-So as in the example above we just wanted to change the
-&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;top-nav&lt;/span&gt;&lt;/tt&gt; colors we just add the following lines to  &lt;tt class="docutils literal"&gt;style.sccs&lt;/tt&gt; file&lt;/p&gt;
+components that we wished to modify.
+So as in the example above where we just wanted to change the
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;top-nav&lt;/span&gt;&lt;/tt&gt; colors we just add the following lines to  &lt;tt class="docutils literal"&gt;style.sccs&lt;/tt&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="vg"&gt;$topbar&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dropdown&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="ss"&gt;bg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;#3498db;&lt;/span&gt;
 &lt;span class="vg"&gt;$topbar&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dropdown&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;toggle&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="ss"&gt;alpha&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="vg"&gt;$dropdown&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="ss"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;#fff;&lt;/span&gt;
@@ -120,8 +122,8 @@ So as in the example above we just wanted to change the
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Note, you need to define the new colors etc. &lt;strong&gt;before&lt;/strong&gt; you
 import the foundation components.&lt;/p&gt;
-&lt;p&gt;As before generate &lt;tt class="docutils literal"&gt;style.css&lt;/tt&gt; and copy this to the static directory of your pelican
-theme.&lt;/p&gt;
+&lt;p&gt;As before, compile the  &lt;tt class="docutils literal"&gt;style.css&lt;/tt&gt; and copy this
+to the static directory of your pelican theme.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="deployment-on-github"&gt;
 &lt;h2&gt;Deployment On Github&lt;/h2&gt;
