@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>chrisdev</title><link href="http://blog.chrisdev.com/" rel="alternate"></link><link href="http://blog.chrisdev.com/feeds/%s.atom.xml" rel="self"></link><id>http://blog.chrisdev.com/</id><updated>2013-05-01T00:00:00-04:00</updated><entry><title>Welcome to the Blog</title><link href="http://blog.chrisdev.com/welcome.html" rel="alternate"></link><updated>2013-05-01T00:00:00-04:00</updated><author><name>Christopher Clarke</name></author><id>tag:blog.chrisdev.com,2013-05-01:welcome.html</id><summary type="html">&lt;p&gt;I'm trying out a static blog as maybe this will
-encourage me to post on a more frequent bases. I've decided to go with
-&lt;a class="reference external" href="https://github.com/getpelican/pelican"&gt;pelican&lt;/a&gt; as it's written in python, is a  was really easy to
-set up and has good documentation.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>chrisdev</title><link href="http://blog.chrisdev.com/" rel="alternate"></link><link href="http://blog.chrisdev.com/feeds/%s.atom.xml" rel="self"></link><id>http://blog.chrisdev.com/</id><updated>2013-05-01T00:00:00-04:00</updated><entry><title>Welcome To My Blog</title><link href="http://blog.chrisdev.com/welcome.html" rel="alternate"></link><updated>2013-05-01T00:00:00-04:00</updated><author><name>Christopher Clarke</name></author><id>tag:blog.chrisdev.com,2013-05-01:welcome.html</id><summary type="html">&lt;p&gt;I've started experimenting with a static blog in the hope that this will
+encourage me to post on a more frequently . I've decided to go with
+&lt;a class="reference external" href="https://github.com/getpelican/pelican"&gt;pelican&lt;/a&gt; as it's written in python, set up and has good documentation and
+I'm using &lt;tt class="docutils literal"&gt;github pages&lt;/tt&gt; for hosting.&lt;/p&gt;
 &lt;div class="section" id="getting-started"&gt;
 &lt;h2&gt;Getting Started&lt;/h2&gt;
 &lt;p&gt;First, I created a virtualenv for
@@ -14,8 +14,8 @@ pip install pelican
 &lt;div class="highlight"&gt;&lt;pre&gt;pelican-quickstart
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Since I was going to host on Github I felt that I did not need the
-generated Makefile, and other helper scripts.
-Instead I created a settings file that initially
+generated Makefile, and all the other helper scripts.
+Instead, I created a settings file that initially
 looked like this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;AUTHOR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;Christopher Clarke&amp;#39;&lt;/span&gt;
 &lt;span class="n"&gt;DEFAULT_DATE_FORMAT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;%A, %B &lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s"&gt;, %Y&amp;#39;&lt;/span&gt;
@@ -24,7 +24,7 @@ looked like this:&lt;/p&gt;
 &lt;span class="n"&gt;GOOGLE_ANALYTICS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;
 &lt;span class="n"&gt;SITEURL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;http://blog.chrisdev.com&amp;#39;&lt;/span&gt;
 &lt;span class="n"&gt;FEED_DOMAIN&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SITEURL&lt;/span&gt;
-&lt;span class="n"&gt;SITENAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;ChrrisDev Blog&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;SITENAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;TheChrisDev Blog&amp;#39;&lt;/span&gt;
 &lt;span class="n"&gt;SOCIAL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;twitter&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;http://twitter.com/realchrisdev&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
           &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;github&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;https://github.com/chrisdev&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
           &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;facebook&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;http://www.facebook.com/chrisdevtt&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),)&lt;/span&gt;
@@ -32,54 +32,62 @@ looked like this:&lt;/p&gt;
 &lt;span class="n"&gt;TIMEZONE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;America/Port_of_Spain&amp;quot;&lt;/span&gt;
 &lt;span class="n"&gt;TWITTER_USERNAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;realchrisdev&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;To generate the site I created a test &lt;tt class="docutils literal"&gt;rst&lt;/tt&gt; file and ran the
-following command:&lt;/p&gt;
+&lt;p&gt;To generate the site I created a test &lt;tt class="docutils literal"&gt;rst&lt;/tt&gt; file in the content directory
+and ran the following:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;pelican content -s settings.py -o .
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;To view your site just open the index file in your browser or if you are
+&lt;p&gt;To view the generated site just open the index file in your browser or if you are
 on a Mac&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;open index.html
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="theming-the-blog"&gt;
 &lt;h2&gt;Theming The Blog&lt;/h2&gt;
-&lt;p&gt;By default your Blog will be based on the &lt;tt class="docutils literal"&gt;notmyidea&lt;/tt&gt; theme which is
-pretty nice but we wanted to use a theme based on &lt;a class="reference external" href="http://foundation.zurb.com"&gt;Zurb Foundation 4&lt;/a&gt;.
+&lt;p&gt;By default &lt;a class="reference external" href="https://github.com/getpelican/pelican"&gt;pelican&lt;/a&gt;  will theme your site using &lt;tt class="docutils literal"&gt;notmyidea&lt;/tt&gt;.
+But I wanted to use a theme based on &lt;a class="reference external" href="http://foundation.zurb.com"&gt;Zurb Foundation 4&lt;/a&gt;.
 Fortunately,  the official &lt;a class="reference external" href="https://github.com/getpelican/pelican-themes"&gt;pelican-themes&lt;/a&gt; repository already contained
 a &lt;tt class="docutils literal"&gt;Foundation 4&lt;/tt&gt; theme called &lt;tt class="docutils literal"&gt;tuxlite_zf&lt;/tt&gt;.
 This is a minimalist theme with a main column and a right sidebar.
-That we felt that this would
-provide a good starting point for our custom theme.  To install the
-pelican-themes we simply cloned the repository to our local machine.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git clone https://github.com/getpelican/pelican-themes ~/pelican-themes
+That I felt would provide a good starting point for a custom theme.
+To install the
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;pelican-themes&lt;/span&gt;&lt;/tt&gt; we simply cloned the repository to our local machine.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git clone https://github.com/getpelican/pelican-themes ~/Development/pelican-themes
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;We then copied the &lt;tt class="docutils literal"&gt;tuxlite_zf&lt;/tt&gt; theme folder to a folder called &lt;tt class="docutils literal"&gt;chrisdev_zf&lt;/tt&gt;
-so that we could customize it. Next we edited our  &lt;tt class="docutils literal"&gt;settings.py&lt;/tt&gt;
+&lt;p&gt;We then copied the &lt;tt class="docutils literal"&gt;tuxlite_zf&lt;/tt&gt; theme folder to a new folder  &lt;tt class="docutils literal"&gt;chrisdev_zf&lt;/tt&gt;
+so that we could customize it. Next,  we edited  &lt;tt class="docutils literal"&gt;settings.py&lt;/tt&gt;
 file to include this line:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;../pelican-themes/chrisdev_zf&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Then we regenerated the site as before to confirm that &lt;tt class="docutils literal"&gt;tuxlite_zf&lt;/tt&gt; was
-indeed a &lt;tt class="docutils literal"&gt;Foundation 4&lt;/tt&gt; theme.&lt;/p&gt;
-&lt;div class="section" id="sass-and-compass"&gt;
-&lt;h3&gt;SASS and Compass&lt;/h3&gt;
+&lt;p&gt;Finall, we regenerated the site as before to confirm that &lt;tt class="docutils literal"&gt;tuxlite_zf&lt;/tt&gt; was
+indeed generating a &lt;tt class="docutils literal"&gt;Foundation 4&lt;/tt&gt; site.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="customization-with-sass-and-compass"&gt;
+&lt;h2&gt;Customization with SASS and Compass&lt;/h2&gt;
 &lt;p&gt;The best way to customize a &lt;tt class="docutils literal"&gt;Foundation 4&lt;/tt&gt; site is to use
-&lt;a class="reference external" href="http://sass-lang.com/"&gt;Sass&lt;/a&gt;  and &lt;a class="reference external" href="http://compass-style.org"&gt;Compass&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This involves just a little bit of &lt;tt class="docutils literal"&gt;ruby&lt;/tt&gt; but bear with us.
-Just run the following to
-the update you system and install &lt;tt class="docutils literal"&gt;Foundation 4&lt;/tt&gt; gem and all the
-necessary dependencies.&lt;/p&gt;
+&lt;a class="reference external" href="http://sass-lang.com/"&gt;Sass&lt;/a&gt; and &lt;a class="reference external" href="http://compass-style.org"&gt;Compass&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This normally means that &lt;tt class="docutils literal"&gt;ruby&lt;/tt&gt; needs to be installed on your system.
+If you are on a Mac then you are in luck since a fairly recent version of
+&lt;tt class="docutils literal"&gt;ruby&lt;/tt&gt; ships with &lt;cite&gt;Mountain Lion`&lt;/cite&gt;.
+Update your &lt;tt class="docutils literal"&gt;ruby&lt;/tt&gt; installation and install &lt;tt class="docutils literal"&gt;Foundation 4&lt;/tt&gt; and all the
+necessary dependencies i.e. &lt;a class="reference external" href="http://sass-lang.com/"&gt;Sass&lt;/a&gt; and &lt;a class="reference external" href="http://compass-style.org"&gt;Compass&lt;/a&gt; .&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;sudo gem update --system
-
+sudo gem install compass
 sudo gem install zurb-foundation
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Next create a project for the custom theme&lt;/p&gt;
+&lt;p&gt;Next create a project for to generate the custom &lt;tt class="docutils literal"&gt;css&lt;/tt&gt; for
+your theme.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;compass create custom-foundation4 -r zurb-foundation --using foundation
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You can view &lt;tt class="docutils literal"&gt;index.html&lt;/tt&gt; in your browser confirm that your project is
-a standard &lt;tt class="docutils literal"&gt;Foundation 4&lt;/tt&gt; site. So for example, if you want to modify the
-any CSS component we just need to edit &lt;tt class="docutils literal"&gt;_settings.scss&lt;/tt&gt; file which
-is located in the &lt;tt class="docutils literal"&gt;sass&lt;/tt&gt; folder of the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;custom-foundation&lt;/span&gt;&lt;/tt&gt; project.
-For example to change the colors of the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Top-nav&lt;/span&gt;&lt;/tt&gt; we made the following changes&lt;/p&gt;
+a standard &lt;tt class="docutils literal"&gt;Foundation 4&lt;/tt&gt; site. Next you will want to start
+by making changes to the &lt;tt class="docutils literal"&gt;Scsss&lt;/tt&gt; files and compiling
+with &lt;tt class="docutils literal"&gt;compass&lt;/tt&gt; to generate &lt;tt class="docutils literal"&gt;css&lt;/tt&gt; output.&lt;/p&gt;
+&lt;p&gt;The Foundation folks have made this easy for us as you can
+modify almost any Foundation &lt;tt class="docutils literal"&gt;CSS&lt;/tt&gt; component by editing &lt;tt class="docutils literal"&gt;_settings.scss&lt;/tt&gt;
+file which is located in the &lt;tt class="docutils literal"&gt;sass&lt;/tt&gt;
+folder of the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;custom-foundation&lt;/span&gt;&lt;/tt&gt; project.
+For example, to change the colors of the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Top-nav&lt;/span&gt;&lt;/tt&gt; we made the following
+changes to &lt;tt class="docutils literal"&gt;_settings.scss&lt;/tt&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="vg"&gt;$topbar&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dropdown&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="ss"&gt;bg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;#3498db;&lt;/span&gt;
 &lt;span class="vg"&gt;$topbar&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dropdown&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;toggle&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="ss"&gt;alpha&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="vg"&gt;$dropdown&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="ss"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;#fff;&lt;/span&gt;
@@ -87,17 +95,56 @@ For example to change the colors of the &lt;tt class="docutils literal"&gt;&lt;s
 &lt;p&gt;Next run&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;compass compile
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;You can also set compass to watch mode so that it watches your sass for
-changes and compiles them to CSS when ever changes are detected.&lt;/p&gt;
-&lt;p&gt;You can configure compass to generate compressed code by editing the 'config.rb'
+&lt;p&gt;You can also set &lt;tt class="docutils literal"&gt;compass&lt;/tt&gt; in watch mode so that it
+will watch for saves and compile each time you save an Scss file.
+Additionally, you can also configure compass to generate compressed code
+by editing the 'config.rb'
 and uncommenting&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;output_style&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;  :compact &lt;span class="c"&gt;# or :compressed expanded or :nested or&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;output_style&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;  :compressed &lt;span class="c"&gt;# or :compressed expanded or :nested or&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Once you are satisfied you can copy the  &lt;tt class="docutils literal"&gt;app.css&lt;/tt&gt; file to your
-custom pelican-theme's static directory&lt;/p&gt;
+&lt;p&gt;Once you are satisfied, you can copy &lt;tt class="docutils literal"&gt;app.css&lt;/tt&gt; as &lt;tt class="docutils literal"&gt;foundation.css&lt;/tt&gt; to your
+custom pelican-theme's static directory.&lt;/p&gt;
+&lt;p&gt;Once you have more experience with compass/sass you may want to
+target particular CSS components instead of regenerating the entire
+&lt;tt class="docutils literal"&gt;foundation.css&lt;/tt&gt; just to make changes to a few components. To achieve this we
+simply created a new &lt;tt class="docutils literal"&gt;scss&lt;/tt&gt; called &lt;tt class="docutils literal"&gt;style.scss&lt;/tt&gt; and imported just those
+modify those components that we wished to target.
+So as in the example above we just wanted to change the
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;top-nav&lt;/span&gt;&lt;/tt&gt; colors we just add the following lines to  &lt;tt class="docutils literal"&gt;style.sccs&lt;/tt&gt; file&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="vg"&gt;$topbar&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dropdown&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="ss"&gt;bg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;#3498db;&lt;/span&gt;
+&lt;span class="vg"&gt;$topbar&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dropdown&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;toggle&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="ss"&gt;alpha&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="vg"&gt;$dropdown&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="ss"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;#fff;&lt;/span&gt;
+
+&lt;span class="vi"&gt;@import&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;foundation/components/grid&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="vi"&gt;@import&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;foundation/components/top-bar&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Note, you need to define the new colors etc. &lt;strong&gt;before&lt;/strong&gt; you
+import the foundation components.&lt;/p&gt;
+&lt;p&gt;As before generate &lt;tt class="docutils literal"&gt;style.css&lt;/tt&gt; and copy this to the static directory of your pelican
+theme.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="github-setup"&gt;
-&lt;h3&gt;Github setup&lt;/h3&gt;
+&lt;div class="section" id="deployment-on-github"&gt;
+&lt;h2&gt;Deployment On Github&lt;/h2&gt;
+&lt;p&gt;I started by creating a repository on my &lt;a class="reference external" href="http://github.com"&gt;github&lt;/a&gt;
+called &lt;tt class="docutils literal"&gt;chrisdev.github.com&lt;/tt&gt;.
+The use of my &lt;tt class="docutils literal"&gt;github&lt;/tt&gt; account name as the first part of the
+repository name was necessary to indicate that this was a special repository
+for serving &lt;tt class="docutils literal"&gt;User&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;Organization&lt;/tt&gt; html pages from the master branch of a
+repository. The site would be viewable at &lt;a class="reference external" href="http://chrisdev.github.io"&gt;http://chrisdev.github.io&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Next in the the directory where I created the pelican blog I ran the followig&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git init
+git add .
+git commit -m &lt;span class="s2"&gt;&amp;quot;initial commit&amp;quot;&lt;/span&gt;
+git remote add origin git@github.com:chrisdev/chrisdev.github.com.git
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To update the site I just have to push to the origin&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git push -u origin master
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I also set up a custom domain for the blog at &lt;a class="reference external" href="http://blog.chrisdev.com"&gt;http://blog.chrisdev.com&lt;/a&gt;
+by simply setting up a &lt;tt class="docutils literal"&gt;CNAME&lt;/tt&gt; record in my DNS
+to set  &lt;tt class="docutils literal"&gt;blog.chrisdev.com&lt;/tt&gt; as an alias for &lt;tt class="docutils literal"&gt;chrisdev.github.com&lt;/tt&gt;.
+I also had to add a file to the &lt;tt class="docutils literal"&gt;github&lt;/tt&gt; repository  called
+&lt;tt class="docutils literal"&gt;CNAME&lt;/tt&gt; which contained
+a sigle line with the alias i.e  &lt;tt class="docutils literal"&gt;blog.chrisdev.com&lt;/tt&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="static-site blogging peilcan foundation4 compass sass"></category></entry></feed>
+</summary><category term="static-site"></category><category term="pelican"></category><category term="foundation4"></category><category term="compass"></category><category term="sass"></category></entry></feed>

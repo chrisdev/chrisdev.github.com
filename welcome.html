@@ -4,8 +4,7 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width" />
 
-    <title>Welcome to the Blog</title>
-
+    <title>Welcome To My Blog</title>
     <link rel="stylesheet" href="./theme/css/normalize.css">
     <link rel="stylesheet" href="./theme/css/foundation.min.css">
     <link rel="stylesheet" href="./theme/css/style.css">
@@ -14,6 +13,7 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <script src="./theme/js/custom.modernizr.js"></script>
 </head>
 
@@ -22,30 +22,36 @@
 <!-- Nav Bar -->
 
 <div class="sticky" id="menu">
-    <nav class="top-bar">
-      <ul class="title-area">
-        <!-- Title Area -->
-        <li class="name">
-          <h1><a href=".">The ChrisDev Blog</a></h1>
-        </li>
-        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-      </ul>
-      <section class="top-bar-section">
-        <!-- Left Nav Section -->
-        <ul class="left">
-          <li class="divider"></li>
-          <li><a href="#">About</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Django</a></li>
-          <li><a href="#">Numpy &amp; Pandas</a></li>
-          <li class="divider"></li>
-          <li><a href="#">ChrisDev</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </section>
-</nav>
+    <header>
+        <nav class="top-bar">
+           <ul class="title-area">
+            <!-- Title Area -->
+            <li class="name">
+            <h1>
+                <a href=".">
+                    <span class="bracket">{</span>
+                    <span class="star">*</span>
+                    <span class="bracket">}</span>
+                    <span class="chris">Chris</span>
+                    <span class="dev">Dev</span>
+                    <span class="blog-title">&nbsp;UnRavel</span> 
+                </a>
+            </h1>
+            </li>
+            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+          </ul>
+        <section class="top-bar-section">
+            <!-- Left Nav Section -->
+            <ul class="left">
+            <li class="divider"></li>
+            <li><a href="http://www.chrisdev.com/">About</a></li>
+            <li class="divider"></li>
+            <li><a href="http://www.chrisdev.com/contact_us/">Contact</a></li>
+            </ul>
+            </section>
+        </nav>
+</header>
 </div>
 
 <!-- End Nav -->
@@ -59,7 +65,7 @@
     <article>
     <header>
         <h3 class="article-title"><a href="./welcome.html" rel="bookmark"
-        title="Permalink to Welcome to the Blog">Welcome to the Blog</a></h3>
+        title="Permalink to Welcome To My Blog">Welcome To My Blog</a></h3>
         <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="realchrisdev">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     </header>
 
@@ -67,10 +73,10 @@
     </h6>
 
 
-    <p>I'm trying out a static blog as maybe this will
-encourage me to post on a more frequent bases. I've decided to go with
-<a class="reference external" href="https://github.com/getpelican/pelican">pelican</a> as it's written in python, is a  was really easy to
-set up and has good documentation.</p>
+    <p>I've started experimenting with a static blog in the hope that this will
+encourage me to post on a more frequently . I've decided to go with
+<a class="reference external" href="https://github.com/getpelican/pelican">pelican</a> as it's written in python, set up and has good documentation and
+I'm using <tt class="docutils literal">github pages</tt> for hosting.</p>
 <div class="section" id="getting-started">
 <h2>Getting Started</h2>
 <p>First, I created a virtualenv for
@@ -82,8 +88,8 @@ pip install pelican
 <div class="highlight"><pre>pelican-quickstart
 </pre></div>
 <p>Since I was going to host on Github I felt that I did not need the
-generated Makefile, and other helper scripts.
-Instead I created a settings file that initially
+generated Makefile, and all the other helper scripts.
+Instead, I created a settings file that initially
 looked like this:</p>
 <div class="highlight"><pre><span class="n">AUTHOR</span> <span class="o">=</span> <span class="s">&#39;Christopher Clarke&#39;</span>
 <span class="n">DEFAULT_DATE_FORMAT</span> <span class="o">=</span> <span class="s">&#39;%A, %B </span><span class="si">%d</span><span class="s">, %Y&#39;</span>
@@ -92,7 +98,7 @@ looked like this:</p>
 <span class="n">GOOGLE_ANALYTICS</span><span class="o">=</span><span class="s">&#39;&#39;</span>
 <span class="n">SITEURL</span> <span class="o">=</span> <span class="s">&#39;http://blog.chrisdev.com&#39;</span>
 <span class="n">FEED_DOMAIN</span> <span class="o">=</span> <span class="n">SITEURL</span>
-<span class="n">SITENAME</span> <span class="o">=</span> <span class="s">&#39;ChrrisDev Blog&#39;</span>
+<span class="n">SITENAME</span> <span class="o">=</span> <span class="s">&#39;TheChrisDev Blog&#39;</span>
 <span class="n">SOCIAL</span> <span class="o">=</span> <span class="p">((</span><span class="s">&#39;twitter&#39;</span><span class="p">,</span> <span class="s">&#39;http://twitter.com/realchrisdev&#39;</span><span class="p">),</span>
           <span class="p">(</span><span class="s">&#39;github&#39;</span><span class="p">,</span> <span class="s">&#39;https://github.com/chrisdev&#39;</span><span class="p">),</span>
           <span class="p">(</span><span class="s">&#39;facebook&#39;</span><span class="p">,</span> <span class="s">&#39;http://www.facebook.com/chrisdevtt&#39;</span><span class="p">),)</span>
@@ -100,54 +106,62 @@ looked like this:</p>
 <span class="n">TIMEZONE</span> <span class="o">=</span> <span class="s">&quot;America/Port_of_Spain&quot;</span>
 <span class="n">TWITTER_USERNAME</span> <span class="o">=</span> <span class="s">&#39;realchrisdev&#39;</span>
 </pre></div>
-<p>To generate the site I created a test <tt class="docutils literal">rst</tt> file and ran the
-following command:</p>
+<p>To generate the site I created a test <tt class="docutils literal">rst</tt> file in the content directory
+and ran the following:</p>
 <div class="highlight"><pre>pelican content -s settings.py -o .
 </pre></div>
-<p>To view your site just open the index file in your browser or if you are
+<p>To view the generated site just open the index file in your browser or if you are
 on a Mac</p>
 <div class="highlight"><pre>open index.html
 </pre></div>
 </div>
 <div class="section" id="theming-the-blog">
 <h2>Theming The Blog</h2>
-<p>By default your Blog will be based on the <tt class="docutils literal">notmyidea</tt> theme which is
-pretty nice but we wanted to use a theme based on <a class="reference external" href="http://foundation.zurb.com">Zurb Foundation 4</a>.
+<p>By default <a class="reference external" href="https://github.com/getpelican/pelican">pelican</a>  will theme your site using <tt class="docutils literal">notmyidea</tt>.
+But I wanted to use a theme based on <a class="reference external" href="http://foundation.zurb.com">Zurb Foundation 4</a>.
 Fortunately,  the official <a class="reference external" href="https://github.com/getpelican/pelican-themes">pelican-themes</a> repository already contained
 a <tt class="docutils literal">Foundation 4</tt> theme called <tt class="docutils literal">tuxlite_zf</tt>.
 This is a minimalist theme with a main column and a right sidebar.
-That we felt that this would
-provide a good starting point for our custom theme.  To install the
-pelican-themes we simply cloned the repository to our local machine.</p>
-<div class="highlight"><pre>git clone https://github.com/getpelican/pelican-themes ~/pelican-themes
+That I felt would provide a good starting point for a custom theme.
+To install the
+<tt class="docutils literal"><span class="pre">pelican-themes</span></tt> we simply cloned the repository to our local machine.</p>
+<div class="highlight"><pre>git clone https://github.com/getpelican/pelican-themes ~/Development/pelican-themes
 </pre></div>
-<p>We then copied the <tt class="docutils literal">tuxlite_zf</tt> theme folder to a folder called <tt class="docutils literal">chrisdev_zf</tt>
-so that we could customize it. Next we edited our  <tt class="docutils literal">settings.py</tt>
+<p>We then copied the <tt class="docutils literal">tuxlite_zf</tt> theme folder to a new folder  <tt class="docutils literal">chrisdev_zf</tt>
+so that we could customize it. Next,  we edited  <tt class="docutils literal">settings.py</tt>
 file to include this line:</p>
 <div class="highlight"><pre><span class="n">THEME</span> <span class="o">=</span> <span class="s">&quot;../pelican-themes/chrisdev_zf&quot;</span>
 </pre></div>
-<p>Then we regenerated the site as before to confirm that <tt class="docutils literal">tuxlite_zf</tt> was
-indeed a <tt class="docutils literal">Foundation 4</tt> theme.</p>
-<div class="section" id="sass-and-compass">
-<h3>SASS and Compass</h3>
+<p>Finall, we regenerated the site as before to confirm that <tt class="docutils literal">tuxlite_zf</tt> was
+indeed generating a <tt class="docutils literal">Foundation 4</tt> site.</p>
+</div>
+<div class="section" id="customization-with-sass-and-compass">
+<h2>Customization with SASS and Compass</h2>
 <p>The best way to customize a <tt class="docutils literal">Foundation 4</tt> site is to use
-<a class="reference external" href="http://sass-lang.com/">Sass</a>  and <a class="reference external" href="http://compass-style.org">Compass</a></p>
-<p>This involves just a little bit of <tt class="docutils literal">ruby</tt> but bear with us.
-Just run the following to
-the update you system and install <tt class="docutils literal">Foundation 4</tt> gem and all the
-necessary dependencies.</p>
+<a class="reference external" href="http://sass-lang.com/">Sass</a> and <a class="reference external" href="http://compass-style.org">Compass</a></p>
+<p>This normally means that <tt class="docutils literal">ruby</tt> needs to be installed on your system.
+If you are on a Mac then you are in luck since a fairly recent version of
+<tt class="docutils literal">ruby</tt> ships with <cite>Mountain Lion`</cite>.
+Update your <tt class="docutils literal">ruby</tt> installation and install <tt class="docutils literal">Foundation 4</tt> and all the
+necessary dependencies i.e. <a class="reference external" href="http://sass-lang.com/">Sass</a> and <a class="reference external" href="http://compass-style.org">Compass</a> .</p>
 <div class="highlight"><pre>sudo gem update --system
-
+sudo gem install compass
 sudo gem install zurb-foundation
 </pre></div>
-<p>Next create a project for the custom theme</p>
+<p>Next create a project for to generate the custom <tt class="docutils literal">css</tt> for
+your theme.</p>
 <div class="highlight"><pre>compass create custom-foundation4 -r zurb-foundation --using foundation
 </pre></div>
 <p>You can view <tt class="docutils literal">index.html</tt> in your browser confirm that your project is
-a standard <tt class="docutils literal">Foundation 4</tt> site. So for example, if you want to modify the
-any CSS component we just need to edit <tt class="docutils literal">_settings.scss</tt> file which
-is located in the <tt class="docutils literal">sass</tt> folder of the <tt class="docutils literal"><span class="pre">custom-foundation</span></tt> project.
-For example to change the colors of the <tt class="docutils literal"><span class="pre">Top-nav</span></tt> we made the following changes</p>
+a standard <tt class="docutils literal">Foundation 4</tt> site. Next you will want to start
+by making changes to the <tt class="docutils literal">Scsss</tt> files and compiling
+with <tt class="docutils literal">compass</tt> to generate <tt class="docutils literal">css</tt> output.</p>
+<p>The Foundation folks have made this easy for us as you can
+modify almost any Foundation <tt class="docutils literal">CSS</tt> component by editing <tt class="docutils literal">_settings.scss</tt>
+file which is located in the <tt class="docutils literal">sass</tt>
+folder of the <tt class="docutils literal"><span class="pre">custom-foundation</span></tt> project.
+For example, to change the colors of the <tt class="docutils literal"><span class="pre">Top-nav</span></tt> we made the following
+changes to <tt class="docutils literal">_settings.scss</tt></p>
 <div class="highlight"><pre><span class="vg">$topbar</span><span class="o">-</span><span class="n">dropdown</span><span class="o">-</span><span class="ss">bg</span><span class="p">:</span> <span class="c1">#3498db;</span>
 <span class="vg">$topbar</span><span class="o">-</span><span class="n">dropdown</span><span class="o">-</span><span class="n">toggle</span><span class="o">-</span><span class="ss">alpha</span><span class="p">:</span> <span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="p">;</span>
 <span class="vg">$dropdown</span><span class="o">-</span><span class="n">label</span><span class="o">-</span><span class="ss">color</span><span class="p">:</span> <span class="c1">#fff;</span>
@@ -155,30 +169,76 @@ For example to change the colors of the <tt class="docutils literal"><span class
 <p>Next run</p>
 <div class="highlight"><pre>compass compile
 </pre></div>
-<p>You can also set compass to watch mode so that it watches your sass for
-changes and compiles them to CSS when ever changes are detected.</p>
-<p>You can configure compass to generate compressed code by editing the 'config.rb'
+<p>You can also set <tt class="docutils literal">compass</tt> in watch mode so that it
+will watch for saves and compile each time you save an Scss file.
+Additionally, you can also configure compass to generate compressed code
+by editing the 'config.rb'
 and uncommenting</p>
-<div class="highlight"><pre><span class="nv">output_style</span> <span class="o">=</span>  :compact <span class="c"># or :compressed expanded or :nested or</span>
+<div class="highlight"><pre><span class="nv">output_style</span> <span class="o">=</span>  :compressed <span class="c"># or :compressed expanded or :nested or</span>
 </pre></div>
-<p>Once you are satisfied you can copy the  <tt class="docutils literal">app.css</tt> file to your
-custom pelican-theme's static directory</p>
+<p>Once you are satisfied, you can copy <tt class="docutils literal">app.css</tt> as <tt class="docutils literal">foundation.css</tt> to your
+custom pelican-theme's static directory.</p>
+<p>Once you have more experience with compass/sass you may want to
+target particular CSS components instead of regenerating the entire
+<tt class="docutils literal">foundation.css</tt> just to make changes to a few components. To achieve this we
+simply created a new <tt class="docutils literal">scss</tt> called <tt class="docutils literal">style.scss</tt> and imported just those
+modify those components that we wished to target.
+So as in the example above we just wanted to change the
+<tt class="docutils literal"><span class="pre">top-nav</span></tt> colors we just add the following lines to  <tt class="docutils literal">style.sccs</tt> file</p>
+<div class="highlight"><pre><span class="vg">$topbar</span><span class="o">-</span><span class="n">dropdown</span><span class="o">-</span><span class="ss">bg</span><span class="p">:</span> <span class="c1">#3498db;</span>
+<span class="vg">$topbar</span><span class="o">-</span><span class="n">dropdown</span><span class="o">-</span><span class="n">toggle</span><span class="o">-</span><span class="ss">alpha</span><span class="p">:</span> <span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="p">;</span>
+<span class="vg">$dropdown</span><span class="o">-</span><span class="n">label</span><span class="o">-</span><span class="ss">color</span><span class="p">:</span> <span class="c1">#fff;</span>
+
+<span class="vi">@import</span> <span class="s2">&quot;foundation/components/grid&quot;</span><span class="p">;</span>
+<span class="vi">@import</span> <span class="s2">&quot;foundation/components/top-bar&quot;</span><span class="p">;</span>
+</pre></div>
+<p>Note, you need to define the new colors etc. <strong>before</strong> you
+import the foundation components.</p>
+<p>As before generate <tt class="docutils literal">style.css</tt> and copy this to the static directory of your pelican
+theme.</p>
 </div>
-<div class="section" id="github-setup">
-<h3>Github setup</h3>
-</div>
+<div class="section" id="deployment-on-github">
+<h2>Deployment On Github</h2>
+<p>I started by creating a repository on my <a class="reference external" href="http://github.com">github</a>
+called <tt class="docutils literal">chrisdev.github.com</tt>.
+The use of my <tt class="docutils literal">github</tt> account name as the first part of the
+repository name was necessary to indicate that this was a special repository
+for serving <tt class="docutils literal">User</tt> or <tt class="docutils literal">Organization</tt> html pages from the master branch of a
+repository. The site would be viewable at <a class="reference external" href="http://chrisdev.github.io">http://chrisdev.github.io</a>.</p>
+<p>Next in the the directory where I created the pelican blog I ran the followig</p>
+<div class="highlight"><pre>git init
+git add .
+git commit -m <span class="s2">&quot;initial commit&quot;</span>
+git remote add origin git@github.com:chrisdev/chrisdev.github.com.git
+</pre></div>
+<p>To update the site I just have to push to the origin</p>
+<div class="highlight"><pre>git push -u origin master
+</pre></div>
+<p>I also set up a custom domain for the blog at <a class="reference external" href="http://blog.chrisdev.com">http://blog.chrisdev.com</a>
+by simply setting up a <tt class="docutils literal">CNAME</tt> record in my DNS
+to set  <tt class="docutils literal">blog.chrisdev.com</tt> as an alias for <tt class="docutils literal">chrisdev.github.com</tt>.
+I also had to add a file to the <tt class="docutils literal">github</tt> repository  called
+<tt class="docutils literal">CNAME</tt> which contained
+a sigle line with the alias i.e  <tt class="docutils literal">blog.chrisdev.com</tt>.</p>
 </div>
 
-    <p class="subheader">Category: <a href="./category/python.html">python</a>
-
-    Tagged: 
-        <a href="./tag/static-site-blogging-peilcan-foundation4-compass-sass.html">static-site blogging peilcan foundation4 compass sass </a>
+    <p >
+Category:&nbsp;<a class="label" href="./category/python.html">python</a>
+</p>
+<p>Tags:&nbsp;
+                <a class="label secondary" href="./tag/static-site.html">static-site </a>
+                <a class="label secondary" href="./tag/pelican.html">pelican </a>
+                <a class="label secondary" href="./tag/foundation4.html">foundation4 </a>
+                <a class="label secondary" href="./tag/compass.html">compass </a>
+                <a class="label secondary" href="./tag/sass.html">sass </a>
     </p>
 
 
 
 
-    	<h4>Comments</h4>
+        <div id="disqus_thread"></div>
+    <h4>Comments</h4>
+
     <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'chrisdevblog'; // required: replace example with your forum shortname
@@ -198,29 +258,33 @@ custom pelican-theme's static directory</p>
 
     <!-- Sidebar -->
     <aside class="large-3 columns">
-        <h5 class="sidebar-title">Site</h5>
+        <h5 class="sidebar-title">Quick Links</h5>
         <ul class="side-nav">
             <li><a href="./archives.html">Archives</a>
+            <li class="divider"></li
             <li><a href="./tags.html">Tags</a>
+            <li class="divider"></li>
                                 </ul>
 
                 <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
-                    <li><a href="./category/python.html">python</a></li>
+                     <li> <a href="./category/python.html">python</a></li>
+            <li class="divider"></li
                 </ul>
         
         
 		        <h5 class="sidebar-title">Social</h5>
-        <ul class="side-nav">
-                <li><a class="fc-webicon twitter small" href="http://twitter.com/realchrisdev">twitter</a></li>
-                <li><a class="fc-webicon github small" href="https://github.com/chrisdev">github</a></li>
-                <li><a class="fc-webicon facebook small" href="http://www.facebook.com/chrisdevtt">facebook</a></li>
-                </ul>
-                <ul class="side-nav">
-            <li>
-            <a class="fc-webicon rss medium" href="/feed/all.atom.xml"> Subcribe tio my feed</a>
-            </li>
-        </ul>
+        <p>
+                <a class="fc-webicon twitter medium" href="http://twitter.com/realchrisdev" title="twitter">twitter</a>
+        &nbsp;
+                <a class="fc-webicon github medium" href="https://github.com/chrisdev" title="github">github</a>
+        &nbsp;
+                <a class="fc-webicon facebook medium" href="http://www.facebook.com/chrisdevtt" title="facebook">facebook</a>
+        &nbsp;
+                </p>
+                <p> Subscribe to the feed: 
+           <a class="fc-webicon rss small" href="/feed/all.atom.xml"></a>
+        </p>
     </aside> <!-- End Sidebar -->
 
 </div> <!-- End Main Content and Sidebar -->
@@ -241,8 +305,9 @@ custom pelican-theme's static directory</p>
         </div>
         <div class="large-4 columns">
             <h6><strong>Need a Website?</strong></h6> 
-            <p> If you need a website or a looking for a web based project fill out <a href="#">client project form</a>.
-            Remember you can always email us or call us if you have questions or need more information,
+            <p> If you need a website or a looking for a web based project fill out our
+                <a href="www.chrisdev.com/contact_us/client-project-form/">client project form</a>.
+            Remember you can always email  us or call us if you have questions or need more information,
             </p>
         </div>
       </div>

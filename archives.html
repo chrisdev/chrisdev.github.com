@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width" />
 
     <title>chrisdev</title>
-
     <link rel="stylesheet" href="./theme/css/normalize.css">
     <link rel="stylesheet" href="./theme/css/foundation.min.css">
     <link rel="stylesheet" href="./theme/css/style.css">
@@ -14,6 +13,7 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <script src="./theme/js/custom.modernizr.js"></script>
 </head>
 
@@ -22,30 +22,36 @@
 <!-- Nav Bar -->
 
 <div class="sticky" id="menu">
-    <nav class="top-bar">
-      <ul class="title-area">
-        <!-- Title Area -->
-        <li class="name">
-          <h1><a href=".">The ChrisDev Blog</a></h1>
-        </li>
-        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-      </ul>
-      <section class="top-bar-section">
-        <!-- Left Nav Section -->
-        <ul class="left">
-          <li class="divider"></li>
-          <li><a href="#">About</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Django</a></li>
-          <li><a href="#">Numpy &amp; Pandas</a></li>
-          <li class="divider"></li>
-          <li><a href="#">ChrisDev</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </section>
-</nav>
+    <header>
+        <nav class="top-bar">
+           <ul class="title-area">
+            <!-- Title Area -->
+            <li class="name">
+            <h1>
+                <a href=".">
+                    <span class="bracket">{</span>
+                    <span class="star">*</span>
+                    <span class="bracket">}</span>
+                    <span class="chris">Chris</span>
+                    <span class="dev">Dev</span>
+                    <span class="blog-title">&nbsp;UnRavel</span> 
+                </a>
+            </h1>
+            </li>
+            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+          </ul>
+        <section class="top-bar-section">
+            <!-- Left Nav Section -->
+            <ul class="left">
+            <li class="divider"></li>
+            <li><a href="http://www.chrisdev.com/">About</a></li>
+            <li class="divider"></li>
+            <li><a href="http://www.chrisdev.com/contact_us/">Contact</a></li>
+            </ul>
+            </section>
+        </nav>
+</header>
 </div>
 
 <!-- End Nav -->
@@ -63,7 +69,7 @@
     <tbody>
             <tr>
         <td>Wednesday, May 01, 2013</td>
-        <td><a href='welcome.html'>Welcome to the Blog</a></td>
+        <td><a href='welcome.html'>Welcome To My Blog</a></td>
         </tr>
         </tbody>
 </table>
@@ -73,29 +79,33 @@
 
     <!-- Sidebar -->
     <aside class="large-3 columns">
-        <h5 class="sidebar-title">Site</h5>
+        <h5 class="sidebar-title">Quick Links</h5>
         <ul class="side-nav">
             <li><a href="./archives.html">Archives</a>
+            <li class="divider"></li
             <li><a href="./tags.html">Tags</a>
+            <li class="divider"></li>
                                 </ul>
 
                 <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
-                    <li><a href="./category/python.html">python</a></li>
+                     <li> <a href="./category/python.html">python</a></li>
+            <li class="divider"></li
                 </ul>
         
         
 		        <h5 class="sidebar-title">Social</h5>
-        <ul class="side-nav">
-                <li><a class="fc-webicon twitter small" href="http://twitter.com/realchrisdev">twitter</a></li>
-                <li><a class="fc-webicon github small" href="https://github.com/chrisdev">github</a></li>
-                <li><a class="fc-webicon facebook small" href="http://www.facebook.com/chrisdevtt">facebook</a></li>
-                </ul>
-                <ul class="side-nav">
-            <li>
-            <a class="fc-webicon rss medium" href="/feed/all.atom.xml"> Subcribe tio my feed</a>
-            </li>
-        </ul>
+        <p>
+                <a class="fc-webicon twitter medium" href="http://twitter.com/realchrisdev" title="twitter">twitter</a>
+        &nbsp;
+                <a class="fc-webicon github medium" href="https://github.com/chrisdev" title="github">github</a>
+        &nbsp;
+                <a class="fc-webicon facebook medium" href="http://www.facebook.com/chrisdevtt" title="facebook">facebook</a>
+        &nbsp;
+                </p>
+                <p> Subscribe to the feed: 
+           <a class="fc-webicon rss small" href="/feed/all.atom.xml"></a>
+        </p>
     </aside> <!-- End Sidebar -->
 
 </div> <!-- End Main Content and Sidebar -->
@@ -116,8 +126,9 @@
         </div>
         <div class="large-4 columns">
             <h6><strong>Need a Website?</strong></h6> 
-            <p> If you need a website or a looking for a web based project fill out <a href="#">client project form</a>.
-            Remember you can always email us or call us if you have questions or need more information,
+            <p> If you need a website or a looking for a web based project fill out our
+                <a href="www.chrisdev.com/contact_us/client-project-form/">client project form</a>.
+            Remember you can always email  us or call us if you have questions or need more information,
             </p>
         </div>
       </div>
