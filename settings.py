@@ -15,4 +15,4 @@ CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 THEME = '../pelican-themes/chrisdev_zf'
 TIMEZONE = "America/Port_of_Spain"
 TWITTER_USERNAME = 'realchrisdev'
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
