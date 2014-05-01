@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>The ChrisDev Blog</title><link href="http://blog.chrisdev.com/" rel="alternate"></link><link href="http://blog.chrisdev.com/feeds/web-framework.atom.xml" rel="self"></link><id>http://blog.chrisdev.com/</id><updated>2014-02-23T00:00:00-04:00</updated><entry><title>Book Review: Getting Started with Zurb Foundation 4 by Andrew D. Patterson</title><link href="http://blog.chrisdev.com/book-review-getting-started-with-zurb-foundation.html" rel="alternate"></link><updated>2014-02-23T00:00:00-04:00</updated><author><name>Christopher Clarke</name></author><id>tag:blog.chrisdev.com,2014-02-23:book-review-getting-started-with-zurb-foundation.html</id><summary type="html">&lt;p&gt;I was really looking forward to reviewing this book as I'm a big fan of &lt;a class="reference external" href="http://foundation.zurb.com"&gt;Zurb
+Foundation&lt;/a&gt; as I think that it is by far the &lt;a class="reference external" href="http://responsive.vermilion.com/compare.php?framework=current"&gt;best&lt;/a&gt; responsive framework out
+there. Indeed, at work here at &lt;a class="reference external" href="http://chrisdev.com"&gt;ChrisDev&lt;/a&gt;,  we use Foundation for all our web
+based projects.&lt;/p&gt;
+&lt;p&gt;The book is supposed to aimed at web architects, designers, and builders who
+were already familiar with the basics principles of responsive design and
+is divided up into four chapters. I found that
+&lt;cite&gt;Chapter 1: Getting The Most from the Grid System&lt;/cite&gt; was the most useful of the
+lot. The author discussed in some detail his approach
+to dealing with a number of practical layout issues including: nesting rows in
+columns; understanding and customizing column gutters; maintaining row and page
+width; mobile first design (or what the author calls designing from small to to
+large); rearranging columns and so on.  While I found that this chapter hit
+all the basics I felt more emphasis should have been placed on the implications
+of mobile first design as this has always been Foundation's big selling
+point over rivals such as &lt;a class="reference external" href="http://getbootstrap.com"&gt;Twitter BootStrap&lt;/a&gt;.  Also, it was strange
+that there was no mention of some of the great resources provided by Zurb such
+as the &lt;a class="reference external" href="http://foundation.zurb.com/templates4.html"&gt;Foundation 4 Templates&lt;/a&gt; which provide a number of canned layouts for
+various kinds of sites (blogs, marketing product page etc.) that can be a great
+starting point for customizing layout.&lt;/p&gt;
+&lt;p&gt;I was a little disappointed in the next two chapters which covered the CSS and
+JavaScript components provided with Foundation. These seemed a little cursory and
+there was little that went beyond the &lt;a class="reference external" href="http://docs.foundation.com"&gt;online documentation&lt;/a&gt;.
+Of course Foundation comes with more than twenty CSS components about twelve
+JavaScript Plugins so it would have been unrealistic to expect a comprehensive
+treatment of all these components, but maybe the author could have singled out
+the more popular component such as Orbit for more comprehensive treatment.&lt;/p&gt;
+&lt;p&gt;The final chapter covered &lt;a class="reference external" href="http://sass-lang.com"&gt;Sass&lt;/a&gt;. I felt that there was a lot of good material
+here and readers unfamiliar with Sass would find it quite enlightening.
+I particularly liked the sections entitled &lt;em&gt;Customizing with Variables&lt;/em&gt; and
+&lt;em&gt;Understanding functions and mixins&lt;/em&gt;. However, I felt that more emphasis should
+have been placed on this topic given that Sass has become the most efficient
+way to customize and style layout, components and plugins.  I would have
+preferred if Sass could have been introduced very early on (probably as Chapter
+2) and the subsequent chapters covering CSS and JavaScript components each
+contain a section on how to customize one or more of the components or plugins
+with Sass.&lt;/p&gt;
+&lt;p&gt;Overall, I would have to give this book a 3 out of 5 stars since it covers the
+basics and provides a good supplement for the &lt;a class="reference external" href="http://docs.foundation.com"&gt;online documentation&lt;/a&gt;. However,
+I feel that for more experienced designers, architects and builders the book
+will prove to be a bit of a disappointment. Aside from &lt;cite&gt;Chapter 1&lt;/cite&gt;, it provides
+little in the way of a practical approach or even  some guidelines for building
+real world responsive sites with Foundation.  This is important in the context
+of a rapidly evolving framework like Zurb Foundation, where we are we are
+reviewing a book about &lt;cite&gt;version 4&lt;/cite&gt; while &lt;a class="reference external" href="http://foundation.zurb.com/docs/changelog.html"&gt;Foundation 5&lt;/a&gt; has been out since
+November 21, 2013.&lt;/p&gt;
+</summary><category term="Zurb Foundation"></category><category term="book review"></category><category term="foundation 4"></category><category term="responsive"></category><category term="CSS"></category><category term="Sass"></category></entry></feed>

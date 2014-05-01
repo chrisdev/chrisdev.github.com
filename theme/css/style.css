@@ -35,3 +35,9 @@ footer.row {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
+
+hr.dotted {
+    border-color: #ddd;
+    border-style: dashed
+}
+

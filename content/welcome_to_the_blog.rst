@@ -7,7 +7,12 @@ Welcome To My Blog
 :category: python
 :slug: welcome
 :author: Christopher Clarke
-:summary: Welcome to my new static blog
+:summary:  I've started experimenting with a static blog in the hope that 
+           this will encourage me to post on more frequently. 
+           I've decided to go with `pelican`_ as it's written in Python, 
+           is relatively easy to set up and has good documentation.  
+           The blog it self is hosted on ``github`` using ``github pages``.
+
 
 I've started experimenting with a static blog in the hope that this will
 encourage me to post on a more frequently . I've decided to go with
