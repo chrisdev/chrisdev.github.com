@@ -3,7 +3,7 @@ Book Review: Getting Started with Zurb Foundation 4 by Andrew D. Patterson
 
 :date: 2014-02-23
 :tags: Zurb Foundation, book review, foundation 4, responsive, CSS, Sass
-:category:  web framework
+:category:  Zurb Foundation
 :slug: book-review-getting-started-with-zurb-foundation
 :author: Christopher Clarke
 :summary: Covers the all the basics but does not provide enough by way of practical

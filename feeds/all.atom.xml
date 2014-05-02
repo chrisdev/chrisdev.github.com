@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>The ChrisDev Blog</title><link href="http://blog.chrisdev.com/" rel="alternate"></link><link href="http://blog.chrisdev.com/feeds/all.atom.xml" rel="self"></link><id>http://blog.chrisdev.com/</id><updated>2014-04-17T00:00:00-04:00</updated><entry><title>How I Setup my Macs for Python Development</title><link href="http://blog.chrisdev.com/setting-up-your-python-development-environment-on-osx-mavericks.html" rel="alternate"></link><updated>2014-04-17T00:00:00-04:00</updated><author><name>Christopher Clarke</name></author><id>tag:blog.chrisdev.com,2014-04-17:setting-up-your-python-development-environment-on-osx-mavericks.html</id><summary type="html">&lt;p&gt;I've been asked about this a few times already this month so I've decided to
 write down what I do to set up a new Mac for (mainly) Python Development.&lt;/p&gt;
-&lt;div class="section" id="first-install-dropbox-and-start-syncing"&gt;
-&lt;h2&gt;First, Install Dropbox and Start Syncing&lt;/h2&gt;
+&lt;div class="section" id="first-install-dropbox-and-sync-folders"&gt;
+&lt;h2&gt;First, Install Dropbox and Sync Folders&lt;/h2&gt;
 &lt;p&gt;I keep my development folders on &lt;a class="reference external" href="http://dropbox.com"&gt;Dropbox&lt;/a&gt;
 as this gives me some degree of machine independence.
 More recently,  I've also started to keep my &lt;tt class="docutils literal"&gt;dotfiles&lt;/tt&gt;
@@ -10,14 +10,14 @@ on &lt;tt class="docutils literal"&gt;Dropbox&lt;/tt&gt; and  use &lt;a class="r
 the syncing of the &lt;tt class="docutils literal"&gt;dotfiles&lt;/tt&gt; between machines.
 &lt;tt class="docutils literal"&gt;MackUp&lt;/tt&gt; is a pretty straight forward symbolic linking system and it
 basically does what I would have done if I had rolled my own utility.
-Be aware that &lt;tt class="docutils literal"&gt;Mackup's&lt;/tt&gt; default behavior is to put your
+Be aware though that &lt;tt class="docutils literal"&gt;Mackup's&lt;/tt&gt; default behavior is to put your
 &lt;tt class="docutils literal"&gt;.ssh&lt;/tt&gt; folder and its contents on Dropbox.
 If you don't like this behavior then it must be overridden manually.  I always
-start by installing &lt;tt class="docutils literal"&gt;Dropbox&lt;/tt&gt; and syncing my Development folders, as I
-have lots of stuff of on &lt;tt class="docutils literal"&gt;Dropbox&lt;/tt&gt;. So it takes a while to sync everything.
-You  may want to consider using  the
+start by installing &lt;tt class="docutils literal"&gt;Dropbox&lt;/tt&gt; and syncing my Development folders, as
+I typically have lots of stuff of on &lt;tt class="docutils literal"&gt;Dropbox&lt;/tt&gt; so it takes a while to
+sync everything.  You  may want to consider using  the
 &lt;a class="reference external" href="https://www.dropbox.com/help/175/en"&gt;Selective Sync&lt;/a&gt;
-feature to ensure the syncing of your most critical folders first.&lt;/p&gt;
+feature to control the syncing process.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="upgrade-your-terminal-install-iterm-2"&gt;
 &lt;h2&gt;Upgrade your Terminal: Install Iterm 2&lt;/h2&gt;
@@ -76,7 +76,7 @@ If you are using the bash shell then edit your &lt;tt class="docutils literal"&g
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# set the architecture flags&lt;/span&gt;
 &lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;ARCHFLAGS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;-arch x86_64&amp;quot;&lt;/span&gt;
 &lt;span class="c"&gt;# Ensure that local bin is first in path&lt;/span&gt;
-&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;&amp;quot;&lt;/span&gt;/usr/local/bin:&lt;span class="nv"&gt;$PATH&lt;/span&gt;
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/bin:&lt;span class="nv"&gt;$PATH&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;These changes will take effect the next time you restart the shell.
 Rather, than restarting your shell simply type the following in the terminal.&lt;/p&gt;
@@ -197,7 +197,7 @@ of choice add the following to your &lt;tt class="docutils literal"&gt;.zshrc&lt
 &lt;p&gt;or if you use another shell example &lt;tt class="docutils literal"&gt;bash&lt;/tt&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;source&lt;/span&gt; ~/.bash_profile
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Finally test out your setup by typing&lt;/p&gt;
+&lt;p&gt;Finally, test out your setup by typing&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;createdb &lt;span class="nb"&gt;test&lt;/span&gt;-db &lt;span class="c"&gt;#create a new database&lt;/span&gt;
 psql &lt;span class="nb"&gt;test&lt;/span&gt;-db
 dropdb &lt;span class="nb"&gt;test&lt;/span&gt;-db
@@ -219,7 +219,7 @@ So to help them get over the hump we usually recommend they also install a free
 In particular you may be interested in in developing solutions using the
 &lt;a class="reference external" href="http://scipy.org"&gt;SciPy&lt;/a&gt; stack and using tools like &lt;a class="reference external" href="http://ipython.org"&gt;IPython&lt;/a&gt;,
 &lt;a class="reference external" href="http://matplotlib.org"&gt;Matplotlib&lt;/a&gt;, &lt;a class="reference external" href="http://pydata.pandas.org"&gt;Pandas&lt;/a&gt; , &lt;a class="reference external" href="http://matplotlib"&gt;scikit-learn&lt;/a&gt; , etc.  The usual recommendation
-is to use a binary distribution such as &lt;a class="reference external" href="http://pydata.pandas.org"&gt;Anaconda&lt;/a&gt; or &lt;a class="reference external" href="http://pydata.pandas.org"&gt;Enthought Canopy&lt;/a&gt; but
+is to use a binary distribution such as &lt;a class="reference external" href="https://store.continuum.io/cshop/anaconda/"&gt;Anaconda&lt;/a&gt; or &lt;a class="reference external" href="https://www.enthought.com/downloads/"&gt;Enthought Canopy&lt;/a&gt; but
 as a developer you will want to use the source distribution.
 To install the SciPy stack start by installing some perquisites
 libraries and apps using brew.&lt;/p&gt;
@@ -254,6 +254,7 @@ commands within &lt;tt class="docutils literal"&gt;IPython&lt;/tt&gt; or &lt;tt 
 &lt;div class="highlight"&gt;&lt;pre&gt;pip install jinga2
 pip install ipython pyzmq tornado pygments
 pip install matplotlib
+pip install pycopg2
 pip install ipython-sql
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Check that everything is setup properly by launching the IPython notebook with

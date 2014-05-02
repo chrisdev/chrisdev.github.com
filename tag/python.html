@@ -3,7 +3,23 @@
     <meta charset="utf-8" />
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width" />
-
+    <link rel="shortcut icon" href="../theme/images/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="../theme/images/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../theme/images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../theme/images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../theme/images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../theme/images/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../theme/images/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../theme/images/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../theme/images/favicons/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="../theme/images/favicons/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="../theme/images/favicons/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="../theme/images/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../theme/images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../theme/images/favicons/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-TileImage" content="../theme/images/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="../theme/images/favicons/browserconfig.xml">
     <title>The ChrisDev Blog - Python</title>
     <link rel="stylesheet" href="../theme/css/normalize.css">
     <link rel="stylesheet" href="../theme/css/foundation.css">
@@ -69,8 +85,8 @@
 
 <p>I've been asked about this a few times already this month so I've decided to
 write down what I do to set up a new Mac for (mainly) Python Development.</p>
-<div class="section" id="first-install-dropbox-and-start-syncing">
-<h2>First, Install Dropbox and Start Syncing</h2>
+<div class="section" id="first-install-dropbox-and-sync-folders">
+<h2>First, Install Dropbox and Sync Folders</h2>
 <p>I keep my development folders on <a class="reference external" href="http://dropbox.com">Dropbox</a>
 as this gives me some degree of machine independence.
 More recently,  I've also started to keep my <tt class="docutils literal">dotfiles</tt>
@@ -78,14 +94,14 @@ on <tt class="docutils literal">Dropbox</tt> and  use <a class="reference extern
 the syncing of the <tt class="docutils literal">dotfiles</tt> between machines.
 <tt class="docutils literal">MackUp</tt> is a pretty straight forward symbolic linking system and it
 basically does what I would have done if I had rolled my own utility.
-Be aware that <tt class="docutils literal">Mackup's</tt> default behavior is to put your
+Be aware though that <tt class="docutils literal">Mackup's</tt> default behavior is to put your
 <tt class="docutils literal">.ssh</tt> folder and its contents on Dropbox.
 If you don't like this behavior then it must be overridden manually.  I always
-start by installing <tt class="docutils literal">Dropbox</tt> and syncing my Development folders, as I
-have lots of stuff of on <tt class="docutils literal">Dropbox</tt>. So it takes a while to sync everything.
-You  may want to consider using  the
+start by installing <tt class="docutils literal">Dropbox</tt> and syncing my Development folders, as
+I typically have lots of stuff of on <tt class="docutils literal">Dropbox</tt> so it takes a while to
+sync everything.  You  may want to consider using  the
 <a class="reference external" href="https://www.dropbox.com/help/175/en">Selective Sync</a>
-feature to ensure the syncing of your most critical folders first.</p>
+feature to control the syncing process.</p>
 </div>
 <div class="section" id="upgrade-your-terminal-install-iterm-2">
 <h2>Upgrade your Terminal: Install Iterm 2</h2>
@@ -144,7 +160,7 @@ If you are using the bash shell then edit your <tt class="docutils literal">bash
 <div class="highlight"><pre><span class="c"># set the architecture flags</span>
 <span class="nb">export </span><span class="nv">ARCHFLAGS</span><span class="o">=</span><span class="s2">&quot;-arch x86_64&quot;</span>
 <span class="c"># Ensure that local bin is first in path</span>
-<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="err">&quot;</span>/usr/local/bin:<span class="nv">$PATH</span>
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span>/usr/local/bin:<span class="nv">$PATH</span>
 </pre></div>
 <p>These changes will take effect the next time you restart the shell.
 Rather, than restarting your shell simply type the following in the terminal.</p>
@@ -265,7 +281,7 @@ of choice add the following to your <tt class="docutils literal">.zshrc</tt> , <
 <p>or if you use another shell example <tt class="docutils literal">bash</tt></p>
 <div class="highlight"><pre><span class="nb">source</span> ~/.bash_profile
 </pre></div>
-<p>Finally test out your setup by typing</p>
+<p>Finally, test out your setup by typing</p>
 <div class="highlight"><pre>createdb <span class="nb">test</span>-db <span class="c">#create a new database</span>
 psql <span class="nb">test</span>-db
 dropdb <span class="nb">test</span>-db
@@ -287,7 +303,7 @@ So to help them get over the hump we usually recommend they also install a free
 In particular you may be interested in in developing solutions using the
 <a class="reference external" href="http://scipy.org">SciPy</a> stack and using tools like <a class="reference external" href="http://ipython.org">IPython</a>,
 <a class="reference external" href="http://matplotlib.org">Matplotlib</a>, <a class="reference external" href="http://pydata.pandas.org">Pandas</a> , <a class="reference external" href="http://matplotlib">scikit-learn</a> , etc.  The usual recommendation
-is to use a binary distribution such as <a class="reference external" href="http://pydata.pandas.org">Anaconda</a> or <a class="reference external" href="http://pydata.pandas.org">Enthought Canopy</a> but
+is to use a binary distribution such as <a class="reference external" href="https://store.continuum.io/cshop/anaconda/">Anaconda</a> or <a class="reference external" href="https://www.enthought.com/downloads/">Enthought Canopy</a> but
 as a developer you will want to use the source distribution.
 To install the SciPy stack start by installing some perquisites
 libraries and apps using brew.</p>
@@ -322,6 +338,7 @@ commands within <tt class="docutils literal">IPython</tt> or <tt class="docutils
 <div class="highlight"><pre>pip install jinga2
 pip install ipython pyzmq tornado pygments
 pip install matplotlib
+pip install pycopg2
 pip install ipython-sql
 </pre></div>
 <p>Check that everything is setup properly by launching the IPython notebook with
@@ -542,8 +559,9 @@ dtypes: float64(1), int64(1), object(2)
                 <li><a href="../tags.html">Tags</a></li>
                                 
                      <label>Categories</label>
+                            <li><a href="../category/pelican.html">pelican</a></li>
                             <li><a href="../category/python.html">python</a></li>
-                            <li><a href="../category/web-framework.html">web framework</a></li>
+                            <li><a href="../category/zurb-foundation.html">Zurb Foundation</a></li>
                                 
   
                                     

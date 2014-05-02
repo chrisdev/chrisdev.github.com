@@ -116,7 +116,7 @@ Add the following lines
     # set the architecture flags
     export ARCHFLAGS="-arch x86_64"
     # Ensure that local bin is first in path 
-    export PATH="/usr/local/bin:$PATH
+    export PATH=/usr/local/bin:$PATH
 
 These changes will take effect the next time you restart the shell. 
 Rather, than restarting your shell simply type the following in the terminal.

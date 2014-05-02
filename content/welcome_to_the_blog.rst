@@ -4,7 +4,7 @@ Welcome To My Blog
 :date: 2013-05-01
 :modified: 2014-02-28
 :tags: static-site, pelican, foundation4, compass, sass
-:category: python
+:category: pelican
 :slug: welcome
 :author: Christopher Clarke
 :summary:  I've started experimenting with a static blog in the hope that 
