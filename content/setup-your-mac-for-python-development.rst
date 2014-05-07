@@ -34,16 +34,16 @@ feature to control the syncing process.
 
 Upgrade your Terminal: Install Iterm 2
 --------------------------------------
-You going to need a decent terminal application for your command line work.
+You're going to need a decent terminal application for your command line work.
 While the bundled OS X terminal application has gotten a lot better 
-with recent releases of the ``OS X`` but it still has a way to go to match 
+with recent releases of the ``OS X`` it still has a way to go to match 
 `Item2 <http://www.iterm2.com/>`_. Some of the many features of ``Iterm`` 
 are listed `here <http://www.iterm2.com/#/section/features/full_screen>`_. So use 
 `Item2 <http://www.iterm2.com/>`_ as your terminal.
 
 Install XCode: You'll need at least the Command Line Tools
 ----------------------------------------------------------
-You need to install either the full version ``Xode`` or at least to the 
+You need to install either the full version ``Xcode`` or at least to the 
 Command line tools.
 These can be actually installed from the command line by entering the following
 in you terminal window    
@@ -52,7 +52,7 @@ in you terminal window
 
     xcode-select --install
 
-You will then be prompted whether you want to install the full ``Xcode`` or 
+You will then be prompted to either install the full ``Xcode`` or 
 just the command line developer tools, with the latter being the default. 
 Once you’ve installed one or the other, you can proceed to installing ``Homebrew``.
 
@@ -135,7 +135,7 @@ or if you are using ``bash``
 Use the Homebrew Python
 -------------------------
 
-Apple has always bundled ``Python`` along with the its OS releases. 
+Apple has always bundled ``Python`` along with its OS releases. 
 However, we advise you not to use the bundled ``Python`` for development 
 and instead to install ``Python`` via ``homebrew``. We prefer the ``brew``
 Python for a number of reasons including :
@@ -151,7 +151,7 @@ Python for a number of reasons including :
   more and more out-of-date.  ``Homebrew`` will allow you the upgrade to 
   the most recent versions of Python (2 or 3).
 
-- ``Homebrew`` allows you to easily play around with ``Python 3`` as it come
+- ``Homebrew`` allows you to easily play around with ``Python 3`` as it comes
   with ``pip3`` for installing packages
 
 To install ``Python`` with ``homebrew`` enter
@@ -171,7 +171,7 @@ Install VirtualEnv and VirtualEnv Wrapper
 ------------------------------------------
 
 A *Virtual Environment*, is an isolated working copy of ``Python`` and installed
-packages that will allow you to work on a specific project without the worry of 
+packages that allows you to work on a specific project without the worry of 
 affecting other projects.
 
 The ``virtualenv`` package allows you to create virtual environments while the 
@@ -206,7 +206,7 @@ and add the following lines to it
     export WORKON_HOME=$HOME/virtualenvs
     source /usr/local/bin/virtualenvwrapper.sh
 
-Restart you terminal or type the following in the terminal window
+Restart your terminal or type the following in the terminal window
 
 .. code-block:: sh
 
@@ -235,7 +235,7 @@ using ``brew``
     mkvirtalenv test-env
     pip install Pillow
 
-Everything is OK if you get a post install message like similar to the
+Everything is fine if you get a post install message like similar to the
 one shown below ::
 
     PIL SETUP SUMMARY
@@ -263,7 +263,7 @@ Extras
 PostgreSQL  
 ^^^^^^^^^^^
 
-You could of course use ``homebrew`` to install ``PostgreSQL``.   
+You can of course use ``homebrew`` to install ``PostgreSQL``.   
 However, I've found that that it takes a lot of manual tweaking to get all
 the procedural languages (``PL/pgSQL``, ``PL/Python``, ``PLV8`` etc.) as well 
 as extensions like `PostGIS <http://postgis.net/>`_, ``hstore`` etc.  working.
@@ -317,7 +317,7 @@ So to help them get over the hump we usually recommend they also install a free
 Python Data Tools
 ^^^^^^^^^^^^^^^^^^
 
-Increasingly the Python is being used for statistical data analysis  
+Increasingly Python is being used for statistical data analysis  
 In particular you may be interested in in developing solutions using the 
 `SciPy`_ stack and using tools like `IPython`_,  
 `Matplotlib`_, `Pandas`_ , `scikit-learn`_ , etc.  The usual recommendation 
@@ -354,7 +354,7 @@ You can run the test suite by starting ``Python`` and running
     scipy.test()
 
 Almost all the ``numpy`` test should pass but interestingly there will be quite
-a few known fails and fails with ``scipy``.
+a few known failures with ``scipy``.
 
 Next install ``pandas`` 
 
