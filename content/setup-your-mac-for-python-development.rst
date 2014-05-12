@@ -317,20 +317,33 @@ So to help them get over the hump we usually recommend they also install a free
 Python Data Tools
 ^^^^^^^^^^^^^^^^^^
 
-Increasingly Python is being used for statistical data analysis  
-In particular you may be interested in in developing solutions using the 
-`SciPy`_ stack and using tools like `IPython`_,  
+Python is becomming more and more popular for statistics, data analysis and data
+science tasks.  In particular you may be interested in in developing solutions 
+using the `SciPy`_ stack and using tools like `IPython`_,  
 `Matplotlib`_, `Pandas`_ , `scikit-learn`_ , etc.  The usual recommendation 
-is to use a binary distribution such as `Anaconda`_ or `Enthought Canopy`_ but 
-as a developer you will want to use the source distribution. 
-To install the SciPy stack start by installing some perquisites 
-libraries and apps using brew.
+is to use a binary distribution such as `Anaconda`_ or `Enthought Canopy`_, but 
+as a developer you will want/need to use the source distribution. Start by adding 
+these lines to your ``.zshrc`` or ``.bash_profile``. 
+
+.. code-block:: sh
+
+    export CFLAGS="-arch i386 -arch x86_64"
+    export FFLAGS="-m32 -m64"
+    export LDFLAGS="-Wall -undefined dynamic_lookup -bundle -arch i386 -arch x86_64"
+    export CC=gcc
+    export CXX="g++ -arch i386 -arch x86_64"
+
+This should take care of problems you can sometimes encounter in building 
+some ``numpy`` and ``scipy`` extensions.
+
+Next install some of the perquisites libraries and applications using 
+``homebrew.``
 
 .. code-block:: sh
 
     brew install gfortran pkg-config zeromq readline
 
-Start by installing ``numpy`` and ``scipy``  using pip. We also install 
+Then install ``numpy`` and ``scipy``  using pip. We will also install 
 ``nose`` so we can run the test suite.
     
 .. code-block:: sh
@@ -339,7 +352,7 @@ Start by installing ``numpy`` and ``scipy``  using pip. We also install
     pip install scipy
     pip install nose
 
-Note I'm installing these packages directly to the system site packages i.e.
+Note, I'm installing these packages directly to the system site packages i.e.
 in ``/usr/local/lib/python-2.7/site-packages`` as opposed to a 
 particular ``virtualenv`` as I often use ``pydata`` packages for ad-hoc 
 hacking and experimentation.  
@@ -354,7 +367,7 @@ You can run the test suite by starting ``Python`` and running
     scipy.test()
 
 Almost all the ``numpy`` test should pass but interestingly there will be quite
-a few known failures with ``scipy``.
+a few known failures with ``scipy``. This should not be a problem
 
 Next install ``pandas`` 
 
@@ -392,7 +405,7 @@ Start by importing ``pandas`` and load the ``sql`` magics
     %load_ext sql
 
 
-Connect to a PosgreSQL database with data from the Trinidad and Tobago
+Connect to a ``PosgreSQL`` database with data from the Trinidad and Tobago
 stock exchange and execute sql
 
 .. code:: python

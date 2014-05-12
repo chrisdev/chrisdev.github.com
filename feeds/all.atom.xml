@@ -21,22 +21,22 @@ feature to control the syncing process.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="upgrade-your-terminal-install-iterm-2"&gt;
 &lt;h2&gt;Upgrade your Terminal: Install Iterm 2&lt;/h2&gt;
-&lt;p&gt;You going to need a decent terminal application for your command line work.
+&lt;p&gt;You're going to need a decent terminal application for your command line work.
 While the bundled OS X terminal application has gotten a lot better
-with recent releases of the &lt;tt class="docutils literal"&gt;OS X&lt;/tt&gt; but it still has a way to go to match
+with recent releases of the &lt;tt class="docutils literal"&gt;OS X&lt;/tt&gt; it still has a way to go to match
 &lt;a class="reference external" href="http://www.iterm2.com/"&gt;Item2&lt;/a&gt;. Some of the many features of &lt;tt class="docutils literal"&gt;Iterm&lt;/tt&gt;
 are listed &lt;a class="reference external" href="http://www.iterm2.com/#/section/features/full_screen"&gt;here&lt;/a&gt;. So use
 &lt;a class="reference external" href="http://www.iterm2.com/"&gt;Item2&lt;/a&gt; as your terminal.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="install-xcode-you-ll-need-at-least-the-command-line-tools"&gt;
 &lt;h2&gt;Install XCode: You'll need at least the Command Line Tools&lt;/h2&gt;
-&lt;p&gt;You need to install either the full version &lt;tt class="docutils literal"&gt;Xode&lt;/tt&gt; or at least to the
+&lt;p&gt;You need to install either the full version &lt;tt class="docutils literal"&gt;Xcode&lt;/tt&gt; or at least to the
 Command line tools.
 These can be actually installed from the command line by entering the following
 in you terminal window&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;xcode-select --install
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;You will then be prompted whether you want to install the full &lt;tt class="docutils literal"&gt;Xcode&lt;/tt&gt; or
+&lt;p&gt;You will then be prompted to either install the full &lt;tt class="docutils literal"&gt;Xcode&lt;/tt&gt; or
 just the command line developer tools, with the latter being the default.
 Once you’ve installed one or the other, you can proceed to installing &lt;tt class="docutils literal"&gt;Homebrew&lt;/tt&gt;.&lt;/p&gt;
 &lt;/div&gt;
@@ -88,7 +88,7 @@ Rather, than restarting your shell simply type the following in the terminal.&lt
 &lt;/div&gt;
 &lt;div class="section" id="use-the-homebrew-python"&gt;
 &lt;h2&gt;Use the Homebrew Python&lt;/h2&gt;
-&lt;p&gt;Apple has always bundled &lt;tt class="docutils literal"&gt;Python&lt;/tt&gt; along with the its OS releases.
+&lt;p&gt;Apple has always bundled &lt;tt class="docutils literal"&gt;Python&lt;/tt&gt; along with its OS releases.
 However, we advise you not to use the bundled &lt;tt class="docutils literal"&gt;Python&lt;/tt&gt; for development
 and instead to install &lt;tt class="docutils literal"&gt;Python&lt;/tt&gt; via &lt;tt class="docutils literal"&gt;homebrew&lt;/tt&gt;. We prefer the &lt;tt class="docutils literal"&gt;brew&lt;/tt&gt;
 Python for a number of reasons including :&lt;/p&gt;
@@ -101,7 +101,7 @@ greatest version of &lt;tt class="docutils literal"&gt;OS X&lt;/tt&gt;  you may 
 &lt;li&gt;As new versions of &lt;tt class="docutils literal"&gt;Python&lt;/tt&gt; are released, the bundled &lt;tt class="docutils literal"&gt;Python&lt;/tt&gt; becomes
 more and more out-of-date.  &lt;tt class="docutils literal"&gt;Homebrew&lt;/tt&gt; will allow you the upgrade to
 the most recent versions of Python (2 or 3).&lt;/li&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;Homebrew&lt;/tt&gt; allows you to easily play around with &lt;tt class="docutils literal"&gt;Python 3&lt;/tt&gt; as it come
+&lt;li&gt;&lt;tt class="docutils literal"&gt;Homebrew&lt;/tt&gt; allows you to easily play around with &lt;tt class="docutils literal"&gt;Python 3&lt;/tt&gt; as it comes
 with &lt;tt class="docutils literal"&gt;pip3&lt;/tt&gt; for installing packages&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;To install &lt;tt class="docutils literal"&gt;Python&lt;/tt&gt; with &lt;tt class="docutils literal"&gt;homebrew&lt;/tt&gt; enter&lt;/p&gt;
@@ -114,7 +114,7 @@ with &lt;tt class="docutils literal"&gt;pip3&lt;/tt&gt; for installing packages&
 &lt;div class="section" id="install-virtualenv-and-virtualenv-wrapper"&gt;
 &lt;h2&gt;Install VirtualEnv and VirtualEnv Wrapper&lt;/h2&gt;
 &lt;p&gt;A &lt;em&gt;Virtual Environment&lt;/em&gt;, is an isolated working copy of &lt;tt class="docutils literal"&gt;Python&lt;/tt&gt; and installed
-packages that will allow you to work on a specific project without the worry of
+packages that allows you to work on a specific project without the worry of
 affecting other projects.&lt;/p&gt;
 &lt;p&gt;The &lt;tt class="docutils literal"&gt;virtualenv&lt;/tt&gt; package allows you to create virtual environments while the
 &lt;tt class="docutils literal"&gt;virtualenvwrapper&lt;/tt&gt; package provides a framework for organizing
@@ -136,7 +136,7 @@ pip install virtualenvwrapper
 &lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;WORKON_HOME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$HOME&lt;/span&gt;/virtualenvs
 &lt;span class="nb"&gt;source&lt;/span&gt; /usr/local/bin/virtualenvwrapper.sh
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Restart you terminal or type the following in the terminal window&lt;/p&gt;
+&lt;p&gt;Restart your terminal or type the following in the terminal window&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;source&lt;/span&gt; ~/.zshrc
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;or&lt;/p&gt;
@@ -153,7 +153,7 @@ using &lt;tt class="docutils literal"&gt;brew&lt;/tt&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;mkvirtalenv &lt;span class="nb"&gt;test&lt;/span&gt;-env
 pip install Pillow
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Everything is OK if you get a post install message like similar to the
+&lt;p&gt;Everything is fine if you get a post install message like similar to the
 one shown below&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 PIL SETUP SUMMARY
@@ -177,7 +177,7 @@ platform     darwin 2.7.6 (default, Apr  9 2014, 11:48:52)
 &lt;h2&gt;Extras&lt;/h2&gt;
 &lt;div class="section" id="postgresql"&gt;
 &lt;h3&gt;PostgreSQL&lt;/h3&gt;
-&lt;p&gt;You could of course use &lt;tt class="docutils literal"&gt;homebrew&lt;/tt&gt; to install &lt;tt class="docutils literal"&gt;PostgreSQL&lt;/tt&gt;.
+&lt;p&gt;You can of course use &lt;tt class="docutils literal"&gt;homebrew&lt;/tt&gt; to install &lt;tt class="docutils literal"&gt;PostgreSQL&lt;/tt&gt;.
 However, I've found that that it takes a lot of manual tweaking to get all
 the procedural languages (&lt;tt class="docutils literal"&gt;PL/pgSQL&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;PL/Python&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;PLV8&lt;/tt&gt; etc.) as well
 as extensions like &lt;a class="reference external" href="http://postgis.net/"&gt;PostGIS&lt;/a&gt;, &lt;tt class="docutils literal"&gt;hstore&lt;/tt&gt; etc.  working.
@@ -215,23 +215,32 @@ So to help them get over the hump we usually recommend they also install a free
 &lt;/div&gt;
 &lt;div class="section" id="python-data-tools"&gt;
 &lt;h3&gt;Python Data Tools&lt;/h3&gt;
-&lt;p&gt;Increasingly the Python is being used for statistical data analysis
-In particular you may be interested in in developing solutions using the
-&lt;a class="reference external" href="http://scipy.org"&gt;SciPy&lt;/a&gt; stack and using tools like &lt;a class="reference external" href="http://ipython.org"&gt;IPython&lt;/a&gt;,
+&lt;p&gt;Python is becomming more and more popular for statistics, data analysis and data
+science tasks.  In particular you may be interested in in developing solutions
+using the &lt;a class="reference external" href="http://scipy.org"&gt;SciPy&lt;/a&gt; stack and using tools like &lt;a class="reference external" href="http://ipython.org"&gt;IPython&lt;/a&gt;,
 &lt;a class="reference external" href="http://matplotlib.org"&gt;Matplotlib&lt;/a&gt;, &lt;a class="reference external" href="http://pydata.pandas.org"&gt;Pandas&lt;/a&gt; , &lt;a class="reference external" href="http://matplotlib"&gt;scikit-learn&lt;/a&gt; , etc.  The usual recommendation
-is to use a binary distribution such as &lt;a class="reference external" href="https://store.continuum.io/cshop/anaconda/"&gt;Anaconda&lt;/a&gt; or &lt;a class="reference external" href="https://www.enthought.com/downloads/"&gt;Enthought Canopy&lt;/a&gt; but
-as a developer you will want to use the source distribution.
-To install the SciPy stack start by installing some perquisites
-libraries and apps using brew.&lt;/p&gt;
+is to use a binary distribution such as &lt;a class="reference external" href="https://store.continuum.io/cshop/anaconda/"&gt;Anaconda&lt;/a&gt; or &lt;a class="reference external" href="https://www.enthought.com/downloads/"&gt;Enthought Canopy&lt;/a&gt;, but
+as a developer you will want/need to use the source distribution. Start by adding
+these lines to your &lt;tt class="docutils literal"&gt;.zshrc&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;.bash_profile&lt;/tt&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;CFLAGS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;-arch i386 -arch x86_64&amp;quot;&lt;/span&gt;
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;FFLAGS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;-m32 -m64&amp;quot;&lt;/span&gt;
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;LDFLAGS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;-Wall -undefined dynamic_lookup -bundle -arch i386 -arch x86_64&amp;quot;&lt;/span&gt;
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;CC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;gcc
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;CXX&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;g++ -arch i386 -arch x86_64&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This should take care of problems you can sometimes encounter in building
+some &lt;tt class="docutils literal"&gt;numpy&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;scipy&lt;/tt&gt; extensions.&lt;/p&gt;
+&lt;p&gt;Next install some of the perquisites libraries and applications using
+&lt;tt class="docutils literal"&gt;homebrew.&lt;/tt&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;brew install gfortran pkg-config zeromq readline
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Start by installing &lt;tt class="docutils literal"&gt;numpy&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;scipy&lt;/tt&gt;  using pip. We also install
+&lt;p&gt;Then install &lt;tt class="docutils literal"&gt;numpy&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;scipy&lt;/tt&gt;  using pip. We will also install
 &lt;tt class="docutils literal"&gt;nose&lt;/tt&gt; so we can run the test suite.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;pip install numpy
 pip install scipy
 pip install nose
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Note I'm installing these packages directly to the system site packages i.e.
+&lt;p&gt;Note, I'm installing these packages directly to the system site packages i.e.
 in &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;/usr/local/lib/python-2.7/site-packages&lt;/span&gt;&lt;/tt&gt; as opposed to a
 particular &lt;tt class="docutils literal"&gt;virtualenv&lt;/tt&gt; as I often use &lt;tt class="docutils literal"&gt;pydata&lt;/tt&gt; packages for ad-hoc
 hacking and experimentation.
@@ -243,7 +252,7 @@ You can run the test suite by starting &lt;tt class="docutils literal"&gt;Python
 &lt;span class="n"&gt;scipy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Almost all the &lt;tt class="docutils literal"&gt;numpy&lt;/tt&gt; test should pass but interestingly there will be quite
-a few known fails and fails with &lt;tt class="docutils literal"&gt;scipy&lt;/tt&gt;.&lt;/p&gt;
+a few known failures with &lt;tt class="docutils literal"&gt;scipy&lt;/tt&gt;. This should not be a problem&lt;/p&gt;
 &lt;p&gt;Next install &lt;tt class="docutils literal"&gt;pandas&lt;/tt&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;pip install pandas
 &lt;/pre&gt;&lt;/div&gt;
@@ -267,7 +276,7 @@ pip install ipython-sql
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
 &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;load_ext&lt;/span&gt; &lt;span class="n"&gt;sql&lt;/span&gt;
 &lt;/pre&gt;
-&lt;p&gt;Connect to a PosgreSQL database with data from the Trinidad and Tobago
+&lt;p&gt;Connect to a &lt;tt class="docutils literal"&gt;PosgreSQL&lt;/tt&gt; database with data from the Trinidad and Tobago
 stock exchange and execute sql&lt;/p&gt;
 &lt;pre class="code python literal-block"&gt;
 &lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="n"&gt;sql&lt;/span&gt; &lt;span class="n"&gt;postgresql&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;localhost&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mass&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;

@@ -2,6 +2,7 @@
 <head>
     <meta charset="utf-8" />
     <!-- Set the viewport width to device width for mobile -->
+    <meta name="google-site-verification" content="zp8FcBqMmOutJ5gumoSWi_kZa5hlPFzcm0TECe8UXGk" />
     <meta name="viewport" content="width=device-width" />
     <link rel="shortcut icon" href="./theme/images/favicons/favicon.ico">
     <link rel="apple-touch-icon" sizes="57x57" href="./theme/images/favicons/apple-touch-icon-57x57.png">
@@ -70,8 +71,8 @@
         <div class="panel radius">
             <h3>Welcome To ChrisDev Blog</h3>
             <p>
-            I'm a Python developer and Django enthusiast based in 
-            Trinidad &amp; Tobago.  
+              I’m Christopher Clarke and I write about Python, Django, 
+              Data Analysis, Open Source and any other things that catch my fancy
             </p>
         </div>
         
@@ -105,22 +106,22 @@ feature to control the syncing process.</p>
 </div>
 <div class="section" id="upgrade-your-terminal-install-iterm-2">
 <h2>Upgrade your Terminal: Install Iterm 2</h2>
-<p>You going to need a decent terminal application for your command line work.
+<p>You're going to need a decent terminal application for your command line work.
 While the bundled OS X terminal application has gotten a lot better
-with recent releases of the <tt class="docutils literal">OS X</tt> but it still has a way to go to match
+with recent releases of the <tt class="docutils literal">OS X</tt> it still has a way to go to match
 <a class="reference external" href="http://www.iterm2.com/">Item2</a>. Some of the many features of <tt class="docutils literal">Iterm</tt>
 are listed <a class="reference external" href="http://www.iterm2.com/#/section/features/full_screen">here</a>. So use
 <a class="reference external" href="http://www.iterm2.com/">Item2</a> as your terminal.</p>
 </div>
 <div class="section" id="install-xcode-you-ll-need-at-least-the-command-line-tools">
 <h2>Install XCode: You'll need at least the Command Line Tools</h2>
-<p>You need to install either the full version <tt class="docutils literal">Xode</tt> or at least to the
+<p>You need to install either the full version <tt class="docutils literal">Xcode</tt> or at least to the
 Command line tools.
 These can be actually installed from the command line by entering the following
 in you terminal window</p>
 <div class="highlight"><pre>xcode-select --install
 </pre></div>
-<p>You will then be prompted whether you want to install the full <tt class="docutils literal">Xcode</tt> or
+<p>You will then be prompted to either install the full <tt class="docutils literal">Xcode</tt> or
 just the command line developer tools, with the latter being the default.
 Once you’ve installed one or the other, you can proceed to installing <tt class="docutils literal">Homebrew</tt>.</p>
 </div>
@@ -172,7 +173,7 @@ Rather, than restarting your shell simply type the following in the terminal.</p
 </div>
 <div class="section" id="use-the-homebrew-python">
 <h2>Use the Homebrew Python</h2>
-<p>Apple has always bundled <tt class="docutils literal">Python</tt> along with the its OS releases.
+<p>Apple has always bundled <tt class="docutils literal">Python</tt> along with its OS releases.
 However, we advise you not to use the bundled <tt class="docutils literal">Python</tt> for development
 and instead to install <tt class="docutils literal">Python</tt> via <tt class="docutils literal">homebrew</tt>. We prefer the <tt class="docutils literal">brew</tt>
 Python for a number of reasons including :</p>
@@ -185,7 +186,7 @@ greatest version of <tt class="docutils literal">OS X</tt>  you may find that yo
 <li>As new versions of <tt class="docutils literal">Python</tt> are released, the bundled <tt class="docutils literal">Python</tt> becomes
 more and more out-of-date.  <tt class="docutils literal">Homebrew</tt> will allow you the upgrade to
 the most recent versions of Python (2 or 3).</li>
-<li><tt class="docutils literal">Homebrew</tt> allows you to easily play around with <tt class="docutils literal">Python 3</tt> as it come
+<li><tt class="docutils literal">Homebrew</tt> allows you to easily play around with <tt class="docutils literal">Python 3</tt> as it comes
 with <tt class="docutils literal">pip3</tt> for installing packages</li>
 </ul>
 <p>To install <tt class="docutils literal">Python</tt> with <tt class="docutils literal">homebrew</tt> enter</p>
@@ -198,7 +199,7 @@ with <tt class="docutils literal">pip3</tt> for installing packages</li>
 <div class="section" id="install-virtualenv-and-virtualenv-wrapper">
 <h2>Install VirtualEnv and VirtualEnv Wrapper</h2>
 <p>A <em>Virtual Environment</em>, is an isolated working copy of <tt class="docutils literal">Python</tt> and installed
-packages that will allow you to work on a specific project without the worry of
+packages that allows you to work on a specific project without the worry of
 affecting other projects.</p>
 <p>The <tt class="docutils literal">virtualenv</tt> package allows you to create virtual environments while the
 <tt class="docutils literal">virtualenvwrapper</tt> package provides a framework for organizing
@@ -220,7 +221,7 @@ pip install virtualenvwrapper
 <span class="nb">export </span><span class="nv">WORKON_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/virtualenvs
 <span class="nb">source</span> /usr/local/bin/virtualenvwrapper.sh
 </pre></div>
-<p>Restart you terminal or type the following in the terminal window</p>
+<p>Restart your terminal or type the following in the terminal window</p>
 <div class="highlight"><pre><span class="nb">source</span> ~/.zshrc
 </pre></div>
 <p>or</p>
@@ -237,7 +238,7 @@ using <tt class="docutils literal">brew</tt></p>
 <div class="highlight"><pre>mkvirtalenv <span class="nb">test</span>-env
 pip install Pillow
 </pre></div>
-<p>Everything is OK if you get a post install message like similar to the
+<p>Everything is fine if you get a post install message like similar to the
 one shown below</p>
 <pre class="literal-block">
 PIL SETUP SUMMARY
@@ -261,7 +262,7 @@ platform     darwin 2.7.6 (default, Apr  9 2014, 11:48:52)
 <h2>Extras</h2>
 <div class="section" id="postgresql">
 <h3>PostgreSQL</h3>
-<p>You could of course use <tt class="docutils literal">homebrew</tt> to install <tt class="docutils literal">PostgreSQL</tt>.
+<p>You can of course use <tt class="docutils literal">homebrew</tt> to install <tt class="docutils literal">PostgreSQL</tt>.
 However, I've found that that it takes a lot of manual tweaking to get all
 the procedural languages (<tt class="docutils literal">PL/pgSQL</tt>, <tt class="docutils literal">PL/Python</tt>, <tt class="docutils literal">PLV8</tt> etc.) as well
 as extensions like <a class="reference external" href="http://postgis.net/">PostGIS</a>, <tt class="docutils literal">hstore</tt> etc.  working.
@@ -299,23 +300,32 @@ So to help them get over the hump we usually recommend they also install a free
 </div>
 <div class="section" id="python-data-tools">
 <h3>Python Data Tools</h3>
-<p>Increasingly the Python is being used for statistical data analysis
-In particular you may be interested in in developing solutions using the
-<a class="reference external" href="http://scipy.org">SciPy</a> stack and using tools like <a class="reference external" href="http://ipython.org">IPython</a>,
+<p>Python is becomming more and more popular for statistics, data analysis and data
+science tasks.  In particular you may be interested in in developing solutions
+using the <a class="reference external" href="http://scipy.org">SciPy</a> stack and using tools like <a class="reference external" href="http://ipython.org">IPython</a>,
 <a class="reference external" href="http://matplotlib.org">Matplotlib</a>, <a class="reference external" href="http://pydata.pandas.org">Pandas</a> , <a class="reference external" href="http://matplotlib">scikit-learn</a> , etc.  The usual recommendation
-is to use a binary distribution such as <a class="reference external" href="https://store.continuum.io/cshop/anaconda/">Anaconda</a> or <a class="reference external" href="https://www.enthought.com/downloads/">Enthought Canopy</a> but
-as a developer you will want to use the source distribution.
-To install the SciPy stack start by installing some perquisites
-libraries and apps using brew.</p>
+is to use a binary distribution such as <a class="reference external" href="https://store.continuum.io/cshop/anaconda/">Anaconda</a> or <a class="reference external" href="https://www.enthought.com/downloads/">Enthought Canopy</a>, but
+as a developer you will want/need to use the source distribution. Start by adding
+these lines to your <tt class="docutils literal">.zshrc</tt> or <tt class="docutils literal">.bash_profile</tt>.</p>
+<div class="highlight"><pre><span class="nb">export </span><span class="nv">CFLAGS</span><span class="o">=</span><span class="s2">&quot;-arch i386 -arch x86_64&quot;</span>
+<span class="nb">export </span><span class="nv">FFLAGS</span><span class="o">=</span><span class="s2">&quot;-m32 -m64&quot;</span>
+<span class="nb">export </span><span class="nv">LDFLAGS</span><span class="o">=</span><span class="s2">&quot;-Wall -undefined dynamic_lookup -bundle -arch i386 -arch x86_64&quot;</span>
+<span class="nb">export </span><span class="nv">CC</span><span class="o">=</span>gcc
+<span class="nb">export </span><span class="nv">CXX</span><span class="o">=</span><span class="s2">&quot;g++ -arch i386 -arch x86_64&quot;</span>
+</pre></div>
+<p>This should take care of problems you can sometimes encounter in building
+some <tt class="docutils literal">numpy</tt> and <tt class="docutils literal">scipy</tt> extensions.</p>
+<p>Next install some of the perquisites libraries and applications using
+<tt class="docutils literal">homebrew.</tt></p>
 <div class="highlight"><pre>brew install gfortran pkg-config zeromq readline
 </pre></div>
-<p>Start by installing <tt class="docutils literal">numpy</tt> and <tt class="docutils literal">scipy</tt>  using pip. We also install
+<p>Then install <tt class="docutils literal">numpy</tt> and <tt class="docutils literal">scipy</tt>  using pip. We will also install
 <tt class="docutils literal">nose</tt> so we can run the test suite.</p>
 <div class="highlight"><pre>pip install numpy
 pip install scipy
 pip install nose
 </pre></div>
-<p>Note I'm installing these packages directly to the system site packages i.e.
+<p>Note, I'm installing these packages directly to the system site packages i.e.
 in <tt class="docutils literal"><span class="pre">/usr/local/lib/python-2.7/site-packages</span></tt> as opposed to a
 particular <tt class="docutils literal">virtualenv</tt> as I often use <tt class="docutils literal">pydata</tt> packages for ad-hoc
 hacking and experimentation.
@@ -327,7 +337,7 @@ You can run the test suite by starting <tt class="docutils literal">Python</tt> 
 <span class="n">scipy</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
 </pre></div>
 <p>Almost all the <tt class="docutils literal">numpy</tt> test should pass but interestingly there will be quite
-a few known fails and fails with <tt class="docutils literal">scipy</tt>.</p>
+a few known failures with <tt class="docutils literal">scipy</tt>. This should not be a problem</p>
 <p>Next install <tt class="docutils literal">pandas</tt></p>
 <div class="highlight"><pre>pip install pandas
 </pre></div>
@@ -351,7 +361,7 @@ pip install ipython-sql
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="o">%</span><span class="n">load_ext</span> <span class="n">sql</span>
 </pre>
-<p>Connect to a PosgreSQL database with data from the Trinidad and Tobago
+<p>Connect to a <tt class="docutils literal">PosgreSQL</tt> database with data from the Trinidad and Tobago
 stock exchange and execute sql</p>
 <pre class="code python literal-block">
 <span class="o">%%</span><span class="n">sql</span> <span class="n">postgresql</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="o">/</span><span class="n">mass</span><span class="o">-</span><span class="n">db</span>
