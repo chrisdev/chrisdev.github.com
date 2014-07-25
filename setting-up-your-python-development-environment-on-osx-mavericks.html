@@ -2,91 +2,92 @@
 <head>
     <meta charset="utf-8" />
     <!-- Set the viewport width to device width for mobile -->
-    <meta name="google-site-verification" content="zp8FcBqMmOutJ5gumoSWi_kZa5hlPFzcm0TECe8UXGk" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="shortcut icon" href="./theme/images/favicons/favicon.ico">
-    <link rel="apple-touch-icon" sizes="57x57" href="./theme/images/favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./theme/images/favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./theme/images/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./theme/images/favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./theme/images/favicons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./theme/images/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./theme/images/favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./theme/images/favicons/apple-touch-icon-152x152.png">
-    <link rel="icon" type="image/png" href="./theme/images/favicons/favicon-196x196.png" sizes="196x196">
-    <link rel="icon" type="image/png" href="./theme/images/favicons/favicon-160x160.png" sizes="160x160">
-    <link rel="icon" type="image/png" href="./theme/images/favicons/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="./theme/images/favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="./theme/images/favicons/favicon-32x32.png" sizes="32x32">
-    <meta name="msapplication-TileColor" content="#00aba9">
-    <meta name="msapplication-TileImage" content="./theme/images/favicons/mstile-144x144.png">
-    <meta name="msapplication-config" content="./theme/images/favicons/browserconfig.xml">
+    <meta name="viewport" content="width=device-width" >
+    <meta name="description" content="">
     <title>How I Setup my Macs for Python Development</title>
-    <link rel="stylesheet" href="./theme/css/normalize.css">
     <link rel="stylesheet" href="./theme/css/foundation.css">
     <link rel="stylesheet" href="./theme/css/foundation-icons.css">
-    <link rel="stylesheet" href="./theme/css/style.css">
-    <link rel="stylesheet" href="./theme/css/pygments.css">
+    <link rel="stylesheet" href="./theme/css/styles.css">
+    <link rel="stylesheet" href="./theme/css/pygment.css">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+ 
+    
+    <script src="./theme/js/vendor/modernizr.js"></script>
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script src="./theme/js/vendor/modernizr.js"></script>
 </head>
 
 <body>
 
 <!-- Nav Bar -->
 
-<div class="contain-to-grid sticky">
-    <nav class="top-bar" data-topbar>
-            <ul class="title-area">
+<div id="header" data-magellan-expedition="fixed">
+    <div class="row hide-for-small">
+        <div class="social large-12 columns">
+            <li style="float: right; text-align: right; font-size: 22px; list-style: none;">
+                <a href="http://twitter.com/realchrisdev"><i class="fi-social-twitter"></i></a>
+                <a href="https://github.com/chrisdev"><i class="fi-social-github"></i></a>
+                <a href="http://www.facebook.com/chrisdevtt"><i class="fi-social-facebook"></i></a>
+            </li>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <nav class="top-bar" data-topbar>
+              <ul class="title-area">
                 <li class="name">
-                  <a href=".">
-                      <img src="./theme/images/chris_dev_topbar_logo.png" alt="" /> 
-                  </a>
+                    <h1><a href="/">The ChrisDev Blog</a></h1>
                 </li>
                 <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-            </ul>
-            <section class="top-bar-section">
-                <ul class="right">
-                    <li class="divider"></li>
-                    <li><a href="http://www.chrisdev.com/">About</a></li>
-                    <li class="divider"></li>
-                    <li><a href="http://www.chrisdev.com/contact_us/">Contact</a></li>
-                    <li class="divider"></li>
+              </ul>
+            
+              <section class="top-bar-section">
+                <ul class="right">                  
+                        <li><a href="http://chrisdev.com/about/">About</a></li>
+                        <li><a href="http://chrisdev.com/contact/">Contact Us</a></li>
                 </ul>
-            </section>
-    </nav>
-</div>
+              </section>
+            </nav>
+        </div>
+    </div>
+</div>      
 
 <!-- End Nav -->
 
 
-<!-- Main Page Content and Sidebar -->
+<!-- Main Page Content -->
 <div class="row" style="margin-top: 15px;">
-    
-
-    <!-- Main Blog Content -->
-    <div class="large-9 columns">
-        <div class="panel radius">
-            <h3>Welcome To ChrisDev Blog</h3>
-            <p>
-              I’m Christopher Clarke and I write about Python, Django, 
-              Data Analysis, Open Source and any other things that catch my fancy
-            </p>
-        </div>
+        <div id="main" class="large-12 columns">
 <article>
-    <header>
-        <h1 class="text-center"><a href="./setting-up-your-python-development-environment-on-osx-mavericks.html" rel="bookmark"
-        title="Permalink to How I Setup my Macs for Python Development">How I Setup my Macs for Python Development</a></h3>
-<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="realchrisdev">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    </header>
+    <h1 class="article-title">How I Setup my Macs for Python Development</h1>
+    <div class="info hide-for-small">
+        <ul class="small-block-grid-3">
+            <li><i class="fi-clock"></i>&nbsp;Thu 17 April 2014</li>
+            <li><i class="fi-torso"></i>&nbsp;By&nbsp;<a href="./author/christopher-clarke.html"><strong>Christopher Clarke</strong></a></li>
+            <li><i class="fi-marker"></i>&nbsp;Category&nbsp;<a href="./category/python.html"><strong>python</strong></a></li>
+        </ul>
+        <ul class="small-block-grid-1 tags">
+                <li><i class="fi-marker"></i>&nbsp;Tags&nbsp;
+ 
+                        <span class="label secondary round"><a href="./tag/python.html">Python</a></span>
+ 
+                        <span class="label secondary round"><a href="./tag/development.html">Development</a></span>
+ 
+                        <span class="label secondary round"><a href="./tag/os-x.html">OS X</a></span>
+ 
+                        <span class="label secondary round"><a href="./tag/mavericks.html">Mavericks</a></span>
+ 
+                        <span class="label secondary round"><a href="./tag/homebrew.html">homebrew</a></span>
+                </li>
+        </ul>
+    </div>
 
-<h6 class="subheader" title="2014-04-17T00:00:00">Thursday, April 17, 2014
-</h6>
-
-
-    <p>I've been asked about this a few times already this month so I've decided to
+    <div class="figure">
+<img alt="This is a test" src="./images/setting-up-my-mac-for-python-dev.jpg" />
+</div>
+<p>I've been asked about this a few times already this month so I've decided to
 write down what I do to set up a new Mac for (mainly) Python Development.</p>
 <div class="section" id="first-install-dropbox-and-sync-folders">
 <h2>First, Install Dropbox and Sync Folders</h2>
@@ -535,99 +536,85 @@ dtypes: float64(1), int64(1), object(2)
 &lt;matplotlib.axes.AxesSubplot at 0x11650bcd0&gt;
 </pre>
 <div class="figure">
-<img alt="" src="/theme/images/output_13_1.png" />
+<img alt="map to buried treasure" src="/theme/images/output_13_1.png" />
 </div>
 </div>
 </div>
 
-<p class="subheader">Category: <a href="./category/python.html">python</a>
 
-    Tagged: 
-    <a href="./tag/python.html">Python </a>
-    <a href="./tag/development.html">Development </a>
-    <a href="./tag/os-x.html">OS X </a>
-    <a href="./tag/mavericks.html">Mavericks </a>
-    <a href="./tag/homebrew.html">homebrew </a>
-</p>
-
-
-
-
-    <div id="disqus_thread"></div>
-    <h4>Comments</h4>
-
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'chrisdevblog'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </article>
-    </div>
-    <!-- End Main Content -->
-
-    <!-- Sidebar -->
-    <aside id="sidebar" class="large-3 columns">
-        <div class="panel radius">
-            <ul class="side-nav">
-               
-                <label>Site</label>
-                <li><a href="./archives.html">Archives</a></li>
-                <li><a href="./tags.html">Tags</a></li>
-                                
-                     <label>Categories</label>
-                            <li><a href="./category/pelican.html">pelican</a></li>
-                            <li><a href="./category/python.html">python</a></li>
-                            <li><a href="./category/zurb-foundation.html">Zurb Foundation</a></li>
-                                
-  
-                                    
-                     <label>Social</label>
-                            <li><a href="http://twitter.com/realchrisdev"><i class="fi-social-twitter"></i>&nbsp;twitter</a></li>
-                            <li><a href="https://github.com/chrisdev"><i class="fi-social-github"></i>&nbsp;github</a></li>
-                
-         <script data-gittip-username="chrisdev" data-gittip-widget="giving"
-          src="//gttp.co/v1.js" async></script>       
-                <li class="divider"></li>
-                <li><a href="feeds/all.atom.xml"><i class="fi-rss"></i>&nbsp; Subcribe to my feed</a></li>
-            </ul>
         </div>
-    </aside> <!-- End Sidebar -->
-
-</div> <!-- End Main Content and Sidebar -->
+</div> 
+ <!-- End Main Content -->
 
 
 <!-- Footer -->
-<footer class="row">
-<div class="large-12 columns">
-      <div class="row">
-        <div class="large-6 columns">
-             <h6><strong>Contact Us</strong></h6>                                             
-            <ul>                                                                             
-                <li>Phone (Cell):&nbsp;+(868)-773-4644</li>                              
-                <li>Phone (Office):&nbsp;+(868)-221-6277</li>                            
-                <li>Email:&nbsp;<a href="mailto:cclarke@chrisdev.com">cclarke at chrisdev.com</a>⇥  </li>
-            </ul>                                                                            
-        </div>
-        <div class="large-6 columns">
-            <h6><strong>Need a Website?</strong></h6> 
-            <p> If you need a website or a looking for a web based project fill out our
-                <a href="www.chrisdev.com/contact_us/client-project-form/">client project form</a>.
-            Remember you can always email  us or call us if you have questions or need more information,
-            </p>
-        </div>
-      </div>
-  </div>
-</div>
-</footer>
+<div id="footer">
+    <footer class="row">
+            <div class="large-3 medium-3 small-6 columns">
+                <h6>Site</h6>
+                <ul>
+                <li><a href="./archives.html">Archives</a></li>
+                <li><a href="./tags.html">Tags</a></li>
+                <li><a href="./categories.html">Categories</a></li>
+                </ul>
+            </div>
+            <div class="large-3 medium-3 small-6 columns">
+                <h6>Categories</h6>
+                    <ul>
+                        <li><a href="./category/pelican.html">pelican</a></li>
+                        <li><a href="./category/python.html">python</a></li>
+                        <li><a href="./category/zurb-foundation.html">Zurb Foundation</a></li>
+                    </ul>
+ 
+            </div>
+            <div class="large-3 medium-3 small-6 columns">
+                    <h6>Links</h6>
+                    <ul>
+                            <li><a href="http://chrisdev.com/about/">About</a></li>
+                            <li><a href="http://chrisdev.com/contact/">Contact Us</a></li>
+                    </ul>
+ 
+            </div>
+            <div class="large-3 medium-3 small-6 columns">
+                    <h6>Social</h6>
+                    <ul>
+                            <li><a href="http://twitter.com/realchrisdev"><i class="fi-social-twitter"></i>&nbsp;twitter</a></li>
+                            <li><a href="https://github.com/chrisdev"><i class="fi-social-github"></i>&nbsp;github</a></li>
+                            <li><a href="http://www.facebook.com/chrisdevtt"><i class="fi-social-facebook"></i>&nbsp;facebook</a></li>
+                            <li><a href="/feed/all.atom.xml"><i class="fi-rss"></i>&nbsp; Subcribe to my feed</a></li>
+                    </ul>
+            </div>
+            <hr>
+            <div class="large-6 medium-6 columns">
+                <h6><strong>Contact Us</strong></h6>                                             
 
+<ul id="hcard-cclarke@chrisdev.com" class="vcard">
+    <li class="fn n">
+<a href="http://chrisdev.com" class="url"><span class="given-name">Christopher</span>&nbsp;<span class="family-name">Clarke&nbsp;</span></a>    </li>
+ 
+<li class="adr">
+   <ul>
+<li class="street-address">A3 St Bendicts Gardens</li><li class="locality">Tunapuna</li>        <li class="country-name">
+            Trinidad and Tobago
+        </li>
+ </ul>
+</li>    <li class="tel">
+        <dt>Phone (<span class="type">home</span>)</dt>
+        <dd><span class="value">773-4644</span></dd>
+   </li> 
+</ul>
+                </ul>                                                                            
+            </div>
+            <div class="large-6 medium-6 hide-for-small columns">
+                <h6><strong>Need a Website?</strong></h6> 
+                <p> If you need a website or a looking for a web based project fill out our
+                    <a href="" target="_blank">client project form</a>.
+                Remember you can always email  us or call us if you have questions or need more information,
+                </p>
+            </div>
+    </footer>
+</div>
 <script src="./theme/js/vendor/jquery.js"></script>
 <script src="./theme/js/foundation.min.js"></script>
 <script>
