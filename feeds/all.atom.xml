@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>The ChrisDev Blog</title><link href="http://blog.chrisdev.com/" rel="alternate"></link><link href="http://blog.chrisdev.com/feeds/all.atom.xml" rel="self"></link><id>http://blog.chrisdev.com/</id><updated>2014-04-17T00:00:00-04:00</updated><entry><title>How I Setup my Macs for Python Development</title><link href="http://blog.chrisdev.com/setting-up-your-python-development-environment-on-osx-mavericks.html" rel="alternate"></link><updated>2014-04-17T00:00:00-04:00</updated><author><name>Christopher Clarke</name></author><id>tag:blog.chrisdev.com,2014-04-17:setting-up-your-python-development-environment-on-osx-mavericks.html</id><summary type="html">&lt;p&gt;I've been asked about this a few times already this month so I've decided to
+<feed xmlns="http://www.w3.org/2005/Atom"><title>The ChrisDev Blog</title><link href="http://blog.chrisdev.com/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>http://blog.chrisdev.com/</id><updated>2014-04-17T00:00:00-04:00</updated><entry><title>How I Setup my Macs for Python Development</title><link href="http://blog.chrisdev.com/setting-up-your-python-development-environment-on-osx-mavericks.html" rel="alternate"></link><updated>2014-04-17T00:00:00-04:00</updated><author><name>Christopher Clarke</name></author><id>tag:blog.chrisdev.com,2014-04-17:setting-up-your-python-development-environment-on-osx-mavericks.html</id><summary type="html">&lt;div class="figure"&gt;
+&lt;img alt="This is a test" src="http://blog.chrisdev.com/images/setting-up-my-mac-for-python-dev.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;I've been asked about this a few times already this month so I've decided to
 write down what I do to set up a new Mac for (mainly) Python Development.&lt;/p&gt;
 &lt;div class="section" id="first-install-dropbox-and-sync-folders"&gt;
 &lt;h2&gt;First, Install Dropbox and Sync Folders&lt;/h2&gt;
@@ -448,7 +451,7 @@ dtypes: float64(1), int64(1), object(2)
 &amp;lt;matplotlib.axes.AxesSubplot at 0x11650bcd0&amp;gt;
 &lt;/pre&gt;
 &lt;div class="figure"&gt;
-&lt;img alt="" src="/theme/images/output_13_1.png" /&gt;
+&lt;img alt="map to buried treasure" src="/theme/images/output_13_1.png" /&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -498,7 +501,7 @@ real world responsive sites with Foundation.  This is important in the context
 of a rapidly evolving framework like Zurb Foundation, where we are we are
 reviewing a book about &lt;cite&gt;version 4&lt;/cite&gt; while &lt;a class="reference external" href="http://foundation.zurb.com/docs/changelog.html"&gt;Foundation 5&lt;/a&gt; has been out since
 November 21, 2013.&lt;/p&gt;
-</summary><category term="Zurb Foundation"></category><category term="book review"></category><category term="foundation 4"></category><category term="responsive"></category><category term="CSS"></category><category term="Sass"></category></entry><entry><title>Welcome To My Blog</title><link href="http://blog.chrisdev.com/welcome.html" rel="alternate"></link><updated>2013-05-01T00:00:00-04:00</updated><author><name>Christopher Clarke</name></author><id>tag:blog.chrisdev.com,2013-05-01:welcome.html</id><summary type="html">&lt;p&gt;I've started experimenting with a static blog in the hope that this will
+</summary><category term="Zurb Foundation"></category><category term="book review"></category><category term="foundation 4"></category><category term="responsive"></category><category term="CSS"></category><category term="Sass"></category></entry><entry><title>Welcome To My Blog</title><link href="http://blog.chrisdev.com/welcome.html" rel="alternate"></link><updated>2014-02-28T00:00:00-04:00</updated><author><name>Christopher Clarke</name></author><id>tag:blog.chrisdev.com,2013-05-01:welcome.html</id><summary type="html">&lt;p&gt;I've started experimenting with a static blog in the hope that this will
 encourage me to post on a more frequently . I've decided to go with
 &lt;a class="reference external" href="https://github.com/getpelican/pelican"&gt;pelican&lt;/a&gt; as it's written in python, set up and has good documentation and
 I'm using &lt;tt class="docutils literal"&gt;github pages&lt;/tt&gt; for hosting.&lt;/p&gt;

@@ -5,10 +5,15 @@ How I Setup my Macs for Python Development
 :category: python
 :slug: setting-up-your-python-development-environment-on-osx-mavericks
 :author: Christopher Clarke
+:thumbnail: /images/setting-up-my-mac-for-python-dev.jpg
 :summary:  Explains how I set up my Macs for Python development. **TL;DR** 
            use Dropbox to host development and ``dot`` files. ``Iterm2``, ``xcode``
            command line tools  ``homebrew`` for Python and utilities and 
            shared libraries. Use ``Postgresapp`` for PostgreSQL.
+
+
+.. figure:: {filename}/images/setting-up-my-mac-for-python-dev.jpg
+   :alt: This is a test
 
 I've been asked about this a few times already this month so I've decided to
 write down what I do to set up a new Mac for (mainly) Python Development.
@@ -615,6 +620,7 @@ Use ``matplotlib`` to plot the closing price
 
 
 .. figure:: /theme/images/output_13_1.png
+   :alt: map to buried treasure
 
 
 .. _IPython : http://ipython.org

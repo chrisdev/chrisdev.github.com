@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>The ChrisDev Blog</title><link href="http://blog.chrisdev.com/" rel="alternate"></link><link href="http://blog.chrisdev.com/feeds/python.atom.xml" rel="self"></link><id>http://blog.chrisdev.com/</id><updated>2014-04-17T00:00:00-04:00</updated><entry><title>How I Setup my Macs for Python Development</title><link href="http://blog.chrisdev.com/setting-up-your-python-development-environment-on-osx-mavericks.html" rel="alternate"></link><updated>2014-04-17T00:00:00-04:00</updated><author><name>Christopher Clarke</name></author><id>tag:blog.chrisdev.com,2014-04-17:setting-up-your-python-development-environment-on-osx-mavericks.html</id><summary type="html">&lt;p&gt;I've been asked about this a few times already this month so I've decided to
+<feed xmlns="http://www.w3.org/2005/Atom"><title>The ChrisDev Blog</title><link href="http://blog.chrisdev.com/" rel="alternate"></link><link href="/feeds/python.atom.xml" rel="self"></link><id>http://blog.chrisdev.com/</id><updated>2014-04-17T00:00:00-04:00</updated><entry><title>How I Setup my Macs for Python Development</title><link href="http://blog.chrisdev.com/setting-up-your-python-development-environment-on-osx-mavericks.html" rel="alternate"></link><updated>2014-04-17T00:00:00-04:00</updated><author><name>Christopher Clarke</name></author><id>tag:blog.chrisdev.com,2014-04-17:setting-up-your-python-development-environment-on-osx-mavericks.html</id><summary type="html">&lt;div class="figure"&gt;
+&lt;img alt="This is a test" src="http://blog.chrisdev.com/images/setting-up-my-mac-for-python-dev.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;I've been asked about this a few times already this month so I've decided to
 write down what I do to set up a new Mac for (mainly) Python Development.&lt;/p&gt;
 &lt;div class="section" id="first-install-dropbox-and-sync-folders"&gt;
 &lt;h2&gt;First, Install Dropbox and Sync Folders&lt;/h2&gt;
@@ -448,7 +451,7 @@ dtypes: float64(1), int64(1), object(2)
 &amp;lt;matplotlib.axes.AxesSubplot at 0x11650bcd0&amp;gt;
 &lt;/pre&gt;
 &lt;div class="figure"&gt;
-&lt;img alt="" src="/theme/images/output_13_1.png" /&gt;
+&lt;img alt="map to buried treasure" src="/theme/images/output_13_1.png" /&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
