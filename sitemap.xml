@@ -4,182 +4,182 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>http://blog.chrisdev.com/index.html</loc>
-<lastmod>2014-08-21T09:53:03-00:00</lastmod>
+<loc>/index.html</loc>
+<lastmod>2014-08-28T13:10:05-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/archives.html</loc>
-<lastmod>2014-08-21T09:53:03-00:00</lastmod>
+<loc>/archives.html</loc>
+<lastmod>2014-08-28T13:10:05-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/tags.html</loc>
-<lastmod>2014-08-21T09:53:03-00:00</lastmod>
+<loc>/tags.html</loc>
+<lastmod>2014-08-28T13:10:05-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/categories.html</loc>
-<lastmod>2014-08-21T09:53:03-00:00</lastmod>
+<loc>/categories.html</loc>
+<lastmod>2014-08-28T13:10:05-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/setting-up-your-python-development-environment-on-osx-mavericks.html</loc>
+<loc>/setting-up-your-python-development-environment-on-osx-mavericks.html</loc>
 <lastmod>2014-04-17T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/book-review-getting-started-with-zurb-foundation.html</loc>
+<loc>/book-review-getting-started-with-zurb-foundation.html</loc>
 <lastmod>2014-02-23T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/welcome.html</loc>
+<loc>/welcome.html</loc>
 <lastmod>2014-02-28T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/category/pelican.html</loc>
+<loc>/category/pelican.html</loc>
 <lastmod>2014-02-28T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/category/python.html</loc>
+<loc>/category/python.html</loc>
 <lastmod>2014-04-17T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/category/zurb-foundation.html</loc>
+<loc>/category/zurb-foundation.html</loc>
 <lastmod>2014-02-23T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/tag/development.html</loc>
+<loc>/tag/development.html</loc>
 <lastmod>2014-04-17T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/tag/pelican.html</loc>
+<loc>/tag/pelican.html</loc>
 <lastmod>2014-02-28T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/tag/mavericks.html</loc>
+<loc>/tag/mavericks.html</loc>
 <lastmod>2014-04-17T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/tag/sass.html</loc>
+<loc>/tag/sass.html</loc>
 <lastmod>2014-02-28T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/tag/python.html</loc>
+<loc>/tag/python.html</loc>
 <lastmod>2014-04-17T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/tag/compass.html</loc>
+<loc>/tag/compass.html</loc>
 <lastmod>2014-02-28T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/tag/book-review.html</loc>
+<loc>/tag/book-review.html</loc>
 <lastmod>2014-02-23T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/tag/responsive.html</loc>
+<loc>/tag/responsive.html</loc>
 <lastmod>2014-02-23T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/tag/foundation4.html</loc>
+<loc>/tag/foundation4.html</loc>
 <lastmod>2014-02-28T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/tag/homebrew.html</loc>
+<loc>/tag/homebrew.html</loc>
 <lastmod>2014-04-17T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/tag/zurb-foundation.html</loc>
+<loc>/tag/zurb-foundation.html</loc>
 <lastmod>2014-02-23T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/tag/os-x.html</loc>
+<loc>/tag/os-x.html</loc>
 <lastmod>2014-04-17T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/tag/foundation-4.html</loc>
+<loc>/tag/foundation-4.html</loc>
 <lastmod>2014-02-23T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/tag/css.html</loc>
+<loc>/tag/css.html</loc>
 <lastmod>2014-02-23T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/tag/static-site.html</loc>
+<loc>/tag/static-site.html</loc>
 <lastmod>2014-02-28T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.chrisdev.com/author/christopher-clarke.html</loc>
+<loc>/author/christopher-clarke.html</loc>
 <lastmod>2014-04-17T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>

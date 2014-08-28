@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The ChrisDev Blog</title><link>http://blog.chrisdev.com/</link><description></description><atom:link href="/feeds/christopher-clarke.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 17 Apr 2014 00:00:00 -0400</lastBuildDate><item><title>How I Setup my Macs for Python Development</title><link>http://blog.chrisdev.com/setting-up-your-python-development-environment-on-osx-mavericks.html</link><description>&lt;div class="figure"&gt;
-&lt;img alt="This is a test" src="http://blog.chrisdev.com/images/setting-up-my-mac-for-python-dev.jpg" /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The ChrisDev Blog</title><link>/</link><description></description><atom:link href="/feeds/christopher-clarke.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 17 Apr 2014 00:00:00 -0400</lastBuildDate><item><title>How I Setup my Macs for Python Development</title><link>/setting-up-your-python-development-environment-on-osx-mavericks.html</link><description>&lt;div class="figure"&gt;
+&lt;img alt="This is a test" src="/images/setting-up-my-mac-for-python-dev.jpg" /&gt;
 &lt;/div&gt;
 &lt;p&gt;I've been asked about this a few times already this month so I've decided to
 write down what I do to set up a new Mac for (mainly) Python Development.&lt;/p&gt;
@@ -455,7 +455,7 @@ dtypes: float64(1), int64(1), object(2)
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Clarke</dc:creator><pubDate>Thu, 17 Apr 2014 00:00:00 -0400</pubDate><guid>tag:blog.chrisdev.com,2014-04-17:setting-up-your-python-development-environment-on-osx-mavericks.html</guid><category>Python</category><category>Development</category><category>OS X</category><category>Mavericks</category><category>homebrew</category></item><item><title>Book Review: Getting Started with Zurb Foundation 4 by Andrew D. Patterson</title><link>http://blog.chrisdev.com/book-review-getting-started-with-zurb-foundation.html</link><description>&lt;p&gt;I was really looking forward to reviewing this book as I'm a big fan of &lt;a class="reference external" href="http://foundation.zurb.com"&gt;Zurb
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Clarke</dc:creator><pubDate>Thu, 17 Apr 2014 00:00:00 -0400</pubDate><guid>tag:,2014-04-17:setting-up-your-python-development-environment-on-osx-mavericks.html</guid><category>Python</category><category>Development</category><category>OS X</category><category>Mavericks</category><category>homebrew</category></item><item><title>Book Review: Getting Started with Zurb Foundation 4 by Andrew D. Patterson</title><link>/book-review-getting-started-with-zurb-foundation.html</link><description>&lt;p&gt;I was really looking forward to reviewing this book as I'm a big fan of &lt;a class="reference external" href="http://foundation.zurb.com"&gt;Zurb
 Foundation&lt;/a&gt; as I think that it is by far the &lt;a class="reference external" href="http://responsive.vermilion.com/compare.php?framework=current"&gt;best&lt;/a&gt; responsive framework out
 there. Indeed, at work here at &lt;a class="reference external" href="http://chrisdev.com"&gt;ChrisDev&lt;/a&gt;,  we use Foundation for all our web
 based projects.&lt;/p&gt;
@@ -501,7 +501,7 @@ real world responsive sites with Foundation.  This is important in the context
 of a rapidly evolving framework like Zurb Foundation, where we are we are
 reviewing a book about &lt;cite&gt;version 4&lt;/cite&gt; while &lt;a class="reference external" href="http://foundation.zurb.com/docs/changelog.html"&gt;Foundation 5&lt;/a&gt; has been out since
 November 21, 2013.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Clarke</dc:creator><pubDate>Sun, 23 Feb 2014 00:00:00 -0400</pubDate><guid>tag:blog.chrisdev.com,2014-02-23:book-review-getting-started-with-zurb-foundation.html</guid><category>Zurb Foundation</category><category>book review</category><category>foundation 4</category><category>responsive</category><category>CSS</category><category>Sass</category></item><item><title>Welcome To My Blog</title><link>http://blog.chrisdev.com/welcome.html</link><description>&lt;p&gt;I've started experimenting with a static blog in the hope that this will
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Clarke</dc:creator><pubDate>Sun, 23 Feb 2014 00:00:00 -0400</pubDate><guid>tag:,2014-02-23:book-review-getting-started-with-zurb-foundation.html</guid><category>Zurb Foundation</category><category>book review</category><category>foundation 4</category><category>responsive</category><category>CSS</category><category>Sass</category></item><item><title>Welcome To My Blog</title><link>/welcome.html</link><description>&lt;p&gt;I've started experimenting with a static blog in the hope that this will
 encourage me to post on a more frequently . I've decided to go with
 &lt;a class="reference external" href="https://github.com/getpelican/pelican"&gt;pelican&lt;/a&gt; as it's written in python, set up and has good documentation and
 I'm using &lt;tt class="docutils literal"&gt;github pages&lt;/tt&gt; for hosting.&lt;/p&gt;
@@ -651,4 +651,4 @@ I also had to add a file to the &lt;tt class="docutils literal"&gt;github&lt;/tt
 &lt;tt class="docutils literal"&gt;CNAME&lt;/tt&gt; which contained
 a sigle line with the alias i.e  &lt;tt class="docutils literal"&gt;blog.chrisdev.com&lt;/tt&gt;.&lt;/p&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Clarke</dc:creator><pubDate>Fri, 28 Feb 2014 00:00:00 -0400</pubDate><guid>tag:blog.chrisdev.com,2013-05-01:welcome.html</guid><category>static-site</category><category>pelican</category><category>foundation4</category><category>compass</category><category>sass</category></item></channel></rss>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Clarke</dc:creator><pubDate>Fri, 28 Feb 2014 00:00:00 -0400</pubDate><guid>tag:,2013-05-01:welcome.html</guid><category>static-site</category><category>pelican</category><category>foundation4</category><category>compass</category><category>sass</category></item></channel></rss>
