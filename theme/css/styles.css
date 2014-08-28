@@ -33,6 +33,9 @@ article table tr th, article table tr td {padding: 9px 12px;}
 article table tr th {background: rgba(25, 188, 156, 0.8); text-align: center; color: #fff;}
 
 
+article .feed_image {max-height:340px; width: 100%; overflow: hidden; border-radius: 8px; margin-bottom: 5px;}
+
+
 
 div.panel {background: #fff; border: 1px solid #DDD;}'
 #content {min-height: 500px;}
@@ -130,7 +133,6 @@ ul.square li {font-size: 13px; font-variant: normal;}
 
 #welcome img {min-width: 80px; border-radius: 50%; margin-bottom: 10px;}
 #welcome p { font-size: 16px;}
-#welcome {background-image: url("../images/parallax.jpg");background-attachment: fixed; height: 350px; padding-top: 40px; background-size:100%;}
+#welcome {background-image: url("../images/parallax.jpg");background-attachment: fixed; height: 300px; padding-top: 50px; background-size:100%;}
 
-#welcome input[type="text"], textarea {border-bottom-left-radius: 4px; border-top-left-radius: 4px;}
-#welcome .postfix.button {border-bottom-right-radius: 4px; border-top-right-radius: 4px; left: -2px;}
+#welcome input[type="text"], textarea {border-radius:4px;}
