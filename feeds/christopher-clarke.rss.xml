@@ -51,7 +51,7 @@ development.  &lt;tt class="docutils literal"&gt;Homebrew&lt;/tt&gt; is actually
 just visit the &lt;tt class="docutils literal"&gt;Homebrew&lt;/tt&gt;
 homepage copy and paste the code listed under &lt;em&gt;Install Homebrew&lt;/em&gt; into your
 terminal. The install snippet changes occasionally and it is currently&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;ruby -e &lt;span class="s2"&gt;&amp;quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)&amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;ruby -e &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;But be remember to visit &lt;a class="reference external" href="http://brew.sh"&gt;Homebrew homepage&lt;/a&gt; to get the
 correct code snippet. Next run&lt;/p&gt;
@@ -192,7 +192,7 @@ the full set of &lt;tt class="docutils literal"&gt;PostgeSQL/PostGIS&lt;/tt&gt; 
 add the bin directory to your path. As before, depending on you shell
 of choice add the following to your &lt;tt class="docutils literal"&gt;.zshrc&lt;/tt&gt; , &lt;tt class="docutils literal"&gt;.bash_profile&lt;/tt&gt; or
 &lt;tt class="docutils literal"&gt;.bashrc&lt;/tt&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/usr/local/bin:/Applications/Postgres.app/Contents/MacOS/bin:$PATH&amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/usr/local/bin:/Applications/Postgres.app/Contents/MacOS/bin:&lt;/span&gt;&lt;span class="nv"&gt;$PATH&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Restart you terminal app or type the following in the terminal window&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;source&lt;/span&gt; ~/.zshrc

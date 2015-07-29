@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" >
+    <meta name="description" content="
+I’m Christopher Clarke and I write about Python, Django, Data Analysis,
+Open Source and any other things that catch my fancy
+">
+<link rel="shortcut icon" href="http://blog.chrisdev.com/theme/images/favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="http://blog.chrisdev.com/theme/images/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://blog.chrisdev.com/theme/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://blog.chrisdev.com/theme/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://blog.chrisdev.com/theme/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://blog.chrisdev.com/theme/images/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://blog.chrisdev.com/theme/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://blog.chrisdev.com/theme/images/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://blog.chrisdev.com/theme/images/favicons/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="http://blog.chrisdev.com/theme/images/favicons/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="http://blog.chrisdev.com/theme/images/favicons/favicon-160x160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="http://blog.chrisdev.com/theme/images/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="http://blog.chrisdev.com/theme/images/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="http://blog.chrisdev.com/theme/images/favicons/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="msapplication-TileImage" content="http://blog.chrisdev.com/theme/images/favicons/mstile-144x144.png">
+<meta name="msapplication-config" content="http://blog.chrisdev.com/theme/images/favicons/browserconfig.xml">    <link href='http://fonts.googleapis.com/css?family=Open+Sans:800|Anonymous+Pro:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <title>No hassle Corporate Web Application Proxy with Hyper-V, Ubuntu and Nginx</title>
+ <link rel="stylesheet" href="http://blog.chrisdev.com/theme/css/foundation.css">
+        <link rel="stylesheet" href="http://blog.chrisdev.com/theme/css/font-awesome.css">
+        <link rel="stylesheet" href="http://blog.chrisdev.com/theme/tipuesearch/tipuesearch.css">
+        <link rel="stylesheet" href="http://blog.chrisdev.com/theme/css/styles.css">
+        <link rel="stylesheet" href="http://blog.chrisdev.com/theme/css/pygment.css">
+
+     <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="The ChrisDev Blog Atom Feed" />
+ 
+    
+    <script src="http://blog.chrisdev.com/theme/js/vendor/modernizr.js"></script>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+
+<div id="header">
+    <div class="row hide-for-small">
+        <div class="social large-12 columns">
+            <li style="float: right; text-align: right; font-size: 22px; list-style: none;">
+                <a href="http://twitter.com/realchrisdev"><i class="fa fa-twitter-square"></i></a>
+                <a href="https://github.com/chrisdev"><i class="fa fa-github-square"></i></a>
+                <a href="http://www.facebook.com/chrisdevtt"><i class="fa fa-facebook-square"></i></a>
+            </li>
+        </div>
+    </div>
+    <div id="logo" class="row">
+        <div class="large-12 columns hide-for-small">
+                <div class="large-4 medium-4 large-centered medium-centered columns text-center">
+                    <img src="/theme/images/site_logo.png" alt="The ChrisDev Blog" />
+                </div>
+        </div>
+    </div>
+        <div data-magellan-expedition="fixed">
+            <nav class="top-bar" data-topbar>
+              <ul class="title-area">
+                <li class="name show-for-small">
+                    <h1><a href="/">The ChrisDev Blog</a></h1>
+                </li>
+                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+              </ul>
+            
+              <section class="top-bar-section">
+                <ul>                  
+                        <li><a href="http://chrisdev.com/about/">About</a></li>
+                        <li><a href="http://chrisdev.com/contact/">Contact Us</a></li>
+                </ul>
+              </section>
+            </nav>
+        </div>
+</div>      
+
+<!-- End Nav -->
+
+
+<!-- Main Page Content -->
+        <div id="main">
+            
+            <div id="content" class="row">
+<article>
+    <h1 class="article-title">No hassle Corporate Web Application Proxy with Hyper-V, Ubuntu and Nginx</h1>
+    <div class="info hide-for-small">
+        <ul class="small-block-grid-3">
+            <li><i class="fi-clock"></i>&nbsp;Tue 21 July 2015</li>
+            <li><i class="fi-torso"></i>&nbsp;By&nbsp;<a href="http://blog.chrisdev.com/author/christopher-clarke.html"><strong>Christopher Clarke</strong></a></li>
+            <li><i class="fi-marker"></i>&nbsp;Category&nbsp;<a href="http://blog.chrisdev.com/category/devops.html"><strong>devops</strong></a></li>
+        </ul>
+        <ul class="small-block-grid-1 tags">
+                <li><i class="fi-marker"></i>&nbsp;Tags&nbsp;
+ 
+                        <span class="label secondary round"><a href="http://blog.chrisdev.com/tag/nginx.html">nginx</a></span>
+ 
+                        <span class="label secondary round"><a href="http://blog.chrisdev.com/tag/hyper-v.html">Hyper-V</a></span>
+ 
+                        <span class="label secondary round"><a href="http://blog.chrisdev.com/tag/ubuntu.html">ubuntu</a></span>
+ 
+                        <span class="label secondary round"><a href="http://blog.chrisdev.com/tag/reverse-proxy.html">reverse-proxy</a></span>
+ 
+                        <span class="label secondary round"><a href="http://blog.chrisdev.com/tag/ssl.html">ssl</a></span>
+                </li>
+        </ul>
+    </div>
+
+    <p>A few weeks ago I was asked by a long standing client if we could set up a <em>Web
+Application Proxy</em> to provide a group of external customers with access to
+a <tt class="docutils literal">JBoss</tt> application running on the corporate LAN.  A quick Google search
+revealed that a <a class="reference external" href="/https://technet.microsoft.com/en-us/library/dn584113.aspx">Web Application Proxy</a> was</p>
+<blockquote>
+a service that provides reverse proxy functionality for web
+applications inside your corporate network to allow users to access them
+for out side the network <a class="footnote-reference" href="#f1" id="id1">[1]</a>.</blockquote>
+<p>Of course Microsoft's version of a reverse proxy server probably
+integrates really tightly with other MS products but for a number of reasons
+the client did not want to use a proprietary approach.  Instead, they wanted a &quot;open&quot;
+solution similar to one that I had built for them some years ago to provide
+external access to a couple of <tt class="docutils literal">Django</tt> applications running on the corporate
+LAN. In that implementation, we had used an Apache web server running
+<tt class="docutils literal">mod_proxy</tt> and <tt class="docutils literal">mod_rewrite</tt> and a simple port-forwarding rule on the
+corporate firewall to build the reverse proxy.</p>
+<p>However, the requirements for the new setup were a bit more ambitious, They
+wanted us to  provide:</p>
+<blockquote>
+<ul class="simple">
+<li>external access to the <tt class="docutils literal">JBoss</tt> application</li>
+<li>external access to one or more <tt class="docutils literal">Django</tt> applications</li>
+<li>SSL encryption for all the exposed web applications</li>
+<li>Encrypted access to <tt class="docutils literal">Outlook Web Access [OWA]</tt> and <tt class="docutils literal">Active Sync</tt> which previously used HTTP</li>
+<li>A static portal site to act a directory to the various services</li>
+<li>Standardize the Client (40x.html) and Server (50x.html) error
+pages across all applications</li>
+</ul>
+</blockquote>
+<p>The make things more interesting the client only had a single external IP
+address and time constraints meant that we could only use a single URL
+name space i.e.  <tt class="docutils literal">external.enterprise.co.tt</tt>.</p>
+<p>In this article we will detail how we set up a corporate reverse proxy with strong
+SSL security using a <tt class="docutils literal">Ubuntu</tt> virtual machine running on <tt class="docutils literal"><span class="pre">Hyper-V</span></tt> and
+an <tt class="docutils literal">nginx</tt> web server to provide secure external access to a number of internal
+web applications. The article is targeted at system administrators and others who
+work primarily with Microsoft tools but are interested in exploring how they can
+leverage Linux and other open source tools like <tt class="docutils literal">nginx</tt> to make their jobs easier.
+If you want to set up your own reverse proxy implementation it would
+probably help to familiarize your self with the Linux command line and some of
+the basic shell commands. Zed Shaw's <a class="reference external" href="http://cli.learncodethehardway.org/book/">The Command
+Line Crash Course</a> is and excellent
+way to get started learning the <tt class="docutils literal">shell</tt>. You will also need to use one
+of the Linux text editors (Vi, EMACS, Nano). If you are new to Linux you should
+probably stick with Nano which is the default text editor on Ubuntu
+distributions.</p>
+<p>In the next section we start by recapping some some of the benefits for having
+a corporate reverse proxy.</p>
+<div class="section" id="what-is-a-reverse-proxy">
+<h2>What is a Reverse Proxy?</h2>
+<p>A reverse proxy sits between the internet and the <em>upstream</em>
+application servers accepting requests, inspecting and transforming them and
+then forwarding them to one or many application servers.</p>
+<blockquote>
+<div class="figure">
+<img alt="Web Applicaton or Reverse Proxy" src="http://blog.chrisdev.com/images/reverse_proxy_server.png" />
+</div>
+</blockquote>
+<p>Having a point at which you can inspect, transform and route HTTP requests
+before they reach your web servers provides a whole host of benefits. These
+include:</p>
+<div class="section" id="ssl-termination">
+<h3>SSL Termination</h3>
+<p>You just need a single Certificate Authority (CA) signed SSL certificate
+to secure all the applications that you want to access externally. This
+certificate needs to be installed only on the reverse proxy.  In most cases you
+can use use HTTP on the upstream web application servers (remember most of
+these are built to run on the relatively secure corporate LAN).  In some
+cases, for instance <tt class="docutils literal">Jboss</tt> upstream application servers, to run under HTTPS,
+to serve HTTPS traffic but but since
+the <tt class="docutils literal">Jboss</tt> application is never directly exposed outside the enterprise a self-signed
+certificate should suffice.  The reverse proxy thus provides a single point of
+configuration and management for SSL/TLS. It takes the processing load of
+encrypting/decrypting HTTPS traffic away from the internal web application
+servers and makes testing and intercepting HTTP requests to individual web
+servers easier.</p>
+</div>
+<div class="section" id="aggregating-multiple-web-applications-into-the-same-url-space">
+<h3>Aggregating Multiple web applications Into the Same URL Space</h3>
+<p>The reverse proxy can route different branches of a single URL address space to
+different internal web servers. So for the URL space implied in our
+requirements above we can route these from the single external domain using the
+reverse proxy. So for the JBoss application we have
+<tt class="docutils literal"><span class="pre">https://external.enterprise.co.tt/jboss</span></tt>, and for OWA we have
+<tt class="docutils literal"><span class="pre">https://external.enterprise.co.tt/owa</span></tt> and for the Django we have
+<tt class="docutils literal"><span class="pre">https://external.enterprise.co.tt/django</span></tt>. Multiple application all mapped
+into one URI name space.</p>
+</div>
+<div class="section" id="security">
+<h3>Security</h3>
+<p>A reverse proxy can hide the topology and characteristics of the back-end
+servers by removing the need for direct internet access to them. You can place
+your reverse proxy in your DMZ, but hide your web servers inside
+a non-public subnet.</p>
+</div>
+<div class="section" id="load-balancing-and-compression">
+<h3>Load Balancing and Compression</h3>
+<p>General purpose reverse proxy applications like Nginx also provide load
+balancing functionality. You can run multiple instances of a particular
+<em>upstream</em> application server and the proxy routes incoming requests to
+a particular instance of the upstream application using mechanisms such
+a round-robin, least-connected or ip-hash or something more sophisticated.</p>
+<p>In order to reduce the bandwidth needed for individual requests, the reverse
+proxy can decompress incoming requests and compress outgoing ones. This reduces
+the load on the back-end servers that would otherwise have to do the
+compression, and makes debugging requests to, and responses from, the back-end
+servers easier.</p>
+</div>
+<div class="section" id="authentication-and-logging">
+<h3>Authentication and Logging</h3>
+<p>The reverse proxy  provide a single point of authentication for all HTTP
+requests.  Because all HTTP requests are routed through the reverse proxy, it
+makes an excellent point for logging and auditing.</p>
+<p>The next section we start our journey by creating a Linux virtual machine to
+host the reverse proxy.</p>
+</div>
+</div>
+<div class="section" id="step-1-create-an-ubuntu-virtual-machine-on-hyper-v">
+<h2>Step 1: Create an Ubuntu Virtual Machine on Hyper-V</h2>
+<p>In my opinion <tt class="docutils literal"><span class="pre">Hyper-V</span></tt> is the best thing to come out of Microsoft since <tt class="docutils literal">Excel
+4.O</tt>.  Setting up a Ubuntu Box on on Hyper-V is quite straight forward. I'm
+assuming that Windows 8.1 or Windows Server 2012 R2 has already
+installed. We will use Ubuntu 14.04 LTS as this is the first Linux release to
+support running inside of a Generation 2 virtual machine. Generation 2 virtual machines
+come with all the cool features like dynamic memory, online backup and
+so on already enabled and ready to go. The term LTS stands for
+Long Term Support which means that security patches and kernel updates etc. are
+available until 2019.</p>
+<p>We will use the Server edition of 14.04 and which you can download form <a class="reference external" href="http://www.ubuntu.com/download/server">here</a>.  Ensure that you get the 64-bit
+versions.  You can use the Desktop edition but be aware that this comes with
+with a lot of extra packages and dependencies that may be out do place in the
+context of a secure reverse proxy.</p>
+<p>Next create a new Generation 2 virtual machine and configure it any thing above
+2GB of RAM is great and you do not need a lot of HD space any thing above 10 GB
+should be sufficient.  Before you start the installation you will need to go
+into the virtual machine settings, change to the Firmware settings page and
+uncheck Enable Secure Boot.</p>
+<div class="figure">
+<img alt="Configure Hyper-V Virtual Machine" src="http://blog.chrisdev.com/images/hyper-v-settings.png" />
+</div>
+<p>You can then boot from the downloaded Ubuntu ISO image and select it to start
+the installation.  The installation process is quite simple, and there are no
+tricks / special options to get it running well under Hyper-V.</p>
+<div class="figure">
+<img alt="Install Ubuntu 14.04" src="http://blog.chrisdev.com/images/hyper-v-install-ubuntu.png" />
+</div>
+<p>Soon you will be done - and you will have an Ubuntu Generation 2 virtual
+machine, :</p>
+<div class="figure">
+<img alt="Ubuntu 14.04 Server Edition running in Hyper-V" src="http://blog.chrisdev.com/images/hyper-v-install-ubuntu.png" />
+</div>
+<p>Next ssh into the Ubuntu VM as root and install the following packages.</p>
+<div class="highlight"><pre>sudo apt-get update
+sudo apt-get install openssl nginx
+</pre></div>
+<p>We're not going to install our usual security packages such as <a class="reference external" href="http://www.fail2ban.org">Fail2ban</a>
+and <a class="reference external" href="https://help.ubuntu.com/community/UFW">UFW</a>  since the corporate
+<a class="reference external" href="http://checkpoint.com">CheckPoint</a> firewall will be used to secure the reverse proxy.</p>
+</div>
+<div class="section" id="step-2-acquire-and-install-the-ssl-certificate">
+<h2>Step 2: Acquire and Install the SSL Certificate</h2>
+<p>In this section we show you how to acquire and install an
+SSL certificate from a trusted, commercial Certificate Authority (CA).</p>
+<div class="section" id="generate-the-private-key-and-certificate-signing-request">
+<h3>Generate the Private Key and Certificate Signing Request</h3>
+<p>We start by creating a secure location to store the certificates login to
+new VM and</p>
+<div class="highlight"><pre>mkdir -p /svr/ssl
+chmod <span class="m">700</span> /svr/ssl
+</pre></div>
+<p>Next <tt class="docutils literal">cd</tt> to the ssl directory and use <tt class="docutils literal">openssl</tt>  to generate your private key
+and CSR on your web server.</p>
+<div class="highlight"><pre>openssl req -newkey rsa:2048 -nodes -keyout external.enterprise.co.tt.key -out external.enterprise.co.tt.csr
+</pre></div>
+<p>You will then be prompted to answer a number of questions
+The most important of which is the Common Name field which should match the name
+of the DNS host that you want to use the certificate on for i.e.
+<tt class="docutils literal">external.enterprise.com</tt>.
+If you are planning on getting an EV certificate, is important to fill the  other
+fields accurately in keeping your organization or business details.</p>
+<div class="highlight"><pre>Country Name <span class="o">(</span><span class="m">2</span> letter code<span class="o">)</span> <span class="o">[</span>AU<span class="o">]</span>: TT
+State or Province Name <span class="o">(</span>full name<span class="o">)</span> <span class="o">[</span>Some-State<span class="o">]</span>: Trinidad
+Locality Name <span class="o">(</span>eg, city<span class="o">)</span> <span class="o">[]</span>:Port of Spain
+Organization Name <span class="o">(</span>eg, company<span class="o">)</span> <span class="o">[</span>Internet Widgits Pty Ltd<span class="o">]</span>: The Enterprise
+Organizational Unit Name <span class="o">(</span>eg, section<span class="o">)</span> <span class="o">[]</span>: IT
+Common Name <span class="o">(</span>e.g. server FQDN or YOUR name<span class="o">)</span> <span class="o">[]</span>:external.enterprise.com
+Email Address <span class="o">[]</span>: webmaster@enterprise.com
+</pre></div>
+<p>This will generate a <tt class="docutils literal">.key</tt> and <tt class="docutils literal">.csr</tt> file. The <tt class="docutils literal">.key</tt> file is your private key,
+you should keep a backup to this file in a secure location.</p>
+<p>The <tt class="docutils literal">.csr</tt> file is what you will send to the CA to request your SSL certificate.</p>
+<p>You will need to copy and paste your CSR when submitting your certificate signing request to your CA.
+To view the contents of your CSR as follows</p>
+<div class="highlight"><pre><span class="nb">cd</span> /svr/ssl
+cat external.enterprise.co.tt.csr
+</pre></div>
+<p>You can check that you filled out the questions correctly by running the
+following command</p>
+<div class="highlight"><pre>openssl -in external.enterprise.co.tt.csr -noout -text
+</pre></div>
+</div>
+<div class="section" id="submit-the-csr-to-the-commercial-certificate-authority">
+<h3>Submit the CSR to the Commercial Certificate Authority</h3>
+<p>You are now ready to submit you CSR to the commercial Certificate Authority. We
+choose to go with a Domain Validated (DV) certificate from Comodo largely due
+to time pressures. A DV certificates is issued once the CA validates that the
+requester owns or controls the domain in question. The process will usually
+involve the CA sending an email to the controller of the domain as well as some
+additional validation step. In contrast an Organization Validation (OV)
+certificates can be issued only after the CA validates the legal identity of
+the requester.  Extended Validation (EV) certificates can be issued only after the
+issuing CA validates the legal identity, among other things, of the requester,
+according to a strict set of guidelines. An EV certificate is supposed to
+provide additional assurance of the legitimacy of your organization's identity
+to your site's visitors.</p>
+<p>However, it should be noted that all flavors of the certificate provide the
+same degree on encryption. Additionally, we have encountered many cases in the
+wild where EV certificates have been configured in such a manner that
+leave the users of these services venerable to a whole range of exploits. The
+lesson being that acquiring an expensive EV certificate is not sufficient to
+protect your customers from these exploits and venerabilities  if
+they are running older unpatched version of some browsers.</p>
+<p>We actually get our certificated via <a class="reference external" href="https://namecheap.com">Namecheap</a>
+which provides a convenient way buy SSL certificates from a variety of CAs. We
+will walk through the process of acquiring a single domain certificate from
+PositiveSSL, but you can deviate if you want a different type of certificate.</p>
+<div class="section" id="select-and-purchase-the-certificate">
+<h4>Select and Purchase the Certificate</h4>
+<p>Go to <a class="reference external" href="https://www.namecheap.com/security/ssl-certificates.aspx">Namecheap's SSL certificate page</a>. Select the Domain
+Validation  Compare Products button in the &quot;Domain Validation&quot; box. Find
+will find &quot;PositiveSSL&quot;, and click the <tt class="docutils literal">Add to Cart</tt> button.</p>
+<div class="figure">
+<img alt="Purchase PositiveSSL certificate from name cheap" src="http://blog.chrisdev.com/images/namecheap_add_to_cart.jpg" />
+</div>
+<p>At this point, you must register or log in to Namecheap to complete the
+payment process.</p>
+<p>To submit the CSR click on Manage SSL Certificates link, under the &quot;Hi Username&quot; section.</p>
+<div class="figure">
+<img alt="Namecheap Manage SSL certifcate" src="http://blog.chrisdev.com/images/namecheap_manage_ssl.jpg" />
+</div>
+<p>Here, you will see a list of all of the SSL certificates that you have
+purchased through Namecheap.</p>
+<blockquote>
+<div class="figure">
+<img alt="Namecheap Manage SSL certifcate" src="http://blog.chrisdev.com/images/namecheap_activate.jpg" />
+</div>
+</blockquote>
+<p>Click on the Activate Now link to submit the CSR.   Choose <tt class="docutils literal">nginx</tt> from the
+<tt class="docutils literal">Select web server</tt> drop down and pate in the CSR into the <tt class="docutils literal">Enter csr</tt> box</p>
+<blockquote>
+<div class="figure">
+<img alt="Namecheap submitt CSR" src="http://blog.chrisdev.com/images/namecheap_submitt_csr.jpg" />
+</div>
+</blockquote>
+<p>then click the <tt class="docutils literal">Next</tt>.  The CSR that you submitted will be parsed and
+validated and the output presented to you.  You should take this opportunity to
+look over the certificate information to ensure that everything is OK.
+Finally, select an approver email from the either the list of administrator
+type emails addresses or the email address in the domain's WHOIS administrative
+contact.  Once you have completed this step the email address that you selected
+will receive an email from Comodo. This email will contain a validation token
+and a link to Comodo's domain control validation form.
+Click on the link in the email, enter the token in the form and  press enter
+to verify that you have control of the domain.</p>
+<p>Once the certificate has been approved an email will be sent to the
+Technical Contact listed in the Namecheap account.  Attached to the email will
+be a <tt class="docutils literal">zip</tt> file with the certificate issued for your domain as well as
+the Comodo's root and intermediate certificates.</p>
+<blockquote>
+<ul class="simple">
+<li>Root CA Certificate - AddTrustExternalCARoot.crt</li>
+<li>Intermediate CA Certificate - COMODORSAAddTrustCA.crt</li>
+<li>Intermediate CA Certificate - COMODORSADomainValidationSecureServerCA.crt</li>
+<li>Your PositiveSSL Certificate - external.enterprise.co.tt.crt</li>
+</ul>
+</blockquote>
+<p>Copy these files to the Ubuntu reverse proxy box using the same location
+where you generated your private key and CSR i.e. <tt class="docutils literal">/srv/ssl</tt>.</p>
+</div>
+<div class="section" id="create-a-certificate-bundle">
+<h4>Create a Certificate bundle</h4>
+<p>In order to use the newly issued certificate with nginx you first must combine all
+the files sent by Comodo into a single file or bundle.
+This is required since the certificate issued for the domain constitutes
+just one part of the certificate chain. It must be combined with the Comodo's  root and
+Intermediate certificates to improve compatibility and ensure that browsers and other
+clients recognize the certificate In
+Unix like systems as we can simply use the <tt class="docutils literal">cat</tt> command.</p>
+<div class="highlight"><pre><span class="nb">cd</span> /svr/ssl
+cat external.enterprise.co.tt.crt ComodoRSADomainValidationSecureServerCA.crt COMODORSAAddTrustCA.crt AddTrustExternalRoot.crt &gt;&gt; bundle.external.enterprise.co.tt.crt
+</pre></div>
+<p>Note the order in which the files are concatenated is important.</p>
+</div>
+<div class="section" id="install-the-certificate">
+<h4>Install the certificate</h4>
+<p>To install the certificate bundle you need to edit your Nginx virtual host files. If
+you are new to Linux you may want to use the <tt class="docutils literal">nano</tt> editor instead of
+the classics like <tt class="docutils literal">vi</tt> or <tt class="docutils literal">emacs</tt>.</p>
+<p>The nginx configuration files are located in <tt class="docutils literal">/etc/nginx</tt> directory. The sub
+directories of interest are:
+- <tt class="docutils literal"><span class="pre">sites-available</span></tt> - the configuration file of each virtual host is defined here.
+- <tt class="docutils literal"><span class="pre">sites-enabled</span></tt> which contains a reference to the virtual hosts that are currently active.</p>
+<p>To enable or activate a virtual host you simply create a symbolic link (soft link) in the
+<tt class="docutils literal"><span class="pre">sites-enabled</span></tt> folder that references the virtual host in sites-enabled.</p>
+<div class="highlight"><pre><span class="nb">cd</span> /etc/nginx/site-enabled
+ln -s ../sites-enabled/default default
+</pre></div>
+<p>As we are setting up a reverse proxy we are only going to have one virtual host
+running. Indeed, we are just going to modify the <tt class="docutils literal">default</tt> virtual host
+that is  when you install the Ubuntu nginx package.</p>
+<div class="highlight"><pre><span class="nb">cd</span> /etc/nginx/sites-available
+nano default
+</pre></div>
+<p>First remove everything in  <tt class="docutils literal">default</tt> except the section headed <tt class="docutils literal"># HTTPS
+Server</tt>. Next uncomment the configuration by removing the <tt class="docutils literal">#</tt> character form
+the lines. Your initial configuration should look like this:</p>
+<div class="highlight"><pre><span class="lineno"> 1 </span><span class="k">server</span> <span class="p">{</span>
+<span class="lineno"> 2 </span>    <span class="kn">listen</span> <span class="mi">443</span><span class="p">;</span>
+<span class="lineno"> 3 </span>    <span class="kn">server_name</span> <span class="s">localhost</span><span class="p">;</span>
+<span class="lineno"> 4 </span>
+<span class="lineno"> 5 </span>    <span class="kn">root</span> <span class="s">html</span><span class="p">;</span>
+<span class="lineno"> 6 </span>    <span class="kn">index</span> <span class="s">index.html</span> <span class="s">index.htm</span><span class="p">;</span>
+<span class="lineno"> 7 </span>
+<span class="lineno"> 8 </span>    <span class="kn">ssl</span> <span class="no">on</span><span class="p">;</span>
+<span class="lineno"> 9 </span>    <span class="kn">ssl_certificate</span> <span class="s">cert.pem</span><span class="p">;</span>
+<span class="lineno">10 </span>    <span class="kn">ssl_certificate_key</span> <span class="s">cert.key</span><span class="p">;</span>
+<span class="lineno">11 </span>
+<span class="lineno">12 </span>    <span class="kn">ssl_session_timeout</span> <span class="mi">5m</span><span class="p">;</span>
+<span class="lineno">13 </span>
+<span class="lineno">14 </span>    <span class="kn">ssl_protocols</span> <span class="s">SSLv3</span> <span class="s">TLSv1</span> <span class="s">TLSv1.1</span> <span class="s">TLSv1.2</span><span class="p">;</span>
+<span class="lineno">15 </span>    <span class="kn">ssl_ciphers</span> <span class="s">&quot;HIGH:!aNULL:!MD5</span> <span class="s">or</span> <span class="s">HIGH:!aNULL:!MD5:!3DES&quot;</span><span class="p">;</span>
+<span class="lineno">16 </span>    <span class="kn">ssl_prefer_server_ciphers</span> <span class="no">on</span><span class="p">;</span>
+<span class="lineno">17 </span>
+<span class="lineno">18 </span>    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+<span class="lineno">19 </span>            <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="nv">$uri/</span> <span class="p">=</span><span class="mi">404</span><span class="p">;</span>
+<span class="lineno">20 </span>    <span class="p">}</span>
+<span class="lineno">21 </span><span class="p">}</span>
+</pre></div>
+<p>The <tt class="docutils literal">VirtualHost</tt> has already to listen on port 443 and <tt class="docutils literal">ssl</tt> has been
+turned on on line 6 <tt class="docutils literal">ssl on</tt>. Make the following changes to <tt class="docutils literal">default</tt></p>
+<p>Change the server name to <tt class="docutils literal">external.enterprise.co.tt</tt></p>
+<div class="highlight"><pre><span class="k">server_name</span> <span class="s">external.enterprise.co.tt</span><span class="p">;</span>
+</pre></div>
+<p>Indicate the location of the bundled ssl certificate you created in step
+2 above</p>
+<div class="highlight"><pre><span class="k">ssl_certificate</span>    <span class="s">/svr/ssl/bundle.external.enterprise.co.tt.crt</span><span class="p">;</span>
+</pre></div>
+<p>Point <tt class="docutils literal">nginx</tt> to the file containing the SSL Private key</p>
+<div class="highlight"><pre><span class="k">ssl_certificate_key</span>    <span class="s">/svr/ssl/external.enterprise.co.tt.key</span><span class="p">;</span>
+</pre></div>
+<p>Set the root directory for requests.</p>
+<div class="highlight"><pre><span class="k">root</span> <span class="s">/usr/share/nginx/html/portal</span><span class="p">;</span>
+</pre></div>
+<p>Completed <tt class="docutils literal">VirtualHost</tt> record should look like this:</p>
+<div class="highlight"><pre><span class="lineno"> 1 </span><span class="k">server</span> <span class="p">{</span>
+<span class="lineno"> 2 </span>    <span class="kn">listen</span> <span class="mi">443</span> <span class="s">default_server</span><span class="p">;</span>
+<span class="lineno"> 3 </span><span class="hll">    <span class="kn">server_name</span> <span class="s">external.enterprise.co.tt</span><span class="p">;</span>
+</span><span class="lineno"> 4 </span>
+<span class="lineno"> 5 </span><span class="hll">    <span class="kn">root</span> <span class="s">/usr/share/nginx/html/portal</span><span class="p">;</span>
+</span><span class="lineno"> 6 </span><span class="hll">    <span class="kn">index</span> <span class="s">index.html</span><span class="p">;</span>
+</span><span class="lineno"> 7 </span>
+<span class="lineno"> 8 </span>    <span class="kn">ssl</span> <span class="no">on</span><span class="p">;</span>
+<span class="lineno"> 9 </span><span class="hll">    <span class="kn">ssl_certificate</span>  <span class="s">/svr/ssl/bundle.external.enterprise.co.tt.crt</span><span class="p">;</span>
+</span><span class="lineno">10 </span><span class="hll">    <span class="kn">ssl_certificate_key</span> <span class="s">/svr/ssl/external.enterprise.co.tt.key</span>
+</span><span class="lineno">11 </span>
+<span class="lineno">12 </span>    <span class="s">ssl_session_timeout</span> <span class="mi">5m</span><span class="p">;</span>
+<span class="lineno">13 </span>
+<span class="lineno">14 </span>    <span class="kn">ssl_protocols</span> <span class="s">SSLv3</span> <span class="s">TLSv1</span> <span class="s">TLSv1.1</span> <span class="s">TLSv1.2</span><span class="p">;</span>
+<span class="lineno">15 </span>    <span class="kn">ssl_ciphers</span> <span class="s">&quot;HIGH:!aNULL:!MD5</span> <span class="s">or</span> <span class="s">HIGH:!aNULL:!MD5:!3DES&quot;</span><span class="p">;</span>
+<span class="lineno">16 </span>    <span class="kn">ssl_prefer_server_ciphers</span> <span class="no">on</span><span class="p">;</span>
+<span class="lineno">17 </span>
+<span class="lineno">18 </span>    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+<span class="lineno">19 </span>            <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="nv">$uri/</span> <span class="p">=</span><span class="mi">404</span><span class="p">;</span>
+<span class="lineno">20 </span>    <span class="p">}</span>
+<span class="lineno">21 </span><span class="p">}</span>
+</pre></div>
+<p>Before you can load the new configuration you need to create the <tt class="docutils literal">protal</tt>
+directory and a placeholder index page.</p>
+<div class="highlight"><pre><span class="nb">cd</span> /usr/share/nginx/html
+mkdir protal
+<span class="nb">cd </span>portal
+nano index.html
+</pre></div>
+<p>Add some placeholder text for example &quot;Welcome to the Reverse Proxy&quot;.</p>
+<p>Once you are done with this you need to test your configuration by running</p>
+<div class="highlight"><pre>service nginx configtest
+</pre></div>
+<p>Finally, restart the <tt class="docutils literal">nginx</tt> to reload the new default configuration</p>
+<div class="highlight"><pre>service nginx restart
+</pre></div>
+</div>
+<div class="section" id="test-the-certificate">
+<h4>Test the Certificate</h4>
+<p>Start by using you browser to navigate to <tt class="docutils literal"><span class="pre">https://external.enterprise.co.tt</span></tt>
+You should observe the familiar lock icon associated with an SSL protected
+site. There should be no warnings for current browsers.
+Click on the lock icon to seethe details of the SSL certificate have be entered
+correctly.</p>
+<div class="figure">
+<img alt="SSL Certificate details" src="http://blog.chrisdev.com/images/certificate.jpg" />
+</div>
+<p>While you SSL certificate has been installed correctly the level of protection
+that it provides is quite weak. Qualys, Inc. a leading provider of cloud
+security and compliance provides service that provides a free online analysis
+of the configuration of SSL servers at <a class="reference external" href="https://ww.ssllabs.com/ssltest">SSL Labs</a>.  Navigate to the SSL Server Test page and
+enter the URL of your reverse proxy and click <tt class="docutils literal">submit</tt>. Your current
+configuration will only a give you a &quot;C&quot; grade.  We'll show you how to get an
+&quot;A&quot;.</p>
+<div class="figure">
+<img alt="SSL Labs test results before" src="http://blog.chrisdev.com/images/ssl_certificate_test_before.png" />
+</div>
+</div>
+<div class="section" id="redirect-http-requests-to-https">
+<h4>Redirect HTTP Requests to HTTPS</h4>
+<p>One problem you may have noticed that you can always need to remember to keep
+entering the <tt class="docutils literal">https</tt> part of the URL to access the site. It would be convenient to if any
+HTTP (<tt class="docutils literal"><span class="pre">http://external.enterprise.co.tt</span></tt>) request could be redirected to HTTPS.
+This problem is solved by adding the highlighted lines to your default virtual
+host configuration.</p>
+<div class="highlight"><pre><span class="lineno"> 1 </span><span class="k">server</span> <span class="p">{</span>
+<span class="lineno"> 2 </span><span class="hll">    <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+</span><span class="lineno"> 3 </span><span class="hll">    <span class="kn">server_name</span> <span class="s">external.enterprise.co.tt</span>
+</span><span class="lineno"> 4 </span><span class="hll">    <span class="s">return</span> <span class="mi">301</span> <span class="s">https:/external.enterprise.co.tt</span><span class="nv">$request_uri</span><span class="p">;</span>
+</span><span class="lineno"> 5 </span><span class="p">}</span>
+<span class="lineno"> 6 </span>
+<span class="lineno"> 7 </span><span class="k">server</span> <span class="p">{</span>
+<span class="lineno"> 8 </span>    <span class="kn">listen</span> <span class="mi">443</span> <span class="s">default_server</span><span class="p">;</span>
+<span class="lineno"> 9 </span>    <span class="kn">server_name</span> <span class="s">external.enterprise.co.tt</span>
+<span class="lineno">10 </span>
+<span class="lineno">11 </span>    <span class="s">root</span> <span class="s">/usr/share/nginx/html/portal</span><span class="p">;</span>
+<span class="lineno">12 </span>    <span class="kn">index</span> <span class="s">index.html</span><span class="p">;</span>
+<span class="lineno">13 </span>
+<span class="lineno">14 </span>    <span class="kn">ssl</span> <span class="no">on</span><span class="p">;</span>
+<span class="lineno">15 </span>    <span class="kn">ssl_certificate</span>  <span class="s">/svr/ssl/bundle.external.enterprise.co.tt.crt</span><span class="p">;</span>
+<span class="lineno">16 </span>    <span class="kn">ssl_certificate_key</span> <span class="s">/svr/ssl/external.enterprise.co.tt.key</span>
+<span class="lineno">17 </span>
+<span class="lineno">18 </span>    <span class="s">ssl_session_timeout</span> <span class="mi">5m</span><span class="p">;</span>
+<span class="lineno">19 </span>
+<span class="lineno">20 </span>    <span class="kn">ssl_protocols</span> <span class="s">SSLv3</span> <span class="s">TLSv1</span> <span class="s">TLSv1.1</span> <span class="s">TLSv1.2</span><span class="p">;</span>
+<span class="lineno">21 </span>    <span class="kn">ssl_ciphers</span> <span class="s">&quot;HIGH:!aNULL:!MD5</span> <span class="s">or</span> <span class="s">HIGH:!aNULL:!MD5:!3DES&quot;</span><span class="p">;</span>
+<span class="lineno">22 </span>    <span class="kn">ssl_prefer_server_ciphers</span> <span class="no">on</span><span class="p">;</span>
+<span class="lineno">23 </span>
+<span class="lineno">24 </span>    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+<span class="lineno">25 </span>            <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="nv">$uri/</span> <span class="p">=</span><span class="mi">404</span><span class="p">;</span>
+<span class="lineno">26 </span>    <span class="p">}</span>
+<span class="lineno">27 </span><span class="p">}</span>
+</pre></div>
+<p>This sets up a separate server for HTTP request which return always returns a
+<tt class="docutils literal">301</tt> or <tt class="docutils literal">moved permanaently</tt> HTTP status code response. The new address would be the
+to the HTTPS server</p>
+</div>
+</div>
+<div class="section" id="harden-the-ssl-certificate">
+<h3>Harden the SSL Certificate</h3>
+<p>SSLlabs test highlights the main problems with the certificate.
+- Weak Diffle-Hellman key exchange parameters
+- Venerability to POODLE due the use of the deprecated protocols like SSL
+- The use of weak ciphers such as RC4
+- Lack of forward secrecy</p>
+<div class="section" id="disable-old-protocols">
+<h4>Disable old Protocols</h4>
+<p>The first issue to address is the fact that the current configuration allows for
+sessions using vulnerable deprecated protocols i.e. SSLv3 and TLSv1 that leave
+users open to a range of exploits and could allow attackers to capture and
+alter information passed between a client and the server.
+So we need to modify line 14 in our the default virtual host configuration as
+followw:</p>
+<div class="highlight"><pre><span class="k">ssl_protocols</span> <span class="s">TLSv1.1</span> <span class="s">TLSv1.2</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="section" id="optimize-th-cipher-suite">
+<h4>Optimize th Cipher Suite</h4>
+<p>We need also to disable weak ciphers (DES, RC4) which nginx defaults to
+in favour of modern ciphers such as (AES) and modes (GCM) as recommended by
+<a class="reference external" href="https://wiki.mozilla.org/Security/Server_Side_TLS">Mozilla</a></p>
+<div class="highlight"><pre><span class="k">ssl_ciphers</span> <span class="s">&#39;ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!3DES:!MD5:!PSK&#39;</span><span class="p">;</span>
+<span class="k">ssl_prefer_server_ciphers</span> <span class="no">on</span><span class="p">;</span>
+</pre></div>
+<p>This configuration is compatible with all Firefox 27+, Chrome 22+, IE 11, Opera 14,
+Safari 7, Android 4.4, Java 8. Note legacy clients including IE8 on WinXP
+will not be supported. If there is a need to support legacy clients the Mozilla
+article also provides a Intermediate compatibility Chipersuite suitable for
+Firefox 1, Chrome 1, IE 7, Opera 5, Safari 1, Windows XP IE8, Android 2.3, Java 7.
+The  <tt class="docutils literal">ssl_prefer_server_chipers on</tt>  ensures the server ciphers are preferred over
+client ciphers.</p>
+</div>
+<div class="section" id="enhance-forward-secerecy">
+<h4>Enhance Forward Secerecy</h4>
+<p>Mozilla summarizes the The concept of forward secrecy as</p>
+<pre class="literal-block">
+client and server negotiate a key that never hits the wire, and is destroyed at
+the end of the session. The RSA private from the server is used to sign
+a Diffie-Hellman key exchange between the client and the server. The pre-master
+key obtained from the Diffie-Hellman handshake is then used for encryption.
+Since the pre-master key is specific to a connection between a client and
+a server, and used only for a limited amount of time, it is called Ephemeral.
+</pre>
+<p>In other words with forward secrecy even if an attacker gets a hold of the
+private keys they will not be able to decrypt past communications.
+Unfortunately, by default the Ephemeral Diffie-Hellman (DHE) key for exchange
+provided by OpenSSL is a 1024-bit key.  So even though we are using a 2048-bit
+certificate, DHE clients will use a weaker key for key-exchange than
+non-ephemeral DH clients.</p>
+<p>We need generate a stronger DHE parameter:</p>
+<div class="highlight"><pre><span class="nb">cd</span> /svr/ssl/
+openssl dhparam -out dhparam.pem 2048
+</pre></div>
+<p>Then add the following line to the default config:</p>
+<div class="highlight"><pre><span class="k">ssl_dhparam</span> <span class="s">/etc/ssl/dhparam.pem</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="section" id="connections-credentials-caching">
+<h4>Connections Credentials Caching</h4>
+<p>Almost all of the overhead with SSL/TLS is during the initial connection setup,
+so by caching the connection parameters for the session, will drastically
+improve subsequent requests</p>
+<div class="highlight"><pre><span class="k">ssl_session_timeout</span> <span class="s">1d</span><span class="p">;</span>
+<span class="k">ssl_session_cache</span> <span class="s">shared:SSL:50m</span><span class="p">;</span>
+</pre></div>
+<p>This will create a cache shared between all worker processes.
+The cache size is specified in bytes (i.e. 50 MB).</p>
+</div>
+<div class="section" id="enable-http-strict-transport-security-hsts">
+<h4>Enable HTTP Strict Transport Security (HSTS)</h4>
+<p>In step 2 above we already made all HTTP requests redirect to HTTPS. Strict
+Transport Security builds upon this by using the HSTS feature enabled in modern
+browsers. The server just need to give a response with HSTS header and the
+client browser will not try to contact the server over regular HTTP again for
+the given time period (max-age).  Indeed, the browser will interpret all requests to this
+hostname as HTTPS, no matter what.</p>
+<div class="highlight"><pre><span class="k">add_header</span> <span class="s">Strict-Transport-Security</span> <span class="s">&quot;max-age=15768000&quot;</span><span class="p">;</span>
+</pre></div>
+<p>The max-age is set in seconds. 15768000 seconds is equivalent to 6 months.</p>
+</div>
+<div class="section" id="enable-ocsp-ssl-stapling">
+<h4>Enable OCSP SSL Stapling</h4>
+<p>Online Certificate Status Protocol (OCSP) is a protocol for checking the
+revocation status of the presented certificate. When the browser is
+presented a certificate, it will contact the issuer of that certificate to
+ascertain if it has been revoked. This, of course, adds overhead to the
+connection initialization and also presents a privacy issue involving a 3rd
+party.</p>
+<p>This OCSP stapling allows the web server (at regular intervals) to contact the
+CA's OCSP server to get a signed response and staple it on
+to the handshake to use when the connection is set up. This provides for a much more
+efficient connection initialization and does not involve any third party.</p>
+<p>The first thing that we have to set up the CA's certificate bundle so we can
+verify that the OCSP response indeed came from the CA</p>
+<div class="highlight"><pre>cat  ComodoRSADomainValidationSecureServerCA.crt COMODORSAAddTrustCA.crt AddTrustExternalRoot.crt &gt;&gt; comodo.crt
+</pre></div>
+<p>Next Add the following lines to the config for your default virtual host</p>
+<div class="highlight"><pre><span class="k">ssl_stapling</span> <span class="no">on</span><span class="p">;</span>
+<span class="k">ssl_stapling_verify</span> <span class="no">on</span><span class="p">;</span>
+<span class="k">ssl_trusted_certificate</span> <span class="s">/svr/ssl/comodo.crt</span><span class="p">;</span>
+<span class="k">resolver</span> <span class="mi">208</span><span class="s">.67.222.222</span> <span class="mi">208</span><span class="s">.67.220.220</span><span class="p">;</span>
+</pre></div>
+<p>The IP addresses for resolver are  for the OpenDNS public DNS servers.
+Alternatively you can use Google or some other service.</p>
+<p>The final configuration should look like.</p>
+<div class="highlight"><pre><span class="k">server</span> <span class="p">{</span>
+    <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+    <span class="kn">server_name</span> <span class="s">external.enterprise.co.tt</span>
+    <span class="s">return</span> <span class="mi">301</span> <span class="s">https:/external.enterprise.co.tt</span><span class="nv">$request_uri</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">server</span> <span class="p">{</span>
+    <span class="kn">listen</span> <span class="mi">443</span> <span class="s">default_server</span><span class="p">;</span>
+    <span class="kn">root</span> <span class="s">/usr/share/nginx/html/portal</span><span class="p">;</span>
+    <span class="kn">index</span> <span class="s">index.html</span><span class="p">;</span>
+
+    <span class="kn">server_name</span> <span class="s">external.enterprise.co.tt.crt</span><span class="p">;</span>
+
+    <span class="kn">ssl</span> <span class="no">on</span><span class="p">;</span>
+    <span class="kn">ssl_certificate</span>  <span class="s">/svr/ssl/bundle.external.enterprise.co.tt.crt</span><span class="p">;</span>
+    <span class="kn">ssl_certificate_key</span> <span class="s">/svr/ssl/external.enterprise.co.tt.key</span>
+
+    <span class="s">ssl_session_timeout</span> <span class="s">1d</span><span class="p">;</span>
+    <span class="kn">ssl_session_cache</span> <span class="s">shared:SSL:50m</span><span class="p">;</span>
+
+    <span class="c1"># Diffie-Hellman parameter for DHE ciphersuites, recommended 2048 bits</span>
+    <span class="kn">ssl_dhparam</span> <span class="s">/svr/ssl/dhparam.pem</span><span class="p">;</span>
+
+    <span class="c1"># modern configuration..</span>
+    <span class="kn">ssl_protocols</span> <span class="s">TLSv1.1</span> <span class="s">TLSv1.2</span><span class="p">;</span>
+    <span class="kn">ssl_ciphers</span> <span class="s">&#39;ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!3DES:!MD5:!PSK&#39;</span><span class="p">;</span>
+    <span class="kn">ssl_prefer_server_ciphers</span> <span class="no">on</span><span class="p">;</span>
+
+    <span class="kn">add_header</span> <span class="s">Strict-Transport-Security</span> <span class="s">max-age=15768000</span><span class="p">;</span>
+
+    <span class="c1"># OCSP Stapling</span>
+    <span class="c1"># fetch OCSP records from URL in ssl_certificate and cache them</span>
+    <span class="kn">ssl_stapling</span> <span class="no">on</span><span class="p">;</span>
+    <span class="kn">ssl_stapling_verify</span> <span class="no">on</span><span class="p">;</span>
+
+    <span class="kn">ssl_trusted_certificate</span> <span class="s">/svr/ssl/comodo.crt</span><span class="p">;</span>
+    <span class="kn">resolver</span> <span class="mi">208</span><span class="s">.67.222.222</span> <span class="mi">208</span><span class="s">.67.220.220</span>
+
+    <span class="s">location</span> <span class="s">/</span> <span class="p">{</span>
+            <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="nv">$uri/</span> <span class="p">=</span><span class="mi">404</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+<p>Test the new configuration by first run</p>
+<div class="highlight"><pre>service nginx configtest
+</pre></div>
+<p>Finally, restart <tt class="docutils literal">nginx</tt> to restart and reload the new default configuration</p>
+<div class="highlight"><pre>service nginx restart
+</pre></div>
+<p>Revisit SSL Server Test page submit you site for testing and
+congratulate your self for earing a well deserved A+</p>
+<div class="figure">
+<img alt="SSL Labs test results After" src="http://blog.chrisdev.com/images/ssl_certificate_test_before.png" />
+</div>
+<p>Now is a good time to chat with you firewall administrator to confirm that
+only external HTTP and HTTPS is being allowed in to your reverse proxy box and in
+turn your reverse proxy can connect with the <tt class="docutils literal">upstream</tt> application servers
+on the internal network.</p>
+</div>
+</div>
+</div>
+<div class="section" id="step-3-configure-the-reverse-proxy">
+<h2>Step 3: Configure the Reverse Proxy</h2>
+<p>Finally you are ready to set up the reverse proxy.  Our configuration will provide
+external users with access to following URL space.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="64%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">External URL</th>
+<th class="head">Route to</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>external.enterprise.co.tt</td>
+<td>Static site showing
+directory of the services
+available through the reverse
+proxy</td>
+</tr>
+<tr><td>external.enterprise.co.tt/jboss</td>
+<td>The JBoss application running as an HTTPS
+service on a machine on the internal
+network. The JBoss applicaton must run as HTTPS
+on the corporate LAN.  But you can use a
+self signed certificate since it is never directly
+exposed to the internet. This handy guide
+shows you how to <a class="reference external" href="https://docs.jboss.org/jbossweb/7.0.x/ssl-howto.html">configure JBoss for
+SSL</a></td>
+</tr>
+<tr><td>external.enterprise.co.tt/django1</td>
+<td>Legacy Django 1.4 application running on
+Apache 2 <tt class="docutils literal"><span class="pre">mod-python</span></tt>.</td>
+</tr>
+<tr><td>external.enterprise.co.tt/django2</td>
+<td>A More modern Django application running
+nginx/gunicorn. The internal nginx
+server takes care of static media serving</td>
+</tr>
+<tr><td>external.enterprise.co.tt/owa</td>
+<td>Microsoft Outlook web access</td>
+</tr>
+</tbody>
+</table>
+<p>We start with a block which adds header fields to the
+request that will be passed on to the upstream applications. This ensures
+the upstream applications have access to to the correct HTTP headers.</p>
+<div class="highlight"><pre><span class="k">proxy_set_header</span>   <span class="s">Host</span>             <span class="nv">$host</span><span class="p">;</span>
+<span class="k">proxy_set_header</span>   <span class="s">X-Real-IP</span>        <span class="nv">$remote_addr</span><span class="p">;</span>
+<span class="k">proxy_set_header</span>   <span class="s">REMOTE_HOST</span>      <span class="nv">$remote_addr</span><span class="p">;</span>
+<span class="k">proxy_set_header</span>   <span class="s">X-Forwarded-For</span>  <span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+<span class="k">proxy_set_header</span>   <span class="s">X-Forwarded-Proto</span> <span class="nv">$scheme</span><span class="p">;</span>
+</pre></div>
+<ul class="simple">
+<li>Host - The domain name of the server and the TCP port
+number on which the server is listening i.e. <em>external.enterprise.co.tt:443</em></li>
+<li>X-Real-IP - Without this header the upstream application will record all the
+request to the upstream as coming from the reverse proxy as opposed to the
+remote clients.</li>
+<li>REMOTE_HOST - The same as X-Real-IP but some applications e.g. Django
+determine the client IP from this field in the request.</li>
+<li>X-Forwarded-For - This is similar to X-Real-IP, but provides added connection
+source entries for the entire chain of proxies the connection's passed
+through.</li>
+<li>X-Forwarded-Proto This is used for identifying the originating protocol of
+the request, since the reverse proxy will communicate to the upstream using
+HTTP even if the request to the reverse proxy is HTTPS.</li>
+</ul>
+<p>The next block is were the actual reverse proxing actually happens. The
+<tt class="docutils literal">location</tt> directive sets the processing based on the request URI. So for  URI
+<tt class="docutils literal"><span class="pre">https://external.enterprise.co.tt/jboss-app/</span></tt>  which matches the location
+/jboss-app/ will be mapped to the JBoss server on the internal network. The
+<tt class="docutils literal">proxy_pass</tt> directive allows us to specify the protocol i.e. HTTPS and the
+port <tt class="docutils literal">8443</tt>. In contrast, the URI <tt class="docutils literal"><span class="pre">https://external.enterprise.co.tt/owa/</span></tt>
+will map to the exchange server running OWA <tt class="docutils literal"><span class="pre">http://192.168.64.A/owa/</span></tt></p>
+<div class="highlight"><pre><span class="lineno"> 1 </span><span class="k">location</span> <span class="s">/jboss-app/</span> <span class="p">{</span>
+<span class="lineno"> 2 </span>    <span class="kn">proxy_pass</span> <span class="s">https://192.168.64.Y:8443/</span><span class="p">;</span>
+<span class="lineno"> 3 </span>
+<span class="lineno"> 4 </span> <span class="p">}</span>
+<span class="lineno"> 5 </span>
+<span class="lineno"> 6 </span><span class="k">location</span> <span class="s">/dango1/</span> <span class="p">{</span>
+<span class="lineno"> 7 </span>    <span class="kn">proxy_pass</span> <span class="s">http://192.168.64.A</span><span class="p">;</span>
+<span class="lineno"> 8 </span>
+<span class="lineno"> 9 </span> <span class="p">}</span>
+<span class="lineno">10 </span>
+<span class="lineno">11 </span><span class="k">location</span> <span class="s">/django2/</span> <span class="p">{</span>
+<span class="lineno">12 </span>    <span class="kn">proxy_pass</span> <span class="s">http://192.168.64.B</span><span class="p">;</span>
+<span class="lineno">13 </span>
+<span class="lineno">14 </span> <span class="p">}</span>
+<span class="lineno">15 </span>
+<span class="lineno">16 </span><span class="k">location</span> <span class="s">/owa/</span> <span class="p">{</span>
+<span class="lineno">17 </span>    <span class="kn">proxy_pass</span> <span class="s">http://192.168.64.A/owa</span>
+<span class="lineno">18 </span><span class="err">}</span>
+<span class="lineno">19 </span>
+<span class="lineno">20 </span><span class="s">location</span> <span class="s">/Microsoft-Server-ActiveSync/</span> <span class="p">{</span>
+<span class="lineno">21 </span>    <span class="kn">proxy_pass</span> <span class="s">http://192.168.64.A</span><span class="p">;</span>
+<span class="lineno">22 </span><span class="p">}</span>
+</pre></div>
+<p>Next set up common error pages to deal with client and server errors</p>
+<div class="highlight"><pre><span class="k">error_page</span> <span class="mi">404</span>             <span class="s">/404.html</span><span class="p">;</span>
+<span class="k">error_page</span> <span class="mi">500</span> <span class="mi">502</span> <span class="mi">503</span> <span class="mi">504</span> <span class="s">/500.html</span><span class="p">;</span>
+</pre></div>
+<p>You will need to add these  to the root of your static site i.e.
+to <tt class="docutils literal">/usr/share/nginx/html/portal</tt>.</p>
+<p>Test your configuration and restart nginx to reload the configuration
+.. code-block:: nginx</p>
+<blockquote>
+service nginx configtest
+service nginx restart</blockquote>
+<p>Finally, visit <tt class="docutils literal"><span class="pre">https://external.enterprise.co.tt/</span></tt> and try out the various
+routes as defined in the reverse proxy. Ensure that you can log in i.e. to
+verify the information is been passed correctly to the back end servers.</p>
+<p class="rubric">Footnotes</p>
+<table class="docutils footnote" frame="void" id="f1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Of course <tt class="docutils literal">Microsoft</tt> is has an actual product called Web
+Application Proxy which is available as part of Windows Server® 2012 R2.  But
+we believe that our open source approach was quick and easy to setup and met
+all the clients requirements.</td></tr>
+</tbody>
+</table>
+</div>
+
+
+</article>
+            </div>
+        </div>
+        <a href="#" class="scrollup">Scroll</a>
+</div> 
+ <!-- End Main Content -->
+
+
+<!-- Footer -->
+<div id="footer">
+    <footer class="row">
+            <div class="large-3 medium-3 small-6 columns">
+                <h6>Site Map</h6>
+                <ul>
+                <li><a href="http://blog.chrisdev.com/archives.html">Archives</a></li>
+                <li><a href="http://blog.chrisdev.com/tags.html">Tags</a></li>
+                <li><a href="http://blog.chrisdev.com/categories.html">Categories</a></li>
+                </ul>
+            </div>
+            <div class="large-3 medium-3 small-6 columns">
+                <h6>Categories</h6>
+                    <ul>
+                        <li><a href="http://blog.chrisdev.com/category/pelican.html">pelican</a></li>
+                        <li><a href="http://blog.chrisdev.com/category/python.html">python</a></li>
+                        <li><a href="http://blog.chrisdev.com/category/zurb-foundation.html">Zurb Foundation</a></li>
+                    </ul>
+ 
+            </div>
+            <div class="large-3 medium-3 small-6 columns">
+                    <h6>Links</h6>
+                    <ul>
+                            <li><a href="http://chrisdev.com/about/">About</a></li>
+                            <li><a href="http://chrisdev.com/contact/">Contact Us</a></li>
+                    </ul>
+ 
+            </div>
+            <div class="large-3 medium-3 small-6 columns">
+                    <h6>Social</h6>
+                    <ul>
+                            <li><a href="http://twitter.com/realchrisdev"><i class="fa fa-twitter"></i>&nbsp;twitter</a></li>
+                            <li><a href="https://github.com/chrisdev"><i class="fa fa-github"></i>&nbsp;github</a></li>
+                            <li><a href="http://www.facebook.com/chrisdevtt"><i class="fa fa-facebook"></i>&nbsp;facebook</a></li>
+                            <li><a href="/feeds/all.atom.xml"><i class="fa fa-"></a></li>
+ 
+                    </ul>
+            </div>
+            <hr>
+            <div class="large-6 medium-6 columns">
+<ul id="hcard-cclarke@chrisdev.com" class="info">
+    <li class="name">
+<a href="http://chrisdev.com" class="url"><span class="given-name">Christopher</span>&nbsp;<span class="family-name">Clarke&nbsp;</span></a>    </li>
+    
+    
+<li class="adr">
+   <ul>
+<li class="street-address">A3 St Bendicts Gardens</li><li class="locality">Tunapuna</li>        <li class="country-name">
+            Trinidad and Tobago
+        </li>
+ </ul>
+</li>        <li class="email"><i class="fa fa-envelope"></i> Email : <a href="mailto:cclarke@chrisdev.com">cclarke@chrisdev.com</a><li/>
+        <li class="tel"><i class="fa fa-phone"></i> Phone (home) : 773-4644</li>
+</ul>
+                </ul>                                                                            
+            </div>
+            <div id ="colophon" class="large-6 medium-6 hide-for-small columns">
+<h6><strong>Colophon</strong></h6> 
+<p> This site is made with <a href="http://python.org">Python</a> using the 
+<a href="http://pypi.python.org/pypi/pelican/">Pelican static site generator</a>.
+This theme is <a href="http://github.com/chrisdev/pelican-transcend-foundation">Transcend Foundation</a>
+by <a href="http://github.com/chrisdev">Christopher Clarke</a> 
+and <a href="http://github.com/ilendl2">Lendl Smith</a> for Chrisdev
+</p>
+            </div>
+    </footer>
+</div>
+<script src="http://blog.chrisdev.com/theme/js/vendor/jquery.js"></script>
+<script src="http://blog.chrisdev.com/theme/js/foundation.min.js"></script>
+<script>
+ $(document).foundation();
+
+  function validateForm(query){
+                return (query.length > 0);
+            }
+</script>
+<script>
+$(document).ready(function () {
+    $(window).scroll(function () {if ($(this).scrollTop() > 100) { $('.scrollup').fadeIn();} else {$('.scrollup').fadeOut();}});
+    $('.scrollup').click(function () {$("html, body").animate({scrollTop: 0}, 600);return false;});});
+</script>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'chrisdevblog'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</body>

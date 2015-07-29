@@ -163,7 +163,7 @@ development.  <tt class="docutils literal">Homebrew</tt> is actually a Ruby appl
 just visit the <tt class="docutils literal">Homebrew</tt>
 homepage copy and paste the code listed under <em>Install Homebrew</em> into your
 terminal. The install snippet changes occasionally and it is currently</p>
-<div class="highlight"><pre>ruby -e <span class="s2">&quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)&quot;</span>
+<div class="highlight"><pre>ruby -e <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install<span class="k">)</span><span class="s2">&quot;</span>
 </pre></div>
 <p>But be remember to visit <a class="reference external" href="http://brew.sh">Homebrew homepage</a> to get the
 correct code snippet. Next run</p>
@@ -304,7 +304,7 @@ the full set of <tt class="docutils literal">PostgeSQL/PostGIS</tt> command line
 add the bin directory to your path. As before, depending on you shell
 of choice add the following to your <tt class="docutils literal">.zshrc</tt> , <tt class="docutils literal">.bash_profile</tt> or
 <tt class="docutils literal">.bashrc</tt></p>
-<div class="highlight"><pre><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/usr/local/bin:/Applications/Postgres.app/Contents/MacOS/bin:$PATH&quot;</span>
+<div class="highlight"><pre><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/usr/local/bin:/Applications/Postgres.app/Contents/MacOS/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
 </pre></div>
 <p>Restart you terminal app or type the following in the terminal window</p>
 <div class="highlight"><pre><span class="nb">source</span> ~/.zshrc
