@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" >
+    <meta name="description" content="
+I’m Christopher Clarke and I write about Python, Django, Data Analysis,
+Open Source and any other things that catch my fancy
+">
+<link rel="shortcut icon" href="../theme/images/favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="../theme/images/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../theme/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../theme/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../theme/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../theme/images/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../theme/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../theme/images/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../theme/images/favicons/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="../theme/images/favicons/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="../theme/images/favicons/favicon-160x160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="../theme/images/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="../theme/images/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="../theme/images/favicons/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="msapplication-TileImage" content="../theme/images/favicons/mstile-144x144.png">
+<meta name="msapplication-config" content="../theme/images/favicons/browserconfig.xml">    <link href='http://fonts.googleapis.com/css?family=Open+Sans:800|Anonymous+Pro:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <title>Introducing wagtail-cookiecutter-foundation</title>
+ <link rel="stylesheet" href="../theme/css/foundation.css">
+        <link rel="stylesheet" href="../theme/css/font-awesome.css">
+        <link rel="stylesheet" href="../theme/tipuesearch/tipuesearch.css">
+        <link rel="stylesheet" href="../theme/css/styles.css">
+        <link rel="stylesheet" href="../theme/css/pygment.css">
+
+ 
+    
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+
+<div id="header">
+    <div class="row hide-for-small">
+        <div class="social medium-12 columns">
+            <li style="float: right; text-align: right; font-size: 22px; list-style: none;">
+                <a href="http://twitter.com/realchrisdev"><i class="fa fa-twitter-square"></i></a>
+                <a href="https://github.com/chrisdev"><i class="fa fa-github-square"></i></a>
+                <a href="http://www.facebook.com/chrisdevtt"><i class="fa fa-facebook-square"></i></a>
+            </li>
+        </div>
+    </div>
+    <div id="logo" class="row">
+        <div class="medium-12 columns hide-for-small">
+                <div class="medium-4 medium-centered columns text-center">
+                    <img src="/theme/images/site_logo.png" alt="The ChrisDev Blog" />
+                </div>
+        </div>
+    </div>
+        <div class="title-bar" data-responsive-toggle="menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        
+        <div class="top-bar" id="menu">
+            <div class="row">
+                <div class="medium-4 medium-centered columns">
+                  <ul class="menu expanded vertical medium-horizontal text-center">
+                            <li><a href="http://chrisdev.com/about/">About</a></li>
+                            <li><a href="http://chrisdev.com/contact/">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+</div>      
+
+<!-- End Nav -->
+
+
+<!-- Main Page Content -->
+        <div id="main">
+            
+            <div id="content" class="row">
+<article>
+    <h1 class="article-title">Introducing wagtail-cookiecutter-foundation</h1>
+    <div class="info hide-for-small-only">
+        <div class="small-up-3">
+            <div class="column" style="padding-left: 0;"><li><i class="fa fa-clock-o"></i>&nbsp;Thu 31 December 2015</li></div>
+            <div class="column"><li><i class="fa fa-user"></i>&nbsp;By:&nbsp;<a href="../author/christopher-clarke.html"><strong>Christopher Clarke</strong></a></li></div>
+            <div class="column"><li><i class="fa fa-list-alt"></i>&nbsp;Category:&nbsp;<a href="../category/django.html"><strong>Django</strong></a></li></div>
+        </div>
+        <div class="small-up-1 tags">
+                <div class="column" style="padding-left: 0;"><li><i class="fa fa-thumb-tack"></i>&nbsp;Tags&nbsp;
+ 
+                        <span class="label secondary round"><a href="../tag/zurb-foundation.html">Zurb-Foundation</a></span>
+ 
+                        <span class="label secondary round"><a href="../tag/wagtail.html">wagtail</a></span>
+ 
+                        <span class="label secondary round"><a href="../tag/cms.html">CMS</a></span>
+ 
+                        <span class="label secondary round"><a href="../tag/django.html">Django</a></span>
+                 </li>
+                </div>
+        </div>
+    </div>
+
+    <div class="figure">
+<img alt="Wagtail Cookiecutter Foundation" src="../images/wagtail-cookiecutter-foundation.png" />
+</div>
+<div class="section" id="introduction">
+<h2>Introduction</h2>
+<p>In this article we introduce you to <a class="reference external" href="http://wagtail-cookiecutter-foundation.readthedocs.org/en/latest/">wagtail-cookiecutter-foundation</a>, a <a class="reference external" href="https://github.com/audreyr/cookiecutter">Cookiecutter</a>
+template for quickly generating <a class="reference external" href="https://djangoproject.com">Django</a> sites powered by <a class="reference external" href="https://wagtail.io">Wagtail CMS</a> and
+<a class="reference external" href="https://foundation.zurb.com">Zurb Foundation 6</a></p>
+<p>Wagtail CMS has been described by as</p>
+<blockquote>
+<a class="reference external" href="http://www.revsys.com/blog/2015/apr/29/wagtail-best-django-cms/">The all around best and most flexible Django CMS currently available</a>.</blockquote>
+<p>One of the key selling points of <a class="reference external" href="https://wagtail.io">Wagtail CMS</a> is that non-technical
+end-users find it that is especially easy to understand and a pleasure to use.
+Indeed, many of the content managers and editors that we've introduced to <a class="reference external" href="https://wagtail.io">Wagtail CMS</a> have
+expressed a clear preference for it over some of the content management tools
+that they've used including stardars like Wordpress and Drupal.</p>
+<p>Another strength of Wagtail is the flexibility of CMS model that allows
+for the representation of everything from the most simple pages with a few
+media elements to more complex unstructured pages where text may be
+interspersed with subheading, pull quotes, videos or specialized content types
+like maps and charts. It is important to note that <a class="reference external" href="https://wagtail.io">Wagtail CMS</a> does not rely on
+a plugins style architecture but rather on plain vanilla Python/Django modules and classes.
+As a consequence, it plays well with the other reusable applications
+in the Python/Django ecosystem. There are hooks into important eco system tools
+like <a class="reference external" href="http://www.django-rest-framework.org">Django Rest Framework</a> and  <a class="reference external" href="https://github.com/elastic/elasticsearch">ElasticSearch</a>   Additionally, Wagtail CMS comes
+it a built in Form builder system and has excellent Image and Document
+management tools.</p>
+<p><a class="reference external" href="https://foundation.zurb.com">Zurb Foundation</a> is a <em>mobile first</em>  responsive framework that provides
+features such as a responsive grid and HTML and CSS UI components, templates,
+and code snippets, including typography, forms, buttons, navigation and other
+interface components, as well as a number of optional JavaScript extensions.
+While <a class="reference external" href="https://foundation.zurb.com">Zurb Foundation</a>  may not be a popular as some other front-end
+frameworks we find that it provides a better platform for customization sites
+and web apps. So
+while the out-of-the-box look and feel is more or less a <cite>flat</cite> design that
+looks good right away, a few tweaks to the Sass files can have some yeild some
+dramatic changes.</p>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started</h2>
+<p>To create a new <a class="reference external" href="https://djangoproject.com">Django</a> project based on this cookiecutter,
+you need to have <cite>Cookiecutter</cite> installed on your machine. If you have not
+installed it, then install it:</p>
+<pre class="literal-block">
+$ pip install cookiecutter
+</pre>
+<p>Note we installed it system wide as you are bound to want to try our some of the other
+<a class="reference external" href="https://github.com/audreyr/cookiecutter#available-templates">cookiecutter templates</a> projects out theree</p>
+<p>Next run cookiecutter against this repo</p>
+<pre class="literal-block">
+$ cookiecutter https://github.com/chrisdev/wagtail-cookiecutter-foundation.git
+</pre>
+<p>You will be prompted to answer the following questions.</p>
+<pre class="literal-block">
+Cloning into 'wagtail-cookiecutter-foundation'...
+remote: Counting objects: 611, done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 611 (delta 3), reused 0 (delta 0), pack-reused 598
+Receiving objects: 100% (611/611), 423.98 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (264/264), done.
+Checking connectivity... done.
+project_name (default is &quot;Wagtail Project&quot;)?
+repo_name (default is &quot;wagtail_project&quot;)?
+version_control_system (default is &quot;hg&quot;)?,
+vcs_host (default is &quot;bitbucket&quot;)?,
+author_name (default is &quot;Your Name&quot;)?
+email (default is &quot;Your email&quot;)?
+description (default is &quot;A short description of the project.&quot;)?
+timezone (default is &quot;UTC&quot;)?
+now (default is &quot;2015/04/16&quot;)?
+year (default is &quot;2015&quot;)?
+production_host_name (default is  example.org)?
+use_ssl_in_production (default is true)?
+staging_host_name (default is staging.example.org)?
+use_vagrant_staging (default is true)?
+deploy_user_name (default is django)
+django_admin_user (default is my_admin_user)
+</pre>
+<p>Enter the project and take a look around:</p>
+<pre class="literal-block">
+$ cd my_wagtail_project/
+$ ls
+</pre>
+<p>Create a GitHub or Bitbucket repo for the project and push it there:</p>
+<pre class="literal-block">
+$ git init
+$ git add .
+$ git commit -m &quot;first awesome commit&quot;
+$ git remote add origin git&#64;github.com:cclarke/my_wagtail_project.git
+$ git push -u origin master
+</pre>
+</div>
+<div class="section" id="quick-start">
+<h2>Quick Start</h2>
+<p>Before you start ensure that you've installed and got the following working.</p>
+<blockquote>
+<ul class="simple">
+<li>pip</li>
+<li>virtualenv/pyvenv/virtualenvwrapper</li>
+<li><a class="reference external" href="http://postgresql.org">PostgreSQL</a></li>
+<li><a class="reference external" href="https://nodejs.org/en/">node/npm</a>, <a class="reference external" href="http://git-scm.com">git</a> (and or <a class="reference external" href="https://www.mercurial-scm.org">mercurial</a>) and <a class="reference external" href="http://bower.io">bower</a></li>
+</ul>
+</blockquote>
+<p>Your project will contain a Makefile that allows you to setup your development
+environment with a single command. To do this run</p>
+<pre class="literal-block">
+make all
+</pre>
+<p>This command will create your project's virtual environment,
+install all pip dependencies,  create
+the development database, run migrations and load initial data to database,
+install front-end dependencies and finally start the development server
+for you.  You can access your site at <tt class="docutils literal"><span class="pre">http://localhost:8000</span></tt>. The Admin
+back-end is available at <tt class="docutils literal"><span class="pre">http://localhost:8000/admin/</span></tt>.</p>
+<p>Your project will come with a set of application modules to use for building
+the sites functionality including:</p>
+<blockquote>
+<ul class="simple">
+<li><tt class="docutils literal">pages</tt> - Different kinds of pages including, Homepage, Standard Pages, Faqs Page etc.</li>
+<li><tt class="docutils literal">blog</tt> - Blog or site news</li>
+<li><tt class="docutils literal">contact</tt> - Contact Page with included contact us form</li>
+<li><tt class="docutils literal">events</tt> - Events</li>
+<li><tt class="docutils literal">photo_gallery</tt> - Create photo galleries using wagtail tags</li>
+<li><tt class="docutils literal">documents</tt> - Organize documents in folders using wagtail tags .</li>
+<li><tt class="docutils literal">products</tt> - Ideal for a product or portfolio showcase</li>
+<li><tt class="docutils literal">feeds</tt> - RSS/Atom feeds which support enclosures to work with services like Mailchimp and Flipboard</li>
+<li><tt class="docutils literal">people</tt> - For the people in your organization or team.</li>
+<li><tt class="docutils literal">faq</tt> - FAQ and answers.</li>
+<li><tt class="docutils literal">utils</tt> - Various utility functions, templatetags and filters</li>
+</ul>
+</blockquote>
+<p>However, we take a modular approach so the can pick and choose the modules to
+include the project by simple adjusting the <tt class="docutils literal">INSTALLED_APPS</tt> in settings.</p>
+<p>When you are ready to provision your production server, simply run</p>
+<pre class="literal-block">
+make provision
+</pre>
+<p>Running this commands will:</p>
+<blockquote>
+<ul class="simple">
+<li>Create a deployment user on the server for the project and download their public key
+of for you use as a deployment key on services like Github or Bitbucket</li>
+<li>Install all the required Linux packages and libraries on the server.</li>
+<li>Install and configure the latest version of <a class="reference external" href="http://postgresql.org">PostgreSQL</a>.</li>
+<li>Install and configure <a class="reference external" href="http://redis.io">Redis</a> and <a class="reference external" href="https://github.com/elastic/elasticsearch">ElasticSearch</a>.</li>
+<li>Setup basic security  on the Linux box using <a class="reference external" href="https://help.ubuntu.com/community/UFW">UFW Firewall</a> and
+<a class="reference external" href="http://www.fail2ban.org/wiki/index.php/Main_Page">fail2ban</a>.</li>
+<li>Clone the project's VCS repository, setup a virtual environment and install all the python and django dependencies required to run the site</li>
+<li>Install and configure all required front-end dependencies</li>
+<li>Configure and install a Celery worker process.</li>
+<li>Install and configure an Nginx Virtaul Host for your site.</li>
+<li>Install and configure your SSL certificate (if required) and ensure that
+you can score an <em>A</em> in the popular <a class="reference external" href="https://www.ssllabs.com">SSL Labs</a> SSL server test.</li>
+</ul>
+</blockquote>
+<p>Need to deploy to a staging server? Run</p>
+<pre class="literal-block">
+make provision DEPLOY_ENV=staging
+</pre>
+<p>You're using a <a class="reference external" href="https://www.vagrantup.com">Vagrant</a> based staging server? Then</p>
+<pre class="literal-block">
+make provision DEPLOY_ENV=vagrant
+</pre>
+<p>Finally, made some changes to your site  and ready to deploy them? Then run</p>
+<pre class="literal-block">
+make deploy
+</pre>
+<p>The deployment and provision rely on suite of <a class="reference external" href="http://docs.ansible.com">Ansible</a> playbooks to
+support the provisioning your servers and deploying changes to production and
+staging.  The provision of <a class="reference external" href="https://www.vagrantup.com">Vagrant</a> based staging server is supported so you
+can &quot;stage&quot; your site locally and tweak and experiment with different
+deployment configurations. To keep things simple we assume that all your
+application components i.e.  <tt class="docutils literal">Django</tt>, <tt class="docutils literal">PostgreSQL</tt>, <tt class="docutils literal">redis</tt> and so on
+are all deployed on a single server.  However, it is a relatively straightforward
+procedure to tweak the playbooks support more complex provisioning scenarios.
+In this way, you can support for example, separate database server,
+multiple upstream <tt class="docutils literal">wsgi</tt> servers and so on. For more check our the doc</p>
+</div>
+<div class="section" id="some-tips-on-manually-upgrading-to-foundation-6">
+<h2>Some tips on Manually Upgrading to Foundation 6</h2>
+<p>If you used the earlier version of this cookiecutter to generate your project,
+your site would have been based on <a class="reference external" href="http://foundation.zurb.com/sites/docs/v/5.5.3/">Foundation 5</a>. If you want to manually
+upgrade to <a class="reference external" href="https://foundation.zurb.com">Zurb Foundation 6</a> here are some of of the difference we noted while
+working on this project and upgrading a couple of client sites.</p>
+<div class="section" id="installation">
+<h3>Installation</h3>
+<p>To install the latests version of Foundation edit the <tt class="docutils literal">bower.json change</tt> and
+change <tt class="docutils literal">foundation&quot;: &quot;~5.5.3&quot;</tt>  to <tt class="docutils literal"><span class="pre">foundation-sites:</span> &quot;~6.1.0&quot;</tt></p>
+</div>
+<div class="section" id="modernizr">
+<h3>Modernizr</h3>
+<p><cite>Modernizr</cite> has been removed from <cite>Foundation 6</cite> so it can be removed from your base.html</p>
+</div>
+<div class="section" id="new-top-bar">
+<h3>New Top-bar</h3>
+<p><a class="reference external" href="http://foundation.zurb.com/sites/docs/top-bar.html">The entire code for the topbar has been changed</a></p>
+</div>
+<div class="section" id="new-off-canvas">
+<h3>New Off Canvas</h3>
+<ul class="simple">
+<li><a class="reference external" href="http://foundation.zurb.com/sites/docs/off-canvas.html">The entire code for the offcanvas has been changed</a></li>
+<li><a class="reference external" href="http://foundation.zurb.com/sites/docs/accordion-menu.html">The drop down for off canvas can now use accordion vertical menu</a></li>
+</ul>
+</div>
+<div class="section" id="block-grid-changed">
+<h3>Block Grid Changed</h3>
+<p><a class="reference external" href="http://foundation.zurb.com/sites/docs/grid.html">The html for a block grid has changed</a> : eg. medium-block-grid-4 to medium-up-4</p>
+</div>
+<div class="section" id="clearing-box-is-no-longer-included">
+<h3>Clearing Box is no longer included</h3>
+<p>In <cite>Foundation 6</cite> there is no more clearing box a feature which was often used
+for photo galleries. Interestingly, Orbit has made a return, but you may
+want to use a third party component like <a class="reference external" href="http://lokeshdhakar.com/projects/lightbox2/">Lightbox2</a>.</p>
+</div>
+<div class="section" id="sass-changes">
+<h3>SASS changes</h3>
+<p>There have been many changes to the Foundation SASS it may be a good idea to read the new  <a class="reference external" href="http://foundation.zurb.com/sites/docs/sass.html">new SASS documentation</a>:</p>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary</h2>
+<p><a class="reference external" href="http://wagtail-cookiecutter-foundation.readthedocs.org/en/latest/">wagtail-cookiecutter-foundation</a> is great time saver for us here at ChrisDev but
+with any project we would like to include so the following features in
+upcoming versions.</p>
+<ul class="simple">
+<li>Integration with <a class="reference external" href="https://letsencrypt.org">Lets Encrypt</a> for the generation and maintenence of SSL
+certificates</li>
+<li>Re-factor some of the more complex pages like the HomePage to use the <a class="reference external" href="http://docs.wagtail.io/en/v1.3.1/topics/streamfield.html">StreamField</a></li>
+</ul>
+<p>Try it out and let me know what you think. I'm open to new ideas and receiving pull requests.</p>
+</div>
+
+
+</article>
+            </div>
+        </div>
+        <a href="#" class="scrollup">Scroll</a>
+</div> 
+ <!-- End Main Content -->
+
+
+<!-- Footer -->
+<div id="footer">
+    <footer class="row">
+            <div class="medium-3 small-6 columns">
+                <h6>Site Map</h6>
+                <ul>
+                <li><a href="../archives.html">Archives</a></li>
+                <li><a href="../tags.html">Tags</a></li>
+                <li><a href="../categories.html">Categories</a></li>
+                </ul>
+            </div>
+            <div class="medium-3 small-6 columns">
+                <h6>Categories</h6>
+                    <ul>
+                        <li><a href="../category/pelican.html">pelican</a></li>
+                        <li><a href="../category/python.html">python</a></li>
+                        <li><a href="../category/zurb-foundation.html">Zurb Foundation</a></li>
+                    </ul>
+ 
+            </div>
+            <div class="medium-3 small-6 columns">
+                    <h6>Links</h6>
+                    <ul>
+                            <li><a href="http://chrisdev.com/about/">About</a></li>
+                            <li><a href="http://chrisdev.com/contact/">Contact Us</a></li>
+                    </ul>
+ 
+            </div>
+            <div class="medium-3 small-6 columns">
+                    <h6>Social</h6>
+                    <ul>
+                            <li><a href="http://twitter.com/realchrisdev"><i class="fa fa-twitter"></i>&nbsp;twitter</a></li>
+                            <li><a href="https://github.com/chrisdev"><i class="fa fa-github"></i>&nbsp;github</a></li>
+                            <li><a href="http://www.facebook.com/chrisdevtt"><i class="fa fa-facebook"></i>&nbsp;facebook</a></li>
+ 
+                    </ul>
+            </div>
+            <hr>
+            <div class="medium-6 columns">
+<ul id="hcard-cclarke@chrisdev.com" class="info">
+    <li class="name">
+<a href="http://chrisdev.com" class="url"><span class="given-name">Christopher</span>&nbsp;<span class="family-name">Clarke&nbsp;</span></a>    </li>
+    
+    
+<li class="adr">
+   <ul>
+<li class="street-address">A3 St Bendicts Gardens</li><li class="locality">Tunapuna</li>        <li class="country-name">
+            Trinidad and Tobago
+        </li>
+ </ul>
+</li>        <li class="email"><i class="fa fa-envelope"></i> Email : <a href="mailto:cclarke@chrisdev.com">cclarke@chrisdev.com</a><li/>
+        <li class="tel"><i class="fa fa-phone"></i> Phone (home) : 773-4644</li>
+</ul>
+                </ul>                                                                            
+            </div>
+            <div id ="colophon" class="medium-6 hide-for-small columns">
+<h6><strong>Colophon</strong></h6> 
+<p> This site is made with <a href="http://python.org">Python</a> using the 
+<a href="http://pypi.python.org/pypi/pelican/">Pelican static site generator</a>.
+This theme is <a href="http://github.com/chrisdev/pelican-transcend-foundation">Transcend Foundation</a>
+by <a href="http://github.com/chrisdev">Christopher Clarke</a> 
+and <a href="http://github.com/ilendl2">Lendl Smith</a> for Chrisdev
+</p>
+            </div>
+    </footer>
+</div>
+<script src="../theme/js/vendor/jquery.min.js"></script>
+<script src="../theme/js/vendor/what-input.min.js"></script>
+<script src="../theme/js/foundation.min.js"></script>
+<script>
+ $(document).foundation();
+
+  function validateForm(query){
+                return (query.length > 0);
+            }
+</script>
+<script>
+$(document).ready(function () {
+    $(window).scroll(function () {if ($(this).scrollTop() > 100) { $('.scrollup').fadeIn();} else {$('.scrollup').fadeOut();}});
+    $('.scrollup').click(function () {$("html, body").animate({scrollTop: 0}, 600);return false;});});
+</script>
+</body>
