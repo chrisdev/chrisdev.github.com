@@ -26,7 +26,7 @@ TIMEZONE = 'America/Port_of_Spain'
 DEFAULT_LANG = u'en'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
+FEED_ALL_ATOM = "blog.chrisdev.com"
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 SITEGRAVATAR = get_gravatar_url(SITE_EMAIL)

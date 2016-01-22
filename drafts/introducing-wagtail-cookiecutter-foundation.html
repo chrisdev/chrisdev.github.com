@@ -31,6 +31,7 @@ Open Source and any other things that catch my fancy
         <link rel="stylesheet" href="../theme/css/styles.css">
         <link rel="stylesheet" href="../theme/css/pygment.css">
 
+     <link href="/blog.chrisdev.com" type="application/atom+xml" rel="alternate" title="The ChrisDev Blog Atom Feed" />
  
     
     <!--[if lt IE 9]>
@@ -88,20 +89,24 @@ Open Source and any other things that catch my fancy
     <h1 class="article-title">Introducing wagtail-cookiecutter-foundation</h1>
     <div class="info hide-for-small-only">
         <div class="small-up-3">
-            <div class="column" style="padding-left: 0;"><li><i class="fa fa-clock-o"></i>&nbsp;Thu 31 December 2015</li></div>
+            <div class="column" style="padding-left: 0;"><li><i class="fa fa-clock-o"></i>&nbsp;Fri 22 January 2016</li></div>
             <div class="column"><li><i class="fa fa-user"></i>&nbsp;By:&nbsp;<a href="../author/christopher-clarke.html"><strong>Christopher Clarke</strong></a></li></div>
             <div class="column"><li><i class="fa fa-list-alt"></i>&nbsp;Category:&nbsp;<a href="../category/django.html"><strong>Django</strong></a></li></div>
         </div>
         <div class="small-up-1 tags">
                 <div class="column" style="padding-left: 0;"><li><i class="fa fa-thumb-tack"></i>&nbsp;Tags&nbsp;
  
-                        <span class="label secondary round"><a href="../tag/zurb-foundation.html">Zurb-Foundation</a></span>
- 
-                        <span class="label secondary round"><a href="../tag/wagtail.html">wagtail</a></span>
+                        <span class="label secondary round"><a href="../tag/wagtail.html">Wagtail</a></span>
  
                         <span class="label secondary round"><a href="../tag/cms.html">CMS</a></span>
  
+                        <span class="label secondary round"><a href="../tag/content-managment.html">Content Managment</a></span>
+ 
                         <span class="label secondary round"><a href="../tag/django.html">Django</a></span>
+ 
+                        <span class="label secondary round"><a href="../tag/zurb-foundation.html">Zurb-Foundation</a></span>
+ 
+                        <span class="label secondary round"><a href="../tag/foundation-6.html">Foundation-6</a></span>
                  </li>
                 </div>
         </div>
@@ -110,120 +115,110 @@ Open Source and any other things that catch my fancy
     <div class="figure">
 <img alt="Wagtail Cookiecutter Foundation" src="../images/wagtail-cookiecutter-foundation.png" />
 </div>
-<div class="section" id="introduction">
-<h2>Introduction</h2>
 <p>In this article we introduce you to <a class="reference external" href="http://wagtail-cookiecutter-foundation.readthedocs.org/en/latest/">wagtail-cookiecutter-foundation</a>, a <a class="reference external" href="https://github.com/audreyr/cookiecutter">Cookiecutter</a>
-template for quickly generating <a class="reference external" href="https://djangoproject.com">Django</a> sites powered by <a class="reference external" href="https://wagtail.io">Wagtail CMS</a> and
-<a class="reference external" href="https://foundation.zurb.com">Zurb Foundation 6</a></p>
-<p>Wagtail CMS has been described by as</p>
+template for quickly generating <a class="reference external" href="https://djangoproject.com">Django</a> sites powered by <a class="reference external" href="https://wagtail.io">Wagtail</a> and
+<a class="reference external" href="https://foundation.zurb.com">Zurb Foundation for Sites 6</a>. The websites generated with our
+Cookiecutter are pretty full featured and come with most of the
+components you are likely to need for the typical website project, including: various
+kinds of top level menus (drop-down, off-canvas), feature sliders, photo galleries,
+contact forms,  various kinds of homepage designs, product and portfolio pages,
+blog and events events module and so on.  But its pretty easy to customize and include only the modules and components to match your project's requirements. For an idea of what to expect check out our live <a class="reference external" href="http://wagtail.chrisdev.com&gt;`">demo</a>.</p>
+<p>Wagtail CMS has been described as:</p>
 <blockquote>
 <a class="reference external" href="http://www.revsys.com/blog/2015/apr/29/wagtail-best-django-cms/">The all around best and most flexible Django CMS currently available</a>.</blockquote>
-<p>One of the key selling points of <a class="reference external" href="https://wagtail.io">Wagtail CMS</a> is that non-technical
-end-users find it that is especially easy to understand and a pleasure to use.
-Indeed, many of the content managers and editors that we've introduced to <a class="reference external" href="https://wagtail.io">Wagtail CMS</a> have
-expressed a clear preference for it over some of the content management tools
-that they've used including stardars like Wordpress and Drupal.</p>
-<p>Another strength of Wagtail is the flexibility of CMS model that allows
-for the representation of everything from the most simple pages with a few
-media elements to more complex unstructured pages where text may be
-interspersed with subheading, pull quotes, videos or specialized content types
-like maps and charts. It is important to note that <a class="reference external" href="https://wagtail.io">Wagtail CMS</a> does not rely on
-a plugins style architecture but rather on plain vanilla Python/Django modules and classes.
-As a consequence, it plays well with the other reusable applications
-in the Python/Django ecosystem. There are hooks into important eco system tools
-like <a class="reference external" href="http://www.django-rest-framework.org">Django Rest Framework</a> and  <a class="reference external" href="https://github.com/elastic/elasticsearch">ElasticSearch</a>   Additionally, Wagtail CMS comes
-it a built in Form builder system and has excellent Image and Document
-management tools.</p>
+<p>One of the big selling points for <a class="reference external" href="https://wagtail.io">Wagtail</a> is its easy of use especially for
+non-technical end-users. Many of the content creators and editors we've
+introduced to it tell us that Wagtail is especially easy understand and they are
+quickly able to get useful work done.  Indeed, many of these users have expressed
+a clear preference for Wagtail over some of the more well known &quot;brands&quot;
+such as Wordpress and Drupal.  Another strength of Wagtail, is the
+flexibility of CMS model that allows for the representation of everything from
+the most simple pages with a few media elements to more complex unstructured
+pages where text may be interspersed with subheading, pull quotes, videos or
+specialized content types like maps and charts. It is important to note that
+<a class="reference external" href="https://wagtail.io">Wagtail</a> does not rely on any arcane plugins architecture but rather on
+standard Python/Django modules, classes and methods.  As a consequence, it
+plays well with the other reusable applications in the Python/Django ecosystem
+such as the <a class="reference external" href="http://www.django-rest-framework.org">Django Rest Framework</a>. There and also hooks to important tools
+like <a class="reference external" href="https://github.com/elastic/elasticsearch">ElasticSearch</a>.   Additionally, Wagtail CMS comes it a built in Form
+builder system and has excellent Image and Document management tools.</p>
 <p><a class="reference external" href="https://foundation.zurb.com">Zurb Foundation</a> is a <em>mobile first</em>  responsive framework that provides
-features such as a responsive grid and HTML and CSS UI components, templates,
-and code snippets, including typography, forms, buttons, navigation and other
-interface components, as well as a number of optional JavaScript extensions.
-While <a class="reference external" href="https://foundation.zurb.com">Zurb Foundation</a>  may not be a popular as some other front-end
-frameworks we find that it provides a better platform for customization sites
-and web apps. So
-while the out-of-the-box look and feel is more or less a <cite>flat</cite> design that
-looks good right away, a few tweaks to the Sass files can have some yeild some
-dramatic changes.</p>
-</div>
-<div class="section" id="getting-started">
-<h2>Getting Started</h2>
-<p>To create a new <a class="reference external" href="https://djangoproject.com">Django</a> project based on this cookiecutter,
-you need to have <cite>Cookiecutter</cite> installed on your machine. If you have not
+all the components required for building websites. These include a responsive
+grid and HTML, JavaScript and CSS UI components, templates, and code snippets covering
+typography, forms, buttons, navigation and other interface components.
+While <a class="reference external" href="https://foundation.zurb.com">Zurb Foundation</a>  may not be as popular as some other front-end
+frameworks, we find that it provides a better platform for customization sites
+and web apps. So while the out-of-the-box look and feel is more or less
+a flat design a few tweaks to the underlying Sass files can have yield some
+pretty dramatic changes.</p>
+<div class="section" id="up-and-running">
+<h2>Up and Running</h2>
+<p>To create a new <a class="reference external" href="https://djangoproject.com">Django</a> project based on wagtail-cookiecutter-foundation
+you need to have <a class="reference external" href="https://github.com/audreyr/cookiecutter">Cookiecutter</a> installed on your machine. If you have not
 installed it, then install it:</p>
-<pre class="literal-block">
-$ pip install cookiecutter
-</pre>
-<p>Note we installed it system wide as you are bound to want to try our some of the other
-<a class="reference external" href="https://github.com/audreyr/cookiecutter#available-templates">cookiecutter templates</a> projects out theree</p>
-<p>Next run cookiecutter against this repo</p>
-<pre class="literal-block">
-$ cookiecutter https://github.com/chrisdev/wagtail-cookiecutter-foundation.git
-</pre>
+<div class="highlight"><pre><span class="nv">$ </span>pip install cookiecutter
+</pre></div>
+<p>Note we always recommend that you installed Cookiecutter system wide, as you are bound to want to try our some of the other <a class="reference external" href="https://github.com/audreyr/cookiecutter#available-templates">cookiecutter templates</a> out there.</p>
+<p>Next run cookiecutter against the wagtail-cookiecutter-foundation repo:</p>
+<div class="highlight"><pre><span class="nv">$ </span>cookiecutter https://github.com/chrisdev/wagtail-cookiecutter-foundation.git
+</pre></div>
 <p>You will be prompted to answer the following questions.</p>
-<pre class="literal-block">
-Cloning into 'wagtail-cookiecutter-foundation'...
-remote: Counting objects: 611, done.
-remote: Compressing objects: 100% (13/13), done.
-remote: Total 611 (delta 3), reused 0 (delta 0), pack-reused 598
-Receiving objects: 100% (611/611), 423.98 KiB | 0 bytes/s, done.
-Resolving deltas: 100% (264/264), done.
-Checking connectivity... done.
-project_name (default is &quot;Wagtail Project&quot;)?
-repo_name (default is &quot;wagtail_project&quot;)?
-version_control_system (default is &quot;hg&quot;)?,
-vcs_host (default is &quot;bitbucket&quot;)?,
-author_name (default is &quot;Your Name&quot;)?
-email (default is &quot;Your email&quot;)?
-description (default is &quot;A short description of the project.&quot;)?
-timezone (default is &quot;UTC&quot;)?
-now (default is &quot;2015/04/16&quot;)?
-year (default is &quot;2015&quot;)?
-production_host_name (default is  example.org)?
-use_ssl_in_production (default is true)?
-staging_host_name (default is staging.example.org)?
-use_vagrant_staging (default is true)?
-deploy_user_name (default is django)
-django_admin_user (default is my_admin_user)
-</pre>
-<p>Enter the project and take a look around:</p>
-<pre class="literal-block">
-$ cd my_wagtail_project/
-$ ls
-</pre>
-<p>Create a GitHub or Bitbucket repo for the project and push it there:</p>
-<pre class="literal-block">
-$ git init
-$ git add .
-$ git commit -m &quot;first awesome commit&quot;
-$ git remote add origin git&#64;github.com:cclarke/my_wagtail_project.git
-$ git push -u origin master
-</pre>
+<div class="highlight"><pre>Cloning into <span class="s1">&#39;wagtail-cookiecutter-foundation&#39;</span>...
+remote: Counting objects: 611, <span class="k">done</span>.
+remote: Compressing objects: 100% <span class="o">(</span>13/13<span class="o">)</span>, <span class="k">done</span>.
+remote: Total <span class="m">611</span> <span class="o">(</span>delta 3<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused 598
+Receiving objects: 100% <span class="o">(</span>611/611<span class="o">)</span>, 423.98 KiB <span class="p">|</span> <span class="m">0</span> bytes/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>264/264<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+project_name <span class="o">(</span>default is <span class="s2">&quot;Wagtail Project&quot;</span><span class="o">)</span>?
+repo_name <span class="o">(</span>default is <span class="s2">&quot;wagtail_project&quot;</span><span class="o">)</span>?
+version_control_system <span class="o">(</span>default is <span class="s2">&quot;hg&quot;</span><span class="o">)</span>?,
+vcs_host <span class="o">(</span>default is <span class="s2">&quot;bitbucket&quot;</span><span class="o">)</span>?,
+author_name <span class="o">(</span>default is <span class="s2">&quot;Your Name&quot;</span><span class="o">)</span>?
+email <span class="o">(</span>default is <span class="s2">&quot;Your email&quot;</span><span class="o">)</span>?
+description <span class="o">(</span>default is <span class="s2">&quot;A short description of the project.&quot;</span><span class="o">)</span>?
+timezone <span class="o">(</span>default is <span class="s2">&quot;UTC&quot;</span><span class="o">)</span>?
+now <span class="o">(</span>default is <span class="s2">&quot;2015/04/16&quot;</span><span class="o">)</span>?
+year <span class="o">(</span>default is <span class="s2">&quot;2015&quot;</span><span class="o">)</span>?
+production_host_name <span class="o">(</span>default is  example.org<span class="o">)</span>?
+use_ssl_in_production <span class="o">(</span>default is <span class="nb">true</span><span class="o">)</span>?
+staging_host_name <span class="o">(</span>default is staging.example.org<span class="o">)</span>?
+use_vagrant_staging <span class="o">(</span>default is <span class="nb">true</span><span class="o">)</span>?
+deploy_user_name <span class="o">(</span>default is django<span class="o">)</span>
+django_admin_user <span class="o">(</span>default is my_admin_user<span class="o">)</span>
+</pre></div>
+<p>Enter the project and take a look around</p>
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>my_wagtail_project/
+<span class="nv">$ </span>ls
+</pre></div>
+<p>Create a GitHub or Bitbucket repo for the project and push it there</p>
+<div class="highlight"><pre><span class="nv">$ </span>git init
+<span class="nv">$ </span>git add .
+<span class="nv">$ </span>git commit -m <span class="s2">&quot;first awesome commit&quot;</span>
+<span class="nv">$ </span>git remote add origin git@github.com:cclarke/my_wagtail_project.git
+<span class="nv">$ </span>git push -u origin master
+</pre></div>
 </div>
 <div class="section" id="quick-start">
 <h2>Quick Start</h2>
 <p>Before you start ensure that you've installed and got the following working.</p>
-<blockquote>
 <ul class="simple">
-<li>pip</li>
-<li>virtualenv/pyvenv/virtualenvwrapper</li>
-<li><a class="reference external" href="http://postgresql.org">PostgreSQL</a></li>
-<li><a class="reference external" href="https://nodejs.org/en/">node/npm</a>, <a class="reference external" href="http://git-scm.com">git</a> (and or <a class="reference external" href="https://www.mercurial-scm.org">mercurial</a>) and <a class="reference external" href="http://bower.io">bower</a></li>
+<li><a class="reference external" href="https://pip.pypa.io/en/stable/">pip</a></li>
+<li><a class="reference external" href="https://virtualenv.pypa.io/en/latest/">virtualenv</a>/<a class="reference external" href="https://docs.python.org/3/library/venv.html#module-venv">pyenv</a>/<a class="reference external" href="https://virtualenvwrapper.readthedocs.org/en/latest/">virtualenvwrapper</a></li>
+<li><a class="reference external" href="http://postgresql.org">PostgreSQL</a> * <a class="reference external" href="https://nodejs.org/en/">node/npm</a>, <a class="reference external" href="http://git-scm.com">git</a> (and or <a class="reference external" href="https://www.mercurial-scm.org">mercurial</a>) and <a class="reference external" href="http://bower.io">bower</a></li>
 </ul>
-</blockquote>
 <p>Your project will contain a Makefile that allows you to setup your development
-environment with a single command. To do this run</p>
-<pre class="literal-block">
-make all
-</pre>
+environment with a single command. To do this run:</p>
+<div class="highlight"><pre>make all
+</pre></div>
 <p>This command will create your project's virtual environment,
 install all pip dependencies,  create
 the development database, run migrations and load initial data to database,
 install front-end dependencies and finally start the development server
-for you.  You can access your site at <tt class="docutils literal"><span class="pre">http://localhost:8000</span></tt>. The Admin
-back-end is available at <tt class="docutils literal"><span class="pre">http://localhost:8000/admin/</span></tt>.</p>
+for you.  You can access your site at <strong>http://localhost:8000</strong>. The Admin
+back-end is available at <strong>http://localhost:8000/admin/</strong>.</p>
 <p>Your project will come with a set of application modules to use for building
 the sites functionality including:</p>
-<blockquote>
 <ul class="simple">
 <li><tt class="docutils literal">pages</tt> - Different kinds of pages including, Homepage, Standard Pages, Faqs Page etc.</li>
 <li><tt class="docutils literal">blog</tt> - Blog or site news</li>
@@ -237,18 +232,16 @@ the sites functionality including:</p>
 <li><tt class="docutils literal">faq</tt> - FAQ and answers.</li>
 <li><tt class="docutils literal">utils</tt> - Various utility functions, templatetags and filters</li>
 </ul>
-</blockquote>
 <p>However, we take a modular approach so the can pick and choose the modules to
 include the project by simple adjusting the <tt class="docutils literal">INSTALLED_APPS</tt> in settings.</p>
-<p>When you are ready to provision your production server, simply run</p>
-<pre class="literal-block">
-make provision
-</pre>
+<p>When you are ready to provision your production server, simply run:</p>
+<div class="highlight"><pre>make provision
+</pre></div>
 <p>Running this commands will:</p>
-<blockquote>
 <ul class="simple">
-<li>Create a deployment user on the server for the project and download their public key
-of for you use as a deployment key on services like Github or Bitbucket</li>
+<li>Create a deployment user on the server to use for the project.</li>
+<li>Create and download download a deployment key for use on services
+like Github or Bitbucket</li>
 <li>Install all the required Linux packages and libraries on the server.</li>
 <li>Install and configure the latest version of <a class="reference external" href="http://postgresql.org">PostgreSQL</a>.</li>
 <li>Install and configure <a class="reference external" href="http://redis.io">Redis</a> and <a class="reference external" href="https://github.com/elastic/elasticsearch">ElasticSearch</a>.</li>
@@ -261,44 +254,42 @@ of for you use as a deployment key on services like Github or Bitbucket</li>
 <li>Install and configure your SSL certificate (if required) and ensure that
 you can score an <em>A</em> in the popular <a class="reference external" href="https://www.ssllabs.com">SSL Labs</a> SSL server test.</li>
 </ul>
-</blockquote>
-<p>Need to deploy to a staging server? Run</p>
-<pre class="literal-block">
-make provision DEPLOY_ENV=staging
-</pre>
-<p>You're using a <a class="reference external" href="https://www.vagrantup.com">Vagrant</a> based staging server? Then</p>
-<pre class="literal-block">
-make provision DEPLOY_ENV=vagrant
-</pre>
-<p>Finally, made some changes to your site  and ready to deploy them? Then run</p>
-<pre class="literal-block">
-make deploy
-</pre>
-<p>The deployment and provision rely on suite of <a class="reference external" href="http://docs.ansible.com">Ansible</a> playbooks to
-support the provisioning your servers and deploying changes to production and
-staging.  The provision of <a class="reference external" href="https://www.vagrantup.com">Vagrant</a> based staging server is supported so you
+<p>Need to deploy to a staging server? Run run:</p>
+<div class="highlight"><pre>make provision <span class="nv">DEPLOY_ENV</span><span class="o">=</span>staging
+</pre></div>
+<p>What! You're running a <a class="reference external" href="https://www.vagrantup.com">Vagrant</a> based staging server? Then run:</p>
+<div class="highlight"><pre>make provision <span class="nv">DEPLOY_ENV</span><span class="o">=</span>vagrant
+</pre></div>
+<p>Finally, made some changes to your site  and ready to deploy them? Then run:</p>
+<div class="highlight"><pre>make deploy
+</pre></div>
+<p>The <tt class="docutils literal">deploy</tt> and <tt class="docutils literal">provision</tt> commands drive on suite of <a class="reference external" href="http://docs.ansible.com">Ansible</a> playbooks to
+run the provisioning and deployment tasks on your servers.
+<a class="reference external" href="https://www.vagrantup.com">Vagrant</a> based staging servers are supported, so you
 can &quot;stage&quot; your site locally and tweak and experiment with different
-deployment configurations. To keep things simple we assume that all your
-application components i.e.  <tt class="docutils literal">Django</tt>, <tt class="docutils literal">PostgreSQL</tt>, <tt class="docutils literal">redis</tt> and so on
-are all deployed on a single server.  However, it is a relatively straightforward
-procedure to tweak the playbooks support more complex provisioning scenarios.
-In this way, you can support for example, separate database server,
-multiple upstream <tt class="docutils literal">wsgi</tt> servers and so on. For more check our the doc</p>
+deployment configurations before expending your resources on hosting providers.
+To keep things simple, we assume that all your application components such as;
+<tt class="docutils literal">Django</tt>, <tt class="docutils literal">PostgreSQL</tt>, <tt class="docutils literal">redis</tt> and so on, are all deployed on a single
+server.  However, it is a relatively straightforward procedure to tweak the
+playbooks support more complex provisioning scenarios.  In this way, you can
+support for example, independent database server, multiple upstream <tt class="docutils literal">wsgi</tt>
+servers and so on. For more check the online <a class="reference external" href="http://wagtail-cookiecutter-foundation.readthedocs.org/en/latest/">documentation</a>.</p>
 </div>
 <div class="section" id="some-tips-on-manually-upgrading-to-foundation-6">
 <h2>Some tips on Manually Upgrading to Foundation 6</h2>
-<p>If you used the earlier version of this cookiecutter to generate your project,
-your site would have been based on <a class="reference external" href="http://foundation.zurb.com/sites/docs/v/5.5.3/">Foundation 5</a>. If you want to manually
-upgrade to <a class="reference external" href="https://foundation.zurb.com">Zurb Foundation 6</a> here are some of of the difference we noted while
-working on this project and upgrading a couple of client sites.</p>
-<div class="section" id="installation">
-<h3>Installation</h3>
-<p>To install the latests version of Foundation edit the <tt class="docutils literal">bower.json change</tt> and
-change <tt class="docutils literal">foundation&quot;: &quot;~5.5.3&quot;</tt>  to <tt class="docutils literal"><span class="pre">foundation-sites:</span> &quot;~6.1.0&quot;</tt></p>
+<p>If you've used an earlier version of this Cookiecutter then the generated
+site would have been based on <a class="reference external" href="http://foundation.zurb.com/sites/docs/v/5.5.3/">Foundation 5</a>. If you want to manually
+upgrade one of these sites to <a class="reference external" href="https://foundation.zurb.com">Zurb Foundation 6</a>, here are some the tweaks
+that you have to make.</p>
+<div class="section" id="upgrade-to-foundation-6">
+<h3>Upgrade to Foundation 6</h3>
+<p>To install the latests version of Foundation edit the <code>bower.json</code> and
+change the line <code>foundation&quot;: &quot;~5.5.3&quot;</code>  to <code>foundation-sites: &quot;~6.1.0&quot;</code></p>
 </div>
 <div class="section" id="modernizr">
 <h3>Modernizr</h3>
-<p><cite>Modernizr</cite> has been removed from <cite>Foundation 6</cite> so it can be removed from your base.html</p>
+<p><a class="reference external" href="https://modernizr.com">Modernizr</a> has been removed as an external dependency from <code>Foundation 6</code> so
+it can be removed from your base.html</p>
 </div>
 <div class="section" id="new-top-bar">
 <h3>New Top-bar</h3>
@@ -318,25 +309,28 @@ change <tt class="docutils literal">foundation&quot;: &quot;~5.5.3&quot;</tt>  t
 <div class="section" id="clearing-box-is-no-longer-included">
 <h3>Clearing Box is no longer included</h3>
 <p>In <cite>Foundation 6</cite> there is no more clearing box a feature which was often used
-for photo galleries. Interestingly, Orbit has made a return, but you may
-want to use a third party component like <a class="reference external" href="http://lokeshdhakar.com/projects/lightbox2/">Lightbox2</a>.</p>
+for photo galleries. You may want to up grade it with an open source
+component like like <a class="reference external" href="http://lokeshdhakar.com/projects/lightbox2/">Lightbox2</a>.</p>
 </div>
 <div class="section" id="sass-changes">
 <h3>SASS changes</h3>
-<p>There have been many changes to the Foundation SASS it may be a good idea to read the new  <a class="reference external" href="http://foundation.zurb.com/sites/docs/sass.html">new SASS documentation</a>:</p>
+<p>There have been many changes to the way that the Foundation SASS is organized
+it may be a good idea to read the new  <a class="reference external" href="http://foundation.zurb.com/sites/docs/sass.html">new SASS documentation</a>:</p>
 </div>
 </div>
 <div class="section" id="summary">
 <h2>Summary</h2>
-<p><a class="reference external" href="http://wagtail-cookiecutter-foundation.readthedocs.org/en/latest/">wagtail-cookiecutter-foundation</a> is great time saver for us here at ChrisDev but
-with any project we would like to include so the following features in
-upcoming versions.</p>
+<p>Over the last few months <a class="reference external" href="http://wagtail-cookiecutter-foundation.readthedocs.org/en/latest/">wagtail-cookiecutter-foundation</a> has been a great time saver for us here at <a class="reference external" href="http://chrisdev.com">ChrisDev</a>, but there are many features that we'd  love to include in future releases. These include:</p>
 <ul class="simple">
-<li>Integration with <a class="reference external" href="https://letsencrypt.org">Lets Encrypt</a> for the generation and maintenence of SSL
+<li>Integration with <a class="reference external" href="https://letsencrypt.org">Lets Encrypt</a> for the generation and maintenance of SSL
 certificates</li>
-<li>Re-factor some of the more complex pages like the HomePage to use the <a class="reference external" href="http://docs.wagtail.io/en/v1.3.1/topics/streamfield.html">StreamField</a></li>
+<li>Turn some of the bundled modules like :code:Feeds into independent Django applications.</li>
+<li>Add more tests and an automated build system for the default <cite>wagtail-cookiecutter-foundation</cite> project.</li>
+<li>Make more use of the Wagtail <a class="reference external" href="http://docs.wagtail.io/en/v1.3.1/topics/streamfield.html">StreamField</a> in more complex pages such as the
+homepage</li>
 </ul>
-<p>Try it out and let me know what you think. I'm open to new ideas and receiving pull requests.</p>
+<p>You can find more of of these as well a bug reports in our <a class="reference external" href="https://github.com/chrisdev/wagtail-cookiecutter-foundation/issues">issue tracker</a>.
+We're open to new ideas and happy to take your pull requests.</p>
 </div>
 
 
@@ -382,6 +376,7 @@ certificates</li>
                             <li><a href="http://twitter.com/realchrisdev"><i class="fa fa-twitter"></i>&nbsp;twitter</a></li>
                             <li><a href="https://github.com/chrisdev"><i class="fa fa-github"></i>&nbsp;github</a></li>
                             <li><a href="http://www.facebook.com/chrisdevtt"><i class="fa fa-facebook"></i>&nbsp;facebook</a></li>
+                            <li><a href="/blog.chrisdev.com"><i class="fa fa-"></a></li>
  
                     </ul>
             </div>
