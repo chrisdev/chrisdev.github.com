@@ -1,5 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>The ChrisDev Blog</title><link href="/" rel="alternate"></link><link href="/blog.chrisdev.com" rel="self"></link><id>/</id><updated>2014-04-17T00:00:00-04:00</updated><entry><title>How I Setup my Macs for Python Development</title><link href="/setting-up-your-python-development-environment-on-osx-mavericks.html" rel="alternate"></link><updated>2014-04-17T00:00:00-04:00</updated><author><name>Christopher Clarke</name></author><id>tag:,2014-04-17:setting-up-your-python-development-environment-on-osx-mavericks.html</id><summary type="html">&lt;div class="figure"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>The ChrisDev Blog</title><link href="/" rel="alternate"></link><link href="/blog.chrisdev.com" rel="self"></link><id>/</id><updated>2016-01-22T00:00:00-04:00</updated><entry><title>Introducing wagtail-cookiecutter-foundation</title><link href="/introducing-wagtail-cookiecutter-foundation.html" rel="alternate"></link><updated>2016-01-22T00:00:00-04:00</updated><author><name>Christopher Clarke</name></author><id>tag:,2016-01-22:introducing-wagtail-cookiecutter-foundation.html</id><summary type="html">&lt;div class="figure"&gt;
+&lt;img alt="Wagtail Cookiecutter Foundation" src="/images/wagtail-cookiecutter-foundation.png" /&gt;
+&lt;/div&gt;
+&lt;p&gt;In this article we introduce you to &lt;a class="reference external" href="http://wagtail-cookiecutter-foundation.readthedocs.org/en/latest/"&gt;wagtail-cookiecutter-foundation&lt;/a&gt;, a &lt;a class="reference external" href="https://github.com/audreyr/cookiecutter"&gt;Cookiecutter&lt;/a&gt;
+template for quickly generating &lt;a class="reference external" href="https://djangoproject.com"&gt;Django&lt;/a&gt; sites powered by &lt;a class="reference external" href="https://wagtail.io"&gt;Wagtail&lt;/a&gt; and
+&lt;a class="reference external" href="https://foundation.zurb.com"&gt;Zurb Foundation for Sites 6&lt;/a&gt;. The websites generated with our
+Cookiecutter are pretty full featured and come with most of the
+components you are likely to need for the typical website project, including: various
+kinds of top level menus (drop-down, off-canvas), feature sliders, photo galleries,
+contact forms,  various kinds of homepage designs, product and portfolio pages,
+blog and events events module and so on.  But its pretty easy to customize and include only the modules and components to match your project's requirements. For an idea of what to expect check out our live &lt;a class="reference external" href="http://wagtail.chrisdev.com"&gt;demo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Wagtail CMS has been described as:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;a class="reference external" href="http://www.revsys.com/blog/2015/apr/29/wagtail-best-django-cms/"&gt;The all around best and most flexible Django CMS currently available&lt;/a&gt;.&lt;/blockquote&gt;
+&lt;p&gt;One of the big selling points for &lt;a class="reference external" href="https://wagtail.io"&gt;Wagtail&lt;/a&gt; is its easy of use especially for
+non-technical end-users. Many of the content creators and editors we've
+introduced to it tell us that Wagtail is especially easy understand and they are
+quickly able to get useful work done.  Indeed, many of these users have expressed
+a clear preference for Wagtail over some of the more well known &amp;quot;brands&amp;quot;
+such as Wordpress and Drupal.  Another strength of Wagtail, is the
+flexibility of CMS model that allows for the representation of everything from
+the most simple pages with a few media elements to more complex unstructured
+pages where text may be interspersed with subheading, pull quotes, videos or
+specialized content types like maps and charts. It is important to note that
+&lt;a class="reference external" href="https://wagtail.io"&gt;Wagtail&lt;/a&gt; does not rely on any arcane plugins architecture but rather on
+standard Python/Django modules, classes and methods.  As a consequence, it
+plays well with the other reusable applications in the Python/Django ecosystem
+such as the &lt;a class="reference external" href="http://www.django-rest-framework.org"&gt;Django Rest Framework&lt;/a&gt;. There and also hooks to important tools
+like &lt;a class="reference external" href="https://github.com/elastic/elasticsearch"&gt;ElasticSearch&lt;/a&gt;.   Additionally, Wagtail CMS comes it a built in Form
+builder system and has excellent Image and Document management tools.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://foundation.zurb.com"&gt;Zurb Foundation&lt;/a&gt; is a &lt;em&gt;mobile first&lt;/em&gt;  responsive framework that provides
+all the components required for building websites. These include a responsive
+grid and HTML, JavaScript and CSS UI components, templates, and code snippets covering
+typography, forms, buttons, navigation and other interface components.
+While &lt;a class="reference external" href="https://foundation.zurb.com"&gt;Zurb Foundation&lt;/a&gt;  may not be as popular as some other front-end
+frameworks, we find that it provides a better platform for customization sites
+and web apps. So while the out-of-the-box look and feel is more or less
+a flat design a few tweaks to the underlying Sass files can have yield some
+pretty dramatic changes.&lt;/p&gt;
+&lt;div class="section" id="up-and-running"&gt;
+&lt;h2&gt;Up and Running&lt;/h2&gt;
+&lt;p&gt;To create a new &lt;a class="reference external" href="https://djangoproject.com"&gt;Django&lt;/a&gt; project based on wagtail-cookiecutter-foundation
+you need to have &lt;a class="reference external" href="https://github.com/audreyr/cookiecutter"&gt;Cookiecutter&lt;/a&gt; installed on your machine. If you have not
+installed it, then install it:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;pip install cookiecutter
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Note we always recommend that you installed Cookiecutter system wide, as you are bound to want to try our some of the other &lt;a class="reference external" href="https://github.com/audreyr/cookiecutter#available-templates"&gt;cookiecutter templates&lt;/a&gt; out there.&lt;/p&gt;
+&lt;p&gt;Next run cookiecutter against the wagtail-cookiecutter-foundation repo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;cookiecutter https://github.com/chrisdev/wagtail-cookiecutter-foundation.git
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You will be prompted to answer the following questions.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Cloning into &lt;span class="s1"&gt;&amp;#39;wagtail-cookiecutter-foundation&amp;#39;&lt;/span&gt;...
+remote: Counting objects: 611, &lt;span class="k"&gt;done&lt;/span&gt;.
+remote: Compressing objects: 100% &lt;span class="o"&gt;(&lt;/span&gt;13/13&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
+remote: Total &lt;span class="m"&gt;611&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;delta 3&lt;span class="o"&gt;)&lt;/span&gt;, reused &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;delta 0&lt;span class="o"&gt;)&lt;/span&gt;, pack-reused 598
+Receiving objects: 100% &lt;span class="o"&gt;(&lt;/span&gt;611/611&lt;span class="o"&gt;)&lt;/span&gt;, 423.98 KiB &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; bytes/s, &lt;span class="k"&gt;done&lt;/span&gt;.
+Resolving deltas: 100% &lt;span class="o"&gt;(&lt;/span&gt;264/264&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
+Checking connectivity... &lt;span class="k"&gt;done&lt;/span&gt;.
+project_name &lt;span class="o"&gt;(&lt;/span&gt;default is &lt;span class="s2"&gt;&amp;quot;Wagtail Project&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;?
+repo_name &lt;span class="o"&gt;(&lt;/span&gt;default is &lt;span class="s2"&gt;&amp;quot;wagtail_project&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;?
+version_control_system &lt;span class="o"&gt;(&lt;/span&gt;default is &lt;span class="s2"&gt;&amp;quot;hg&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;?,
+vcs_host &lt;span class="o"&gt;(&lt;/span&gt;default is &lt;span class="s2"&gt;&amp;quot;bitbucket&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;?,
+author_name &lt;span class="o"&gt;(&lt;/span&gt;default is &lt;span class="s2"&gt;&amp;quot;Your Name&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;?
+email &lt;span class="o"&gt;(&lt;/span&gt;default is &lt;span class="s2"&gt;&amp;quot;Your email&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;?
+description &lt;span class="o"&gt;(&lt;/span&gt;default is &lt;span class="s2"&gt;&amp;quot;A short description of the project.&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;?
+timezone &lt;span class="o"&gt;(&lt;/span&gt;default is &lt;span class="s2"&gt;&amp;quot;UTC&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;?
+now &lt;span class="o"&gt;(&lt;/span&gt;default is &lt;span class="s2"&gt;&amp;quot;2015/04/16&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;?
+year &lt;span class="o"&gt;(&lt;/span&gt;default is &lt;span class="s2"&gt;&amp;quot;2015&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;?
+production_host_name &lt;span class="o"&gt;(&lt;/span&gt;default is  example.org&lt;span class="o"&gt;)&lt;/span&gt;?
+use_ssl_in_production &lt;span class="o"&gt;(&lt;/span&gt;default is &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;?
+staging_host_name &lt;span class="o"&gt;(&lt;/span&gt;default is staging.example.org&lt;span class="o"&gt;)&lt;/span&gt;?
+use_vagrant_staging &lt;span class="o"&gt;(&lt;/span&gt;default is &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;?
+deploy_user_name &lt;span class="o"&gt;(&lt;/span&gt;default is django&lt;span class="o"&gt;)&lt;/span&gt;
+django_admin_user &lt;span class="o"&gt;(&lt;/span&gt;default is my_admin_user&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Enter the project and take a look around&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;my_wagtail_project/
+&lt;span class="nv"&gt;$ &lt;/span&gt;ls
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Create a GitHub or Bitbucket repo for the project and push it there&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git init
+&lt;span class="nv"&gt;$ &lt;/span&gt;git add .
+&lt;span class="nv"&gt;$ &lt;/span&gt;git commit -m &lt;span class="s2"&gt;&amp;quot;first awesome commit&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;git remote add origin git@github.com:cclarke/my_wagtail_project.git
+&lt;span class="nv"&gt;$ &lt;/span&gt;git push -u origin master
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="quick-start"&gt;
+&lt;h2&gt;Quick Start&lt;/h2&gt;
+&lt;p&gt;Before you start ensure that you've installed and got the following working.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://pip.pypa.io/en/stable/"&gt;pip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://virtualenv.pypa.io/en/latest/"&gt;virtualenv&lt;/a&gt;/&lt;a class="reference external" href="https://docs.python.org/3/library/venv.html#module-venv"&gt;pyenv&lt;/a&gt;/&lt;a class="reference external" href="https://virtualenvwrapper.readthedocs.org/en/latest/"&gt;virtualenvwrapper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://postgresql.org"&gt;PostgreSQL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://nodejs.org/en/"&gt;node/npm&lt;/a&gt;, &lt;a class="reference external" href="http://git-scm.com"&gt;git&lt;/a&gt; (and or &lt;a class="reference external" href="https://www.mercurial-scm.org"&gt;mercurial&lt;/a&gt;) and &lt;a class="reference external" href="http://bower.io"&gt;bower&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Your project will contain a Makefile that allows you to setup your development
+environment with a single command. To do this run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;make all
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This command will create your project's virtual environment,
+install all pip dependencies,  create
+the development database, run migrations and load initial data to database,
+install front-end dependencies and finally start the development server
+for you.  You can access your site at &lt;strong&gt;http://localhost:8000&lt;/strong&gt;. The Admin
+back-end is available at &lt;strong&gt;http://localhost:8000/admin/&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Your project will come with a set of application modules to use for building
+the sites functionality including:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;pages&lt;/tt&gt; - Different kinds of pages including, Homepage, Standard Pages, Faqs Page etc.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;blog&lt;/tt&gt; - Blog or site news&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;contact&lt;/tt&gt; - Contact Page with included contact us form&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;events&lt;/tt&gt; - Events&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;photo_gallery&lt;/tt&gt; - Create photo galleries using wagtail tags&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;documents&lt;/tt&gt; - Organize documents in folders using wagtail tags .&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;products&lt;/tt&gt; - Ideal for a product or portfolio showcase&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;feeds&lt;/tt&gt; - RSS/Atom feeds which support enclosures to work with services like Mailchimp and Flipboard&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;people&lt;/tt&gt; - For the people in your organization or team.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;faq&lt;/tt&gt; - FAQ and answers.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;utils&lt;/tt&gt; - Various utility functions, templatetags and filters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;However, we take a modular approach so the can pick and choose the modules to
+include the project by simple adjusting the &lt;tt class="docutils literal"&gt;INSTALLED_APPS&lt;/tt&gt; in settings.&lt;/p&gt;
+&lt;p&gt;When you are ready to provision your production server, simply run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;make provision
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Running this commands will:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Create a deployment user on the server to use for the project.&lt;/li&gt;
+&lt;li&gt;Create and download download a deployment key for use on services
+like Github or Bitbucket&lt;/li&gt;
+&lt;li&gt;Install all the required Linux packages and libraries on the server.&lt;/li&gt;
+&lt;li&gt;Install and configure the latest version of &lt;a class="reference external" href="http://postgresql.org"&gt;PostgreSQL&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Install and configure &lt;a class="reference external" href="http://redis.io"&gt;Redis&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/elastic/elasticsearch"&gt;ElasticSearch&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Setup basic security  on the Linux box using &lt;a class="reference external" href="https://help.ubuntu.com/community/UFW"&gt;UFW Firewall&lt;/a&gt; and
+&lt;a class="reference external" href="http://www.fail2ban.org/wiki/index.php/Main_Page"&gt;fail2ban&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Clone the project's VCS repository, setup a virtual environment and install all the python and django dependencies required to run the site&lt;/li&gt;
+&lt;li&gt;Install and configure all required front-end dependencies&lt;/li&gt;
+&lt;li&gt;Configure and install a Celery worker process.&lt;/li&gt;
+&lt;li&gt;Install and configure an Nginx Virtaul Host for your site.&lt;/li&gt;
+&lt;li&gt;Install and configure your SSL certificate (if required) and ensure that
+you can score an &lt;em&gt;A&lt;/em&gt; in the popular &lt;a class="reference external" href="https://www.ssllabs.com"&gt;SSL Labs&lt;/a&gt; SSL server test.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Need to deploy to a staging server? Run run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;make provision &lt;span class="nv"&gt;DEPLOY_ENV&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;staging
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;What! You're running a &lt;a class="reference external" href="https://www.vagrantup.com"&gt;Vagrant&lt;/a&gt; based staging server? Then run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;make provision &lt;span class="nv"&gt;DEPLOY_ENV&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;vagrant
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Finally, made some changes to your site  and ready to deploy them? Then run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;make deploy
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The &lt;tt class="docutils literal"&gt;deploy&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;provision&lt;/tt&gt; commands drive on suite of &lt;a class="reference external" href="http://docs.ansible.com"&gt;Ansible&lt;/a&gt; playbooks to
+run the provisioning and deployment tasks on your servers.
+&lt;a class="reference external" href="https://www.vagrantup.com"&gt;Vagrant&lt;/a&gt; based staging servers are supported, so you
+can &amp;quot;stage&amp;quot; your site locally and tweak and experiment with different
+deployment configurations before expending your resources on hosting providers.
+To keep things simple, we assume that all your application components such as;
+&lt;tt class="docutils literal"&gt;Django&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;PostgreSQL&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;redis&lt;/tt&gt; and so on, are all deployed on a single
+server.  However, it is a relatively straightforward procedure to tweak the
+playbooks support more complex provisioning scenarios.  In this way, you can
+support for example, independent database server, multiple upstream &lt;tt class="docutils literal"&gt;wsgi&lt;/tt&gt;
+servers and so on. For more check the online &lt;a class="reference external" href="http://wagtail-cookiecutter-foundation.readthedocs.org/en/latest/"&gt;documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Over the last few months &lt;a class="reference external" href="http://wagtail-cookiecutter-foundation.readthedocs.org/en/latest/"&gt;wagtail-cookiecutter-foundation&lt;/a&gt; has been a great time
+saver for us here at &lt;a class="reference external" href="http://chrisdev.com"&gt;ChrisDev&lt;/a&gt;, but there are many
+features that we'd love to include in future releases. These include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Make more use of the Wagtail &lt;a class="reference external" href="http://docs.wagtail.io/en/v1.3.1/topics/streamfield.html"&gt;StreamField&lt;/a&gt; in more complex pages such as the
+homepage&lt;/li&gt;
+&lt;li&gt;The use of with &lt;a class="reference external" href="https://letsencrypt.org"&gt;Lets Encrypt&lt;/a&gt; for the generation and maintenance of SSL
+certificates.&lt;/li&gt;
+&lt;li&gt;Turn some of the bundled modules like Feeds into stand alone reusable Django applications.&lt;/li&gt;
+&lt;li&gt;Add more funtional tests for the the projects generated with the cookiecutter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can find more of of these as well a bug reports in our &lt;a class="reference external" href="https://github.com/chrisdev/wagtail-cookiecutter-foundation/issues"&gt;issue tracker&lt;/a&gt;.
+We're open to new ideas and happy to take your pull requests.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="Wagtail"></category><category term="CMS"></category><category term="Content Managment"></category><category term="Django"></category><category term="Zurb-Foundation"></category><category term="Foundation-6"></category></entry><entry><title>How I Setup my Macs for Python Development</title><link href="/setting-up-your-python-development-environment-on-osx-mavericks.html" rel="alternate"></link><updated>2014-04-17T00:00:00-04:00</updated><author><name>Christopher Clarke</name></author><id>tag:,2014-04-17:setting-up-your-python-development-environment-on-osx-mavericks.html</id><summary type="html">&lt;div class="figure"&gt;
 &lt;img alt="This is a test" src="/images/setting-up-my-mac-for-python-dev.jpg" /&gt;
 &lt;/div&gt;
 &lt;p&gt;I've been asked about this a few times already this month so I've decided to

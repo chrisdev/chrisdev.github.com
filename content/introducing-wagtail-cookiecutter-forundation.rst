@@ -2,10 +2,11 @@
 Introducing wagtail-cookiecutter-foundation 
 =========================================================================
 :date: 2016-01-22
-:tags: Wagtail,CMS, Content Managment,Django, Zurb-Foundation, Foundation-6 
+:tags: Wagtail, CMS, Content Managment, Django, Zurb-Foundation, Foundation-6 
 :category: Django
 :author: Christopher Clarke
-:status: draft
+:slug: introducing-wagtail-cookiecutter-foundation
+:thumbnail: /images/wagtail-cookiecutter-foundation.png
 :summary: This article introduces wagtail-cookiecutter-foundation_, a Cookiecutter_ template for quickly spinning up Django_ sites running the highly regarded `Wagtail`_ Content Management System and the `Zurb Foundation`_ front-end framework. 
 
 
@@ -21,7 +22,7 @@ Cookiecutter are pretty full featured and come with most of the
 components you are likely to need for the typical website project, including: various
 kinds of top level menus (drop-down, off-canvas), feature sliders, photo galleries, 
 contact forms,  various kinds of homepage designs, product and portfolio pages, 
-blog and events events module and so on.  But its pretty easy to customize and include only the modules and components to match your project's requirements. For an idea of what to expect check out our live `demo`_.
+blog and events events module and so on.  But its pretty easy to customize and include only the modules and components to match your project's requirements. For an idea of what to expect check out our live demo_ site.
 
 Wagtail CMS has been described as:   
 
@@ -31,8 +32,8 @@ One of the big selling points for `Wagtail`_ is its easy of use especially for
 non-technical end-users. Many of the content creators and editors we've
 introduced to it tell us that Wagtail is especially easy understand and they are
 quickly able to get useful work done.  Indeed, many of these users have expressed 
-a clear preference for Wagtail over some of the more well known "brands" 
-such as Wordpress and Drupal.  Another strength of Wagtail, is the
+a clear preference for Wagtail over some of the more well known "brands" in the
+Content Managenment world such as Wordpress and Drupal.  Another strength of Wagtail, is the
 flexibility of CMS model that allows for the representation of everything from
 the most simple pages with a few media elements to more complex unstructured
 pages where text may be interspersed with subheading, pull quotes, videos or
@@ -126,7 +127,8 @@ Before you start ensure that you've installed and got the following working.
 
 * `pip`_
 * virtualenv_/pyenv_/virtualenvwrapper_ 
-* PostgreSQL_ * `node/npm`_, `git`_ (and or `mercurial`_) and `bower`_ 
+* PostgreSQL_ 
+* `node/npm`_, `git`_ (and or `mercurial`_) and `bower`_ 
 
 Your project will contain a Makefile that allows you to setup your development 
 environment with a single command. To do this run: 
@@ -214,58 +216,18 @@ playbooks support more complex provisioning scenarios.  In this way, you can
 support for example, independent database server, multiple upstream ``wsgi``
 servers and so on. For more check the online `documentation`_.
 
-Some tips on Manually Upgrading to Foundation 6
--------------------------------------------------
-If you've used an earlier version of this Cookiecutter then the generated 
-site would have been based on `Foundation 5`_. If you want to manually
-upgrade one of these sites to `Zurb Foundation 6`_, here are some the tweaks 
-that you have to make.
-
-Upgrade to Foundation 6
-^^^^^^^^^^^^^^^^^^^^^^^^
-To install the latests version of Foundation edit the :code:`bower.json` and 
-change the line :code:`foundation": "~5.5.3"`  to :code:`foundation-sites: "~6.1.0"`
-
-Modernizr
-^^^^^^^^^^
-Modernizr_ has been removed as an external dependency from :code:`Foundation 6` so 
-it can be removed from your base.html
-
-New Top-bar
-^^^^^^^^^^^^^
-`The entire code for the topbar has been changed`_
-
-New Off Canvas
-^^^^^^^^^^^^^^^
-* `The entire code for the offcanvas has been changed`_
-* `The drop down for off canvas can now use accordion vertical menu`_
-
-Block Grid Changed
-^^^^^^^^^^^^^^^^^^^
-`The html for a block grid has changed`_ : eg. medium-block-grid-4 to medium-up-4
-
-Clearing Box is no longer included 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-In `Foundation 6` there is no more clearing box a feature which was often used 
-for photo galleries. You may want to up grade it with an open source
-component like like `Lightbox2`_. 
-
-SASS changes
-^^^^^^^^^^^^^
-There have been many changes to the way that the Foundation SASS is organized
-it may be a good idea to read the new  `new SASS documentation`_: 
-
-
 Summary
 ---------
-Over the last few months wagtail-cookiecutter-foundation_ has been a great time saver for us here at `ChrisDev <http://chrisdev.com>`_, but there are many features that we'd  love to include in future releases. These include:
+Over the last few months wagtail-cookiecutter-foundation_ has been a great time
+saver for us here at `ChrisDev <http://chrisdev.com>`_, but there are many
+features that we'd love to include in future releases. These include:
 
-- Integration with `Lets Encrypt`_ for the generation and maintenance of SSL
-  certificates 
-- Turn some of the bundled modules like :code:Feeds into independent Django applications. 
-- Add more tests and an automated build system for the default `wagtail-cookiecutter-foundation` project. 
 - Make more use of the Wagtail `StreamField`_ in more complex pages such as the
   homepage
+- The use of with `Lets Encrypt`_ for the generation and maintenance of SSL
+  certificates. 
+- Turn some of the bundled modules like Feeds into stand alone reusable Django applications. 
+- Add more funtional tests for the the projects generated with the cookiecutter 
 
 You can find more of of these as well a bug reports in our `issue tracker`_. 
 We're open to new ideas and happy to take your pull requests.
@@ -307,6 +269,6 @@ We're open to new ideas and happy to take your pull requests.
 .. _`virtualenvwrapper`: https://virtualenvwrapper.readthedocs.org/en/latest/
 .. _`pyenv`: https://docs.python.org/3/library/venv.html#module-venv
 .. _`modernizr`: https://modernizr.com
-.. _`demo`: http://wagtail.chrisdev.com>`
+.. _`demo`: http://wagtail.chrisdev.com
 .. _`issue tracker`: https://github.com/chrisdev/wagtail-cookiecutter-foundation/issues 
 .. _documentation: http://wagtail-cookiecutter-foundation.readthedocs.org/en/latest/  
