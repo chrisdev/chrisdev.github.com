@@ -9,7 +9,7 @@ Cookiecutter are pretty full featured and come with most of the
 components you are likely to need for the typical website project, including: various
 kinds of top level menus (drop-down, off-canvas), feature sliders, photo galleries,
 contact forms,  various kinds of homepage designs, product and portfolio pages,
-blog and events events module and so on.  But its pretty easy to customize and include only the modules and components to match your project's requirements. For an idea of what to expect check out our live &lt;a class="reference external" href="http://wagtail.chrisdev.com"&gt;demo&lt;/a&gt;.&lt;/p&gt;
+blog and events events module and so on.  But its pretty easy to customize and include only the modules and components to match your project's requirements. For an idea of what to expect check out our live &lt;a class="reference external" href="http://wagtail.chrisdev.com"&gt;demo&lt;/a&gt; site.&lt;/p&gt;
 &lt;p&gt;Wagtail CMS has been described as:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;a class="reference external" href="http://www.revsys.com/blog/2015/apr/29/wagtail-best-django-cms/"&gt;The all around best and most flexible Django CMS currently available&lt;/a&gt;.&lt;/blockquote&gt;
@@ -17,8 +17,8 @@ blog and events events module and so on.  But its pretty easy to customize and i
 non-technical end-users. Many of the content creators and editors we've
 introduced to it tell us that Wagtail is especially easy understand and they are
 quickly able to get useful work done.  Indeed, many of these users have expressed
-a clear preference for Wagtail over some of the more well known &amp;quot;brands&amp;quot;
-such as Wordpress and Drupal.  Another strength of Wagtail, is the
+a clear preference for Wagtail over some of the more well known &amp;quot;brands&amp;quot; in the
+Content Managenment world such as Wordpress and Drupal.  Another strength of Wagtail, is the
 flexibility of CMS model that allows for the representation of everything from
 the most simple pages with a few media elements to more complex unstructured
 pages where text may be interspersed with subheading, pull quotes, videos or
