@@ -15,28 +15,29 @@ blog and events events module and so on.  But its pretty easy to customize and i
 &lt;a class="reference external" href="http://www.revsys.com/blog/2015/apr/29/wagtail-best-django-cms/"&gt;The all around best and most flexible Django CMS currently available&lt;/a&gt;.&lt;/blockquote&gt;
 &lt;p&gt;One of the big selling points for &lt;a class="reference external" href="https://wagtail.io"&gt;Wagtail&lt;/a&gt; is its easy of use especially for
 non-technical end-users. Many of the content creators and editors we've
-introduced to it tell us that Wagtail is especially easy understand and they are
+introduced to it tell us that &lt;a class="reference external" href="https://wagtail.io"&gt;Wagtail&lt;/a&gt; is especially easy understand and they are
 quickly able to get useful work done.  Indeed, many of these users have expressed
-a clear preference for Wagtail over some of the more well known &amp;quot;brands&amp;quot; in the
+a clear preference for &lt;a class="reference external" href="https://wagtail.io"&gt;Wagtail&lt;/a&gt; over some of the more well known &amp;quot;brands&amp;quot; in the
 Content Managenment world such as Wordpress and Drupal.  Another strength of Wagtail, is the
-flexibility of CMS model that allows for the representation of everything from
+flexibility of the underlying CMS model which allows for the representation of everything from
 the most simple pages with a few media elements to more complex unstructured
 pages where text may be interspersed with subheading, pull quotes, videos or
 specialized content types like maps and charts. It is important to note that
 &lt;a class="reference external" href="https://wagtail.io"&gt;Wagtail&lt;/a&gt; does not rely on any arcane plugins architecture but rather on
 standard Python/Django modules, classes and methods.  As a consequence, it
 plays well with the other reusable applications in the Python/Django ecosystem
-such as the &lt;a class="reference external" href="http://www.django-rest-framework.org"&gt;Django Rest Framework&lt;/a&gt;. There and also hooks to important tools
-like &lt;a class="reference external" href="https://github.com/elastic/elasticsearch"&gt;ElasticSearch&lt;/a&gt;.   Additionally, Wagtail CMS comes it a built in Form
-builder system and has excellent Image and Document management tools.&lt;/p&gt;
+such as the &lt;a class="reference external" href="http://www.django-rest-framework.org"&gt;Django Rest Framework&lt;/a&gt;. There are also hooks into important tools
+like &lt;a class="reference external" href="https://github.com/elastic/elasticsearch"&gt;ElasticSearch&lt;/a&gt;.   Additionally, &lt;a class="reference external" href="https://wagtail.io"&gt;Wagtail&lt;/a&gt; comes with a built in &amp;quot;Form
+builder&amp;quot; application that allows end users to build their own data collection forms.
+&lt;a class="reference external" href="https://wagtail.io"&gt;Wagtail&lt;/a&gt; also has excellent Image and Document management tools.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://foundation.zurb.com"&gt;Zurb Foundation&lt;/a&gt; is a &lt;em&gt;mobile first&lt;/em&gt;  responsive framework that provides
 all the components required for building websites. These include a responsive
 grid and HTML, JavaScript and CSS UI components, templates, and code snippets covering
 typography, forms, buttons, navigation and other interface components.
 While &lt;a class="reference external" href="https://foundation.zurb.com"&gt;Zurb Foundation&lt;/a&gt;  may not be as popular as some other front-end
 frameworks, we find that it provides a better platform for customization sites
-and web apps. So while the out-of-the-box look and feel is more or less
-a flat design a few tweaks to the underlying Sass files can have yield some
+and web apps. So while the out-of-the-box look and feel is
+a &amp;quot;flat&amp;quot; design, a few tweaks to the underlying &lt;a class="reference external" href="http://foundation.zurb.com/sites/docs/global.html"&gt;Sass&lt;/a&gt; can yield some
 pretty dramatic changes.&lt;/p&gt;
 &lt;div class="section" id="up-and-running"&gt;
 &lt;h2&gt;Up and Running&lt;/h2&gt;
@@ -49,7 +50,7 @@ installed it, then install it:&lt;/p&gt;
 &lt;p&gt;Next run cookiecutter against the wagtail-cookiecutter-foundation repo:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;cookiecutter https://github.com/chrisdev/wagtail-cookiecutter-foundation.git
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;You will be prompted to answer the following questions.&lt;/p&gt;
+&lt;p&gt;You will be prompted to answer the following questions:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;Cloning into &lt;span class="s1"&gt;&amp;#39;wagtail-cookiecutter-foundation&amp;#39;&lt;/span&gt;...
 remote: Counting objects: 611, &lt;span class="k"&gt;done&lt;/span&gt;.
 remote: Compressing objects: 100% &lt;span class="o"&gt;(&lt;/span&gt;13/13&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
@@ -86,8 +87,8 @@ django_admin_user &lt;span class="o"&gt;(&lt;/span&gt;default is my_admin_user&l
 &lt;span class="nv"&gt;$ &lt;/span&gt;git push -u origin master
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="section" id="quick-start"&gt;
-&lt;h2&gt;Quick Start&lt;/h2&gt;
+&lt;div class="section" id="development"&gt;
+&lt;h2&gt;Development&lt;/h2&gt;
 &lt;p&gt;Before you start ensure that you've installed and got the following working.&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://pip.pypa.io/en/stable/"&gt;pip&lt;/a&gt;&lt;/li&gt;
@@ -122,7 +123,10 @@ the sites functionality including:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;However, we take a modular approach so the can pick and choose the modules to
 include the project by simple adjusting the &lt;tt class="docutils literal"&gt;INSTALLED_APPS&lt;/tt&gt; in settings.&lt;/p&gt;
-&lt;p&gt;When you are ready to provision your production server, simply run:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="provisioning-and-deployment"&gt;
+&lt;h2&gt;Provisioning and Deployment&lt;/h2&gt;
+&lt;p&gt;When you are ready to provision your Ubuntu production server, simply run:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;make provision
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Running this commands will:&lt;/p&gt;
@@ -135,7 +139,8 @@ like Github or Bitbucket&lt;/li&gt;
 &lt;li&gt;Install and configure &lt;a class="reference external" href="http://redis.io"&gt;Redis&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/elastic/elasticsearch"&gt;ElasticSearch&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Setup basic security  on the Linux box using &lt;a class="reference external" href="https://help.ubuntu.com/community/UFW"&gt;UFW Firewall&lt;/a&gt; and
 &lt;a class="reference external" href="http://www.fail2ban.org/wiki/index.php/Main_Page"&gt;fail2ban&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Clone the project's VCS repository, setup a virtual environment and install all the python and django dependencies required to run the site&lt;/li&gt;
+&lt;li&gt;Clone the project's VCS repository, setup a virtual environment and install
+all the python and django dependencies required to run the site&lt;/li&gt;
 &lt;li&gt;Install and configure all required front-end dependencies&lt;/li&gt;
 &lt;li&gt;Configure and install a Celery worker process.&lt;/li&gt;
 &lt;li&gt;Install and configure an Nginx Virtaul Host for your site.&lt;/li&gt;
@@ -151,7 +156,7 @@ you can score an &lt;em&gt;A&lt;/em&gt; in the popular &lt;a class="reference ex
 &lt;p&gt;Finally, made some changes to your site  and ready to deploy them? Then run:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;make deploy
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The &lt;tt class="docutils literal"&gt;deploy&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;provision&lt;/tt&gt; commands drive on suite of &lt;a class="reference external" href="http://docs.ansible.com"&gt;Ansible&lt;/a&gt; playbooks to
+&lt;p&gt;The &lt;tt class="docutils literal"&gt;deploy&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;provision&lt;/tt&gt; commands drive &lt;a class="reference external" href="http://docs.ansible.com"&gt;Ansible&lt;/a&gt; playbooks that
 run the provisioning and deployment tasks on your servers.
 &lt;a class="reference external" href="https://www.vagrantup.com"&gt;Vagrant&lt;/a&gt; based staging servers are supported, so you
 can &amp;quot;stage&amp;quot; your site locally and tweak and experiment with different

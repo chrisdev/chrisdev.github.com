@@ -30,20 +30,21 @@ Wagtail CMS has been described as:
 
 One of the big selling points for `Wagtail`_ is its easy of use especially for
 non-technical end-users. Many of the content creators and editors we've
-introduced to it tell us that Wagtail is especially easy understand and they are
+introduced to it tell us that `Wagtail`_ is especially easy understand and they are
 quickly able to get useful work done.  Indeed, many of these users have expressed 
-a clear preference for Wagtail over some of the more well known "brands" in the
+a clear preference for `Wagtail`_ over some of the more well known "brands" in the
 Content Managenment world such as Wordpress and Drupal.  Another strength of Wagtail, is the
-flexibility of CMS model that allows for the representation of everything from
+flexibility of the underlying CMS model which allows for the representation of everything from
 the most simple pages with a few media elements to more complex unstructured
 pages where text may be interspersed with subheading, pull quotes, videos or
 specialized content types like maps and charts. It is important to note that
 `Wagtail`_ does not rely on any arcane plugins architecture but rather on
 standard Python/Django modules, classes and methods.  As a consequence, it
 plays well with the other reusable applications in the Python/Django ecosystem
-such as the `Django Rest Framework`_. There and also hooks to important tools
-like `ElasticSearch`_.   Additionally, Wagtail CMS comes it a built in Form
-builder system and has excellent Image and Document management tools.  
+such as the `Django Rest Framework`_. There are also hooks into important tools
+like `ElasticSearch`_.   Additionally, Wagtail_ comes with a built in "Form
+builder" application that allows end users to build their own data collection forms. 
+Wagtail_ also has excellent Image and Document management tools.  
 
 `Zurb Foundation`_ is a *mobile first*  responsive framework that provides
 all the components required for building websites. These include a responsive 
@@ -51,8 +52,8 @@ grid and HTML, JavaScript and CSS UI components, templates, and code snippets co
 typography, forms, buttons, navigation and other interface components.
 While `Zurb Foundation`_  may not be as popular as some other front-end
 frameworks, we find that it provides a better platform for customization sites
-and web apps. So while the out-of-the-box look and feel is more or less
-a flat design a few tweaks to the underlying Sass files can have yield some 
+and web apps. So while the out-of-the-box look and feel is  
+a "flat" design, a few tweaks to the underlying Sass_ can yield some 
 pretty dramatic changes.
 
 Up and Running
@@ -74,7 +75,7 @@ Next run cookiecutter against the wagtail-cookiecutter-foundation repo:
 
     $ cookiecutter https://github.com/chrisdev/wagtail-cookiecutter-foundation.git
 
-You will be prompted to answer the following questions. 
+You will be prompted to answer the following questions: 
 
 .. code-block:: sh 
 
@@ -120,8 +121,8 @@ Create a GitHub or Bitbucket repo for the project and push it there
     $ git push -u origin master
 
 
-Quick Start
-------------
+Development
+----------------
 
 Before you start ensure that you've installed and got the following working.
 
@@ -162,7 +163,10 @@ the sites functionality including:
 However, we take a modular approach so the can pick and choose the modules to
 include the project by simple adjusting the ``INSTALLED_APPS`` in settings.
 
-When you are ready to provision your production server, simply run:
+Provisioning and Deployment
+----------------------------
+
+When you are ready to provision your Ubuntu production server, simply run:
 
 .. code-block:: sh 
 
@@ -178,7 +182,8 @@ Running this commands will:
 - Install and configure `Redis`_ and `ElasticSearch`_.
 - Setup basic security  on the Linux box using `UFW Firewall`_ and 
   `fail2ban`_.
-- Clone the project's VCS repository, setup a virtual environment and install all the python and django dependencies required to run the site
+- Clone the project's VCS repository, setup a virtual environment and install 
+  all the python and django dependencies required to run the site
 - Install and configure all required front-end dependencies 
 - Configure and install a Celery worker process.
 - Install and configure an Nginx Virtaul Host for your site.
@@ -204,7 +209,7 @@ Finally, made some changes to your site  and ready to deploy them? Then run:
     make deploy 
 
 
-The ``deploy`` and ``provision`` commands drive on suite of Ansible_ playbooks to
+The ``deploy`` and ``provision`` commands drive Ansible_ playbooks that  
 run the provisioning and deployment tasks on your servers. 
 Vagrant_ based staging servers are supported, so you
 can "stage" your site locally and tweak and experiment with different
@@ -241,6 +246,7 @@ We're open to new ideas and happy to take your pull requests.
 .. _`Zurb Foundation`: https://foundation.zurb.com
 .. _`Foundation 5`: http://foundation.zurb.com/sites/docs/v/5.5.3/
 .. _wagtail-cookiecutter-foundation: http://wagtail-cookiecutter-foundation.readthedocs.org/en/latest/   
+.. _Sass: http://foundation.zurb.com/sites/docs/global.html
 .. _Django: https://djangoproject.com
 .. _`Cookiecutter templates`:  https://github.com/audreyr/cookiecutter#available-templates
 .. _`The entire code for the topbar has been changed`: http://foundation.zurb.com/sites/docs/top-bar.html

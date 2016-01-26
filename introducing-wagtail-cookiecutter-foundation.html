@@ -131,28 +131,29 @@ blog and events events module and so on.  But its pretty easy to customize and i
 <a class="reference external" href="http://www.revsys.com/blog/2015/apr/29/wagtail-best-django-cms/">The all around best and most flexible Django CMS currently available</a>.</blockquote>
 <p>One of the big selling points for <a class="reference external" href="https://wagtail.io">Wagtail</a> is its easy of use especially for
 non-technical end-users. Many of the content creators and editors we've
-introduced to it tell us that Wagtail is especially easy understand and they are
+introduced to it tell us that <a class="reference external" href="https://wagtail.io">Wagtail</a> is especially easy understand and they are
 quickly able to get useful work done.  Indeed, many of these users have expressed
-a clear preference for Wagtail over some of the more well known &quot;brands&quot; in the
+a clear preference for <a class="reference external" href="https://wagtail.io">Wagtail</a> over some of the more well known &quot;brands&quot; in the
 Content Managenment world such as Wordpress and Drupal.  Another strength of Wagtail, is the
-flexibility of CMS model that allows for the representation of everything from
+flexibility of the underlying CMS model which allows for the representation of everything from
 the most simple pages with a few media elements to more complex unstructured
 pages where text may be interspersed with subheading, pull quotes, videos or
 specialized content types like maps and charts. It is important to note that
 <a class="reference external" href="https://wagtail.io">Wagtail</a> does not rely on any arcane plugins architecture but rather on
 standard Python/Django modules, classes and methods.  As a consequence, it
 plays well with the other reusable applications in the Python/Django ecosystem
-such as the <a class="reference external" href="http://www.django-rest-framework.org">Django Rest Framework</a>. There and also hooks to important tools
-like <a class="reference external" href="https://github.com/elastic/elasticsearch">ElasticSearch</a>.   Additionally, Wagtail CMS comes it a built in Form
-builder system and has excellent Image and Document management tools.</p>
+such as the <a class="reference external" href="http://www.django-rest-framework.org">Django Rest Framework</a>. There are also hooks into important tools
+like <a class="reference external" href="https://github.com/elastic/elasticsearch">ElasticSearch</a>.   Additionally, <a class="reference external" href="https://wagtail.io">Wagtail</a> comes with a built in &quot;Form
+builder&quot; application that allows end users to build their own data collection forms.
+<a class="reference external" href="https://wagtail.io">Wagtail</a> also has excellent Image and Document management tools.</p>
 <p><a class="reference external" href="https://foundation.zurb.com">Zurb Foundation</a> is a <em>mobile first</em>  responsive framework that provides
 all the components required for building websites. These include a responsive
 grid and HTML, JavaScript and CSS UI components, templates, and code snippets covering
 typography, forms, buttons, navigation and other interface components.
 While <a class="reference external" href="https://foundation.zurb.com">Zurb Foundation</a>  may not be as popular as some other front-end
 frameworks, we find that it provides a better platform for customization sites
-and web apps. So while the out-of-the-box look and feel is more or less
-a flat design a few tweaks to the underlying Sass files can have yield some
+and web apps. So while the out-of-the-box look and feel is
+a &quot;flat&quot; design, a few tweaks to the underlying <a class="reference external" href="http://foundation.zurb.com/sites/docs/global.html">Sass</a> can yield some
 pretty dramatic changes.</p>
 <div class="section" id="up-and-running">
 <h2>Up and Running</h2>
@@ -165,7 +166,7 @@ installed it, then install it:</p>
 <p>Next run cookiecutter against the wagtail-cookiecutter-foundation repo:</p>
 <div class="highlight"><pre><span class="nv">$ </span>cookiecutter https://github.com/chrisdev/wagtail-cookiecutter-foundation.git
 </pre></div>
-<p>You will be prompted to answer the following questions.</p>
+<p>You will be prompted to answer the following questions:</p>
 <div class="highlight"><pre>Cloning into <span class="s1">&#39;wagtail-cookiecutter-foundation&#39;</span>...
 remote: Counting objects: 611, <span class="k">done</span>.
 remote: Compressing objects: 100% <span class="o">(</span>13/13<span class="o">)</span>, <span class="k">done</span>.
@@ -202,8 +203,8 @@ django_admin_user <span class="o">(</span>default is my_admin_user<span class="o
 <span class="nv">$ </span>git push -u origin master
 </pre></div>
 </div>
-<div class="section" id="quick-start">
-<h2>Quick Start</h2>
+<div class="section" id="development">
+<h2>Development</h2>
 <p>Before you start ensure that you've installed and got the following working.</p>
 <ul class="simple">
 <li><a class="reference external" href="https://pip.pypa.io/en/stable/">pip</a></li>
@@ -238,7 +239,10 @@ the sites functionality including:</p>
 </ul>
 <p>However, we take a modular approach so the can pick and choose the modules to
 include the project by simple adjusting the <tt class="docutils literal">INSTALLED_APPS</tt> in settings.</p>
-<p>When you are ready to provision your production server, simply run:</p>
+</div>
+<div class="section" id="provisioning-and-deployment">
+<h2>Provisioning and Deployment</h2>
+<p>When you are ready to provision your Ubuntu production server, simply run:</p>
 <div class="highlight"><pre>make provision
 </pre></div>
 <p>Running this commands will:</p>
@@ -251,7 +255,8 @@ like Github or Bitbucket</li>
 <li>Install and configure <a class="reference external" href="http://redis.io">Redis</a> and <a class="reference external" href="https://github.com/elastic/elasticsearch">ElasticSearch</a>.</li>
 <li>Setup basic security  on the Linux box using <a class="reference external" href="https://help.ubuntu.com/community/UFW">UFW Firewall</a> and
 <a class="reference external" href="http://www.fail2ban.org/wiki/index.php/Main_Page">fail2ban</a>.</li>
-<li>Clone the project's VCS repository, setup a virtual environment and install all the python and django dependencies required to run the site</li>
+<li>Clone the project's VCS repository, setup a virtual environment and install
+all the python and django dependencies required to run the site</li>
 <li>Install and configure all required front-end dependencies</li>
 <li>Configure and install a Celery worker process.</li>
 <li>Install and configure an Nginx Virtaul Host for your site.</li>
@@ -267,7 +272,7 @@ you can score an <em>A</em> in the popular <a class="reference external" href="h
 <p>Finally, made some changes to your site  and ready to deploy them? Then run:</p>
 <div class="highlight"><pre>make deploy
 </pre></div>
-<p>The <tt class="docutils literal">deploy</tt> and <tt class="docutils literal">provision</tt> commands drive on suite of <a class="reference external" href="http://docs.ansible.com">Ansible</a> playbooks to
+<p>The <tt class="docutils literal">deploy</tt> and <tt class="docutils literal">provision</tt> commands drive <a class="reference external" href="http://docs.ansible.com">Ansible</a> playbooks that
 run the provisioning and deployment tasks on your servers.
 <a class="reference external" href="https://www.vagrantup.com">Vagrant</a> based staging servers are supported, so you
 can &quot;stage&quot; your site locally and tweak and experiment with different
