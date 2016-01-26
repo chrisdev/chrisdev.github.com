@@ -40,8 +40,9 @@ USE_SITE_LOGO = True
 THEME = '../pelican-transcend-foundation'
 # Blogroll
 LINKS = (
-    ('About', 'http://chrisdev.com/about/'),
-    ('Contact Us', 'http://chrisdev.com/contact/'),
+    ('Home', '/'),
+    ('About', 'http://chrisdev.com/'),
+    ('Contact Us', 'http://chrisdev.com/'),
 )
 DISPLAY_PAGES_ON_MENU = False
 
@@ -66,7 +67,7 @@ VCARD = {
     'street_address': 'A3 St Bendicts Gardens',
     'locality': 'Tunapuna',
     'country_name': 'Trinidad and Tobago',
-    'tel_home': '773-4644'
+    'tel_home': '+868-773-4644'
 }
 SITEMAP = {
     'format': 'xml',
