@@ -6,11 +6,11 @@ Introducing wagtail-cookiecutter-foundation
 :category: Django
 :author: Christopher Clarke
 :slug: introducing-wagtail-cookiecutter-foundation
-:thumbnail: /images/wagtail-cookiecutter-foundation.png
+:thumbnail: /images/wagtail-cookiecutter-foundation.jpg
 :summary: This article introduces wagtail-cookiecutter-foundation_, a Cookiecutter_ template for quickly spinning up Django_ sites running the highly regarded `Wagtail`_ Content Management System and the `Zurb Foundation`_ front-end framework. 
 
 
-.. figure:: {filename}/images/wagtail-cookiecutter-foundation.png
+.. figure:: {filename}/images/wagtail-cookiecutter-foundation.jpg
    :alt: Wagtail Cookiecutter Foundation 
 
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>The ChrisDev Blog</title><link href="http://blog.chrisdev.com/" rel="alternate"></link><link href="/feeds/christopher-clarke.atom.xml" rel="self"></link><id>http://blog.chrisdev.com/</id><updated>2016-01-22T00:00:00-04:00</updated><entry><title>Introducing wagtail-cookiecutter-foundation</title><link href="http://blog.chrisdev.com/introducing-wagtail-cookiecutter-foundation.html" rel="alternate"></link><updated>2016-01-22T00:00:00-04:00</updated><author><name>Christopher Clarke</name></author><id>tag:blog.chrisdev.com,2016-01-22:introducing-wagtail-cookiecutter-foundation.html</id><summary type="html">&lt;div class="figure"&gt;
-&lt;img alt="Wagtail Cookiecutter Foundation" src="http://blog.chrisdev.com/images/wagtail-cookiecutter-foundation.png" /&gt;
+&lt;img alt="Wagtail Cookiecutter Foundation" src="http://blog.chrisdev.com/images/wagtail-cookiecutter-foundation.jpg" /&gt;
 &lt;/div&gt;
 &lt;p&gt;In this article we introduce you to &lt;a class="reference external" href="http://wagtail-cookiecutter-foundation.readthedocs.org/en/latest/"&gt;wagtail-cookiecutter-foundation&lt;/a&gt;, a &lt;a class="reference external" href="https://github.com/audreyr/cookiecutter"&gt;Cookiecutter&lt;/a&gt;
 template for quickly generating &lt;a class="reference external" href="https://djangoproject.com"&gt;Django&lt;/a&gt; sites powered by &lt;a class="reference external" href="https://wagtail.io"&gt;Wagtail&lt;/a&gt; and

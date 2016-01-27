@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>The ChrisDev Blog</title><link href="/" rel="alternate"></link><link href="/blog.chrisdev.com" rel="self"></link><id>/</id><updated>2016-01-22T00:00:00-04:00</updated><entry><title>Introducing wagtail-cookiecutter-foundation</title><link href="/introducing-wagtail-cookiecutter-foundation.html" rel="alternate"></link><updated>2016-01-22T00:00:00-04:00</updated><author><name>Christopher Clarke</name></author><id>tag:,2016-01-22:introducing-wagtail-cookiecutter-foundation.html</id><summary type="html">&lt;div class="figure"&gt;
-&lt;img alt="Wagtail Cookiecutter Foundation" src="/images/wagtail-cookiecutter-foundation.png" /&gt;
+&lt;img alt="Wagtail Cookiecutter Foundation" src="/images/wagtail-cookiecutter-foundation.jpg" /&gt;
 &lt;/div&gt;
 &lt;p&gt;In this article we introduce you to &lt;a class="reference external" href="http://wagtail-cookiecutter-foundation.readthedocs.org/en/latest/"&gt;wagtail-cookiecutter-foundation&lt;/a&gt;, a &lt;a class="reference external" href="https://github.com/audreyr/cookiecutter"&gt;Cookiecutter&lt;/a&gt;
 template for quickly generating &lt;a class="reference external" href="https://djangoproject.com"&gt;Django&lt;/a&gt; sites powered by &lt;a class="reference external" href="https://wagtail.io"&gt;Wagtail&lt;/a&gt; and
@@ -139,7 +139,8 @@ like Github or Bitbucket&lt;/li&gt;
 &lt;li&gt;Install and configure &lt;a class="reference external" href="http://redis.io"&gt;Redis&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/elastic/elasticsearch"&gt;ElasticSearch&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Setup basic security  on the Linux box using &lt;a class="reference external" href="https://help.ubuntu.com/community/UFW"&gt;UFW Firewall&lt;/a&gt; and
 &lt;a class="reference external" href="http://www.fail2ban.org/wiki/index.php/Main_Page"&gt;fail2ban&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Clone the project's VCS repository, setup a virtual environment and install all the python and django dependencies required to run the site&lt;/li&gt;
+&lt;li&gt;Clone the project's VCS repository, setup a virtual environment and install
+all the python and django dependencies required to run the site&lt;/li&gt;
 &lt;li&gt;Install and configure all required front-end dependencies&lt;/li&gt;
 &lt;li&gt;Configure and install a Celery worker process.&lt;/li&gt;
 &lt;li&gt;Install and configure an Nginx Virtaul Host for your site.&lt;/li&gt;
@@ -155,7 +156,7 @@ you can score an &lt;em&gt;A&lt;/em&gt; in the popular &lt;a class="reference ex
 &lt;p&gt;Finally, made some changes to your site  and ready to deploy them? Then run:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;make deploy
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The &lt;tt class="docutils literal"&gt;deploy&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;provision&lt;/tt&gt; commands drive on suite of &lt;a class="reference external" href="http://docs.ansible.com"&gt;Ansible&lt;/a&gt; playbooks to
+&lt;p&gt;The &lt;tt class="docutils literal"&gt;deploy&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;provision&lt;/tt&gt; commands drive &lt;a class="reference external" href="http://docs.ansible.com"&gt;Ansible&lt;/a&gt; playbooks that
 run the provisioning and deployment tasks on your servers.
 &lt;a class="reference external" href="https://www.vagrantup.com"&gt;Vagrant&lt;/a&gt; based staging servers are supported, so you
 can &amp;quot;stage&amp;quot; your site locally and tweak and experiment with different
