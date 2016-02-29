@@ -10,7 +10,6 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-GOOGLE_ANALYTICS = ''
 FEED_DOMAIN = SITEURL
 SITEURL = 'http://blog.chrisdev.com'
 RELATIVE_URLS = False
@@ -23,4 +22,4 @@ DELETE_OUTPUT_DIRECTORY = False
 # Following items are often useful when publishing
 
 DISQUS_SITENAME = "chrisdevblog"
-#GOOGLE_ANALYTICS = ""
+GOOGLE_ANALYTICS = True
